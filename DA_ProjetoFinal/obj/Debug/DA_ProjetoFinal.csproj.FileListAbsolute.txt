@@ -1,0 +1,15 @@
+E:\Documentos\DA_ProjetoFinal\DA_ProjetoFinal\bin\Debug\DA_ProjetoFinal.exe.config
+E:\Documentos\DA_ProjetoFinal\DA_ProjetoFinal\bin\Debug\DA_ProjetoFinal.exe
+E:\Documentos\DA_ProjetoFinal\DA_ProjetoFinal\bin\Debug\DA_ProjetoFinal.pdb
+E:\Documentos\DA_ProjetoFinal\DA_ProjetoFinal\obj\Debug\DA_ProjetoFinal.csproj.AssemblyReference.cache
+E:\Documentos\DA_ProjetoFinal\DA_ProjetoFinal\obj\Debug\DA_ProjetoFinal.Form1.resources
+E:\Documentos\DA_ProjetoFinal\DA_ProjetoFinal\obj\Debug\DA_ProjetoFinal.Properties.Resources.resources
+E:\Documentos\DA_ProjetoFinal\DA_ProjetoFinal\obj\Debug\DA_ProjetoFinal.csproj.GenerateResource.cache
+E:\Documentos\DA_ProjetoFinal\DA_ProjetoFinal\obj\Debug\DA_ProjetoFinal.csproj.CoreCompileInputs.cache
+E:\Documentos\DA_ProjetoFinal\DA_ProjetoFinal\obj\Debug\DA_ProjetoFinal.exe
+E:\Documentos\DA_ProjetoFinal\DA_ProjetoFinal\obj\Debug\DA_ProjetoFinal.pdb
+E:\Documentos\DA_ProjetoFinal\DA_ProjetoFinal\bin\Debug\EntityFramework.dll
+E:\Documentos\DA_ProjetoFinal\DA_ProjetoFinal\bin\Debug\EntityFramework.SqlServer.dll
+E:\Documentos\DA_ProjetoFinal\DA_ProjetoFinal\bin\Debug\EntityFramework.xml
+E:\Documentos\DA_ProjetoFinal\DA_ProjetoFinal\bin\Debug\EntityFramework.SqlServer.xml
+E:\Documentos\DA_ProjetoFinal\DA_ProjetoFinal\obj\Debug\DA_Proje.4FE204E5.Up2Date
