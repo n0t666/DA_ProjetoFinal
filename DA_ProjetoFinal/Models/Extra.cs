@@ -15,5 +15,7 @@ namespace DA_ProjetoFinal
         public bool Ativo { get; set; }
 
         public virtual ICollection<Menu> Menu { get; set; }
+
+        public virtual ICollection<Reserva> Reserva { get; set; }
     }
 }

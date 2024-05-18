@@ -16,5 +16,7 @@ namespace DA_ProjetoFinal
 
 
         public Menu Menu { get; set; }
+
+        public ICollection<Extra> Extra { get; set; }
     }
 }

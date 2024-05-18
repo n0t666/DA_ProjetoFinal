@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DA_ProjetoFinal
 {
-    internal class Estudante
+    internal class Estudante: Cliente
     {
 
         public int NumEstudante { get; set; }

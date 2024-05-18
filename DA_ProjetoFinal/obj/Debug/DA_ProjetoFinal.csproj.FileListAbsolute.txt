@@ -13,3 +13,6 @@ E:\Documentos\DA_ProjetoFinal\DA_ProjetoFinal\bin\Debug\EntityFramework.SqlServe
 E:\Documentos\DA_ProjetoFinal\DA_ProjetoFinal\bin\Debug\EntityFramework.xml
 E:\Documentos\DA_ProjetoFinal\DA_ProjetoFinal\bin\Debug\EntityFramework.SqlServer.xml
 E:\Documentos\DA_ProjetoFinal\DA_ProjetoFinal\obj\Debug\DA_Proje.4FE204E5.Up2Date
+E:\Documentos\DA_ProjetoFinal\DA_ProjetoFinal\obj\Debug\DA_ProjetoFinal.Form_Borderless.resources
+E:\Documentos\DA_ProjetoFinal\DA_ProjetoFinal\obj\Debug\DA_ProjetoFinal.Views.Main.resources
+E:\Documentos\DA_ProjetoFinal\DA_ProjetoFinal\obj\Debug\DA_ProjetoFinal.Components.SideBarCustomButton.resources
