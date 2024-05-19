@@ -30,31 +30,24 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelTop = new System.Windows.Forms.Panel();
+            this.panelLoadingArea = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.timerSideBar = new System.Windows.Forms.Timer(this.components);
             this.panelSideBar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.sideBarCustomButton1 = new DA_ProjetoFinal.Components.SideBarCustomButton();
+            this.btnHomePage = new DA_ProjetoFinal.Components.SideBarCustomButton();
             this.sideBarCustomButton2 = new DA_ProjetoFinal.Components.SideBarCustomButton();
             this.sideBarCustomButton3 = new DA_ProjetoFinal.Components.SideBarCustomButton();
             this.sideBarCustomButton4 = new DA_ProjetoFinal.Components.SideBarCustomButton();
-            this.sideBarCustomButton5 = new DA_ProjetoFinal.Components.SideBarCustomButton();
+            this.btnReservas = new DA_ProjetoFinal.Components.SideBarCustomButton();
             this.sideBarCustomButton6 = new DA_ProjetoFinal.Components.SideBarCustomButton();
             this.sideBarCustomButton7 = new DA_ProjetoFinal.Components.SideBarCustomButton();
             this.sideBarCustomButton8 = new DA_ProjetoFinal.Components.SideBarCustomButton();
             this.pictureMinimizar = new System.Windows.Forms.PictureBox();
             this.btnSideBar = new System.Windows.Forms.PictureBox();
             this.pictureFechar = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
             this.panelTop.SuspendLayout();
             this.panelSideBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureFechar)).BeginInit();
@@ -66,11 +59,27 @@
             this.panelTop.Controls.Add(this.pictureMinimizar);
             this.panelTop.Controls.Add(this.btnSideBar);
             this.panelTop.Controls.Add(this.pictureFechar);
+            this.panelTop.Controls.Add(this.panel2);
             this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(803, 63);
             this.panelTop.TabIndex = 0;
             this.panelTop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTop_Paint);
+            // 
+            // panelLoadingArea
+            // 
+            this.panelLoadingArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panelLoadingArea.Location = new System.Drawing.Point(194, 63);
+            this.panelLoadingArea.Name = "panelLoadingArea";
+            this.panelLoadingArea.Size = new System.Drawing.Size(609, 555);
+            this.panelLoadingArea.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(191, 63);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(597, 39);
+            this.panel2.TabIndex = 11;
             // 
             // timerSideBar
             // 
@@ -81,11 +90,11 @@
             // 
             this.panelSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.panelSideBar.Controls.Add(this.panel1);
-            this.panelSideBar.Controls.Add(this.sideBarCustomButton1);
+            this.panelSideBar.Controls.Add(this.btnHomePage);
             this.panelSideBar.Controls.Add(this.sideBarCustomButton2);
             this.panelSideBar.Controls.Add(this.sideBarCustomButton3);
             this.panelSideBar.Controls.Add(this.sideBarCustomButton4);
-            this.panelSideBar.Controls.Add(this.sideBarCustomButton5);
+            this.panelSideBar.Controls.Add(this.btnReservas);
             this.panelSideBar.Controls.Add(this.sideBarCustomButton6);
             this.panelSideBar.Controls.Add(this.sideBarCustomButton7);
             this.panelSideBar.Controls.Add(this.sideBarCustomButton8);
@@ -103,37 +112,27 @@
             this.panel1.Size = new System.Drawing.Size(197, 39);
             this.panel1.TabIndex = 10;
             // 
-            // pictureBox1
+            // btnHomePage
             // 
-            this.pictureBox1.Image = global::DA_ProjetoFinal.Properties.Resources.default_user;
-            this.pictureBox1.Location = new System.Drawing.Point(393, 138);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(215, 157);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // sideBarCustomButton1
-            // 
-            this.sideBarCustomButton1.FlatAppearance.BorderSize = 0;
-            this.sideBarCustomButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sideBarCustomButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.sideBarCustomButton1.ForeColor = System.Drawing.Color.White;
-            this.sideBarCustomButton1.HoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(221)))), ((int)(((byte)(51)))));
-            this.sideBarCustomButton1.HoverImage = global::DA_ProjetoFinal.Properties.Resources.home_active_small;
-            this.sideBarCustomButton1.Image = global::DA_ProjetoFinal.Properties.Resources.home_normal_small;
-            this.sideBarCustomButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sideBarCustomButton1.Location = new System.Drawing.Point(3, 48);
-            this.sideBarCustomButton1.Name = "sideBarCustomButton1";
-            this.sideBarCustomButton1.NormalForeColor = System.Drawing.Color.White;
-            this.sideBarCustomButton1.NormalImage = global::DA_ProjetoFinal.Properties.Resources.home_normal_small;
-            this.sideBarCustomButton1.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.sideBarCustomButton1.Size = new System.Drawing.Size(197, 47);
-            this.sideBarCustomButton1.TabIndex = 11;
-            this.sideBarCustomButton1.Text = "  Página principal";
-            this.sideBarCustomButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.sideBarCustomButton1.UseVisualStyleBackColor = true;
-            this.sideBarCustomButton1.Click += new System.EventHandler(this.sideBarCustomButton1_Click);
+            this.btnHomePage.FlatAppearance.BorderSize = 0;
+            this.btnHomePage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHomePage.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.btnHomePage.ForeColor = System.Drawing.Color.White;
+            this.btnHomePage.HoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(221)))), ((int)(((byte)(51)))));
+            this.btnHomePage.HoverImage = global::DA_ProjetoFinal.Properties.Resources.home_active_small;
+            this.btnHomePage.Image = global::DA_ProjetoFinal.Properties.Resources.home_normal_small;
+            this.btnHomePage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHomePage.Location = new System.Drawing.Point(3, 48);
+            this.btnHomePage.Name = "btnHomePage";
+            this.btnHomePage.NormalForeColor = System.Drawing.Color.White;
+            this.btnHomePage.NormalImage = global::DA_ProjetoFinal.Properties.Resources.home_normal_small;
+            this.btnHomePage.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnHomePage.Size = new System.Drawing.Size(197, 47);
+            this.btnHomePage.TabIndex = 11;
+            this.btnHomePage.Text = "  Página principal";
+            this.btnHomePage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHomePage.UseVisualStyleBackColor = true;
+            this.btnHomePage.Click += new System.EventHandler(this.sideBarCustomButton1_Click);
             // 
             // sideBarCustomButton2
             // 
@@ -152,7 +151,7 @@
             this.sideBarCustomButton2.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.sideBarCustomButton2.Size = new System.Drawing.Size(197, 47);
             this.sideBarCustomButton2.TabIndex = 12;
-            this.sideBarCustomButton2.Text = "  Página principal";
+            this.sideBarCustomButton2.Text = "  Menu";
             this.sideBarCustomButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.sideBarCustomButton2.UseVisualStyleBackColor = true;
             // 
@@ -173,7 +172,7 @@
             this.sideBarCustomButton3.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.sideBarCustomButton3.Size = new System.Drawing.Size(197, 47);
             this.sideBarCustomButton3.TabIndex = 13;
-            this.sideBarCustomButton3.Text = "  Página principal";
+            this.sideBarCustomButton3.Text = "  Pratos";
             this.sideBarCustomButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.sideBarCustomButton3.UseVisualStyleBackColor = true;
             // 
@@ -194,30 +193,31 @@
             this.sideBarCustomButton4.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.sideBarCustomButton4.Size = new System.Drawing.Size(197, 47);
             this.sideBarCustomButton4.TabIndex = 14;
-            this.sideBarCustomButton4.Text = "  Página principal";
+            this.sideBarCustomButton4.Text = "  Extras";
             this.sideBarCustomButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.sideBarCustomButton4.UseVisualStyleBackColor = true;
             // 
-            // sideBarCustomButton5
+            // btnReservas
             // 
-            this.sideBarCustomButton5.FlatAppearance.BorderSize = 0;
-            this.sideBarCustomButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sideBarCustomButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.sideBarCustomButton5.ForeColor = System.Drawing.Color.White;
-            this.sideBarCustomButton5.HoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(221)))), ((int)(((byte)(51)))));
-            this.sideBarCustomButton5.HoverImage = global::DA_ProjetoFinal.Properties.Resources.home_active_small;
-            this.sideBarCustomButton5.Image = global::DA_ProjetoFinal.Properties.Resources.home_normal_small;
-            this.sideBarCustomButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sideBarCustomButton5.Location = new System.Drawing.Point(3, 260);
-            this.sideBarCustomButton5.Name = "sideBarCustomButton5";
-            this.sideBarCustomButton5.NormalForeColor = System.Drawing.Color.White;
-            this.sideBarCustomButton5.NormalImage = global::DA_ProjetoFinal.Properties.Resources.home_normal_small;
-            this.sideBarCustomButton5.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.sideBarCustomButton5.Size = new System.Drawing.Size(197, 47);
-            this.sideBarCustomButton5.TabIndex = 15;
-            this.sideBarCustomButton5.Text = "  Página principal";
-            this.sideBarCustomButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.sideBarCustomButton5.UseVisualStyleBackColor = true;
+            this.btnReservas.FlatAppearance.BorderSize = 0;
+            this.btnReservas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReservas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.btnReservas.ForeColor = System.Drawing.Color.White;
+            this.btnReservas.HoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(221)))), ((int)(((byte)(51)))));
+            this.btnReservas.HoverImage = global::DA_ProjetoFinal.Properties.Resources.home_active_small;
+            this.btnReservas.Image = global::DA_ProjetoFinal.Properties.Resources.home_normal_small;
+            this.btnReservas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReservas.Location = new System.Drawing.Point(3, 260);
+            this.btnReservas.Name = "btnReservas";
+            this.btnReservas.NormalForeColor = System.Drawing.Color.White;
+            this.btnReservas.NormalImage = global::DA_ProjetoFinal.Properties.Resources.home_normal_small;
+            this.btnReservas.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnReservas.Size = new System.Drawing.Size(197, 47);
+            this.btnReservas.TabIndex = 15;
+            this.btnReservas.Text = "  Reservas";
+            this.btnReservas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReservas.UseVisualStyleBackColor = true;
+            this.btnReservas.Click += new System.EventHandler(this.btnReservas_Click);
             // 
             // sideBarCustomButton6
             // 
@@ -236,7 +236,7 @@
             this.sideBarCustomButton6.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.sideBarCustomButton6.Size = new System.Drawing.Size(197, 47);
             this.sideBarCustomButton6.TabIndex = 16;
-            this.sideBarCustomButton6.Text = "  Página principal";
+            this.sideBarCustomButton6.Text = "  Multas";
             this.sideBarCustomButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.sideBarCustomButton6.UseVisualStyleBackColor = true;
             // 
@@ -257,7 +257,7 @@
             this.sideBarCustomButton7.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.sideBarCustomButton7.Size = new System.Drawing.Size(197, 47);
             this.sideBarCustomButton7.TabIndex = 17;
-            this.sideBarCustomButton7.Text = "  Página principal";
+            this.sideBarCustomButton7.Text = "  Funcionários";
             this.sideBarCustomButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.sideBarCustomButton7.UseVisualStyleBackColor = true;
             // 
@@ -278,7 +278,7 @@
             this.sideBarCustomButton8.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.sideBarCustomButton8.Size = new System.Drawing.Size(197, 47);
             this.sideBarCustomButton8.TabIndex = 18;
-            this.sideBarCustomButton8.Text = "  Página principal";
+            this.sideBarCustomButton8.Text = "  Clientes";
             this.sideBarCustomButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.sideBarCustomButton8.UseVisualStyleBackColor = true;
             // 
@@ -313,82 +313,12 @@
             this.pictureFechar.TabIndex = 6;
             this.pictureFechar.TabStop = false;
             // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(202, 66);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(597, 39);
-            this.panel2.TabIndex = 11;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(283, 310);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 25);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Utilizador atual:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(501, 299);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(207, 28);
-            this.comboBox1.TabIndex = 13;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(501, 376);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(212, 28);
-            this.comboBox2.TabIndex = 14;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Location = new System.Drawing.Point(288, 410);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(425, 161);
-            this.richTextBox1.TabIndex = 15;
-            this.richTextBox1.Text = "";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(283, 376);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(212, 26);
-            this.dateTimePicker1.TabIndex = 16;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(288, 578);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(425, 23);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "dd";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 615);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.panelLoadingArea);
             this.Controls.Add(this.panelSideBar);
             this.Controls.Add(this.panelTop);
             this.Name = "Main";
@@ -396,12 +326,10 @@
             this.Load += new System.EventHandler(this.Main_Load);
             this.panelTop.ResumeLayout(false);
             this.panelSideBar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureFechar)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -412,23 +340,17 @@
         private System.Windows.Forms.Timer timerSideBar;
         private System.Windows.Forms.FlowLayoutPanel panelSideBar;
         private System.Windows.Forms.Panel panel1;
-        private Components.SideBarCustomButton sideBarCustomButton1;
+        private Components.SideBarCustomButton btnHomePage;
         private Components.SideBarCustomButton sideBarCustomButton2;
         private Components.SideBarCustomButton sideBarCustomButton3;
         private Components.SideBarCustomButton sideBarCustomButton4;
-        private Components.SideBarCustomButton sideBarCustomButton5;
+        private Components.SideBarCustomButton btnReservas;
         private Components.SideBarCustomButton sideBarCustomButton6;
         private Components.SideBarCustomButton sideBarCustomButton7;
         private Components.SideBarCustomButton sideBarCustomButton8;
         private System.Windows.Forms.PictureBox pictureMinimizar;
         private System.Windows.Forms.PictureBox pictureFechar;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panelLoadingArea;
     }
 }

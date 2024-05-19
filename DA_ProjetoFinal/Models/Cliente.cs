@@ -13,5 +13,10 @@ namespace DA_ProjetoFinal
         public ICollection<Reserva> Reserva { get; set; }
 
         public ICollection<Fatura> Fatura { get; set; }
+
+        public override string ToString()
+        {
+            return Nome;
+        }
     }
 }

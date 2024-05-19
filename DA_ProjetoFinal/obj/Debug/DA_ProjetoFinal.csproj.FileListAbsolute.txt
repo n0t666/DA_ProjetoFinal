@@ -16,3 +16,5 @@ E:\Documentos\DA_ProjetoFinal\DA_ProjetoFinal\obj\Debug\DA_Proje.4FE204E5.Up2Dat
 E:\Documentos\DA_ProjetoFinal\DA_ProjetoFinal\obj\Debug\DA_ProjetoFinal.Form_Borderless.resources
 E:\Documentos\DA_ProjetoFinal\DA_ProjetoFinal\obj\Debug\DA_ProjetoFinal.Views.Main.resources
 E:\Documentos\DA_ProjetoFinal\DA_ProjetoFinal\obj\Debug\DA_ProjetoFinal.Components.SideBarCustomButton.resources
+E:\Documentos\DA_ProjetoFinal\DA_ProjetoFinal\obj\Debug\DA_ProjetoFinal.Views.FormHomePage.resources
+E:\Documentos\DA_ProjetoFinal\DA_ProjetoFinal\obj\Debug\DA_ProjetoFinal.Views.FormReservas.resources

@@ -20,6 +20,7 @@ namespace DA_ProjetoFinal
             this.MouseUp += Form_Borderless_MouseUp;
             this.StartPosition = FormStartPosition.CenterScreen; // Inicializa o form no centro do ecrã
             this.FormBorderStyle = FormBorderStyle.None; // Remove a borda do form
+            this.Size = new Size(609, 555);
         }
         private void Form_Borderless_MouseDown(object sender, MouseEventArgs e)
         {

@@ -25,8 +25,7 @@ namespace DA_ProjetoFinal.Views
 
         private void Main_Load(object sender, EventArgs e)
         {
-            
-
+            loadForm(new FormReservas());
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -61,7 +60,8 @@ namespace DA_ProjetoFinal.Views
 
         private void sideBarCustomButton1_Click(object sender, EventArgs e)
         {
-
+            FormHomePage form = new FormHomePage();
+            loadForm(form);
         }
 
         private void panelTop_Paint(object sender, PaintEventArgs e)
@@ -72,6 +72,29 @@ namespace DA_ProjetoFinal.Views
         private void btnSideBar_Click(object sender, EventArgs e)
         {
             timerSideBar.Start();
+        }
+
+        private void loadForm(Form form)
+        {
+            foreach (Control ctrl in panelLoadingArea.Controls)
+            {
+                if (ctrl.Name == form.Name)
+                {
+                    return;
+                }
+            }
+
+            panelLoadingArea.Controls.Clear();
+            form.TopLevel = false;
+            panelLoadingArea.Controls.Add(form);
+            form.Dock = DockStyle.Fill;
+            form.Show();
+        }
+
+        private void btnReservas_Click(object sender, EventArgs e)
+        {
+            FormReservas form = new FormReservas();
+            loadForm(form);
         }
     }
 }

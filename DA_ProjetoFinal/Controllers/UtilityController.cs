@@ -9,6 +9,7 @@ namespace DA_ProjetoFinal
 {
     public class UtilityController
     {
+
         public static int GetWeekNumber(DateTime date)
         {
             Calendar calendar = CultureInfo.CurrentCulture.Calendar;
