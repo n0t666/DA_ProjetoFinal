@@ -36,5 +36,7 @@ namespace DA_ProjetoFinal.Views
         {
             comboBoxClientes.DroppedDown = false;
         }
+
+
     }
 }

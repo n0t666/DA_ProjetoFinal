@@ -18,15 +18,6 @@ namespace DA_ProjetoFinal
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Main());
-            using (var context = new CantinaContext())
-            {
-                Cliente cliente = new Estudante();
-                cliente.Nome = "João";
-                cliente.Nif = 123456789;
-                cliente.FotoDePerfil = "foto";
-                context.Clientes.Add(cliente);
-                context.SaveChanges();
-            }
         }
     }
 }

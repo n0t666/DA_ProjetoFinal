@@ -17,39 +17,10 @@ namespace DA_ProjetoFinal.Views
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void FormHomePage_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
+            poisonDateTime1.Value = DateTime.Now;
+            poisonComboBox1.Text = "Semana Nº" + UtilityController.GetWeekNumber(poisonDateTime1.Value.Date).ToString();
         }
     }
 }
