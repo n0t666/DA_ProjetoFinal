@@ -15,6 +15,8 @@ namespace DA_ProjetoFinal.Views
     {
         private bool sideBarExpanded = false;
         private Point initialPosLoading = new Point();
+        private string BaseAppName = "FoodFlow | ";
+        private string appName;
 
         public Main()
         {
@@ -67,14 +69,11 @@ namespace DA_ProjetoFinal.Views
 
         private void sideBarCustomButton1_Click(object sender, EventArgs e)
         {
+            appName = BaseAppName + "Página inicial";
             FormHomePage form = new FormHomePage();
             loadForm(form);
         }
 
-        private void panelTop_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void btnSideBar_Click(object sender, EventArgs e)
         {
@@ -96,46 +95,54 @@ namespace DA_ProjetoFinal.Views
             panelLoadingArea.Controls.Add(form);
             form.Dock = DockStyle.Fill;
             form.Show();
+            this.Text = appName;
         }
 
         private void btnReservas_Click(object sender, EventArgs e)
         {
+            appName = BaseAppName + "Reservas";
             FormReservas form = new FormReservas();
             loadForm(form);
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
+            appName = BaseAppName + "Menus";
             Form form = new FormMenu();
             loadForm(form);
         }
 
         private void btnPlates_Click(object sender, EventArgs e)
         {
+            appName = BaseAppName + "Pratos";
             Form form = new FormPratos();
             loadForm(form);
         }
 
         private void btnExtras_Click(object sender, EventArgs e)
         {
+            appName = BaseAppName + "Extras";
             Form form = new FormExtras();
             loadForm(form);
         }
 
         private void btnTickets_Click(object sender, EventArgs e)
         {
+            appName = BaseAppName + "Multas";
             Form form = new FormMultas();
             loadForm(form);
         }
 
         private void btnFunct_Click(object sender, EventArgs e)
         {
+            appName = BaseAppName + "Funcionários";
             Form form = new FormFuncionarios();
             loadForm(form);
         }
 
         private void btnClients_Click(object sender, EventArgs e)
         {
+            appName = BaseAppName + "Clientes";
             Form form = new FormClientes();
             loadForm(form);
         }

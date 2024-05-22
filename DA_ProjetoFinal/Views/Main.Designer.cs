@@ -29,12 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panelTop = new System.Windows.Forms.Panel();
+            this.pictureMinimizar = new System.Windows.Forms.PictureBox();
+            this.btnSideBar = new System.Windows.Forms.PictureBox();
+            this.pictureFechar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelLoadingArea = new System.Windows.Forms.Panel();
             this.timerSideBar = new System.Windows.Forms.Timer(this.components);
             this.panelSideBar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnHomePage = new DA_ProjetoFinal.Components.SideBarCustomButton();
             this.btnMenu = new DA_ProjetoFinal.Components.SideBarCustomButton();
             this.btnPlates = new DA_ProjetoFinal.Components.SideBarCustomButton();
@@ -43,14 +48,13 @@
             this.btnTickets = new DA_ProjetoFinal.Components.SideBarCustomButton();
             this.btnFunct = new DA_ProjetoFinal.Components.SideBarCustomButton();
             this.btnClients = new DA_ProjetoFinal.Components.SideBarCustomButton();
-            this.pictureMinimizar = new System.Windows.Forms.PictureBox();
-            this.btnSideBar = new System.Windows.Forms.PictureBox();
-            this.pictureFechar = new System.Windows.Forms.PictureBox();
             this.panelTop.SuspendLayout();
-            this.panelSideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureFechar)).BeginInit();
+            this.panelSideBar.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTop
@@ -64,7 +68,37 @@
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(803, 63);
             this.panelTop.TabIndex = 0;
-            this.panelTop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTop_Paint);
+            // 
+            // pictureMinimizar
+            // 
+            this.pictureMinimizar.Image = global::DA_ProjetoFinal.Properties.Resources.minus;
+            this.pictureMinimizar.Location = new System.Drawing.Point(732, 20);
+            this.pictureMinimizar.Name = "pictureMinimizar";
+            this.pictureMinimizar.Size = new System.Drawing.Size(25, 22);
+            this.pictureMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureMinimizar.TabIndex = 3;
+            this.pictureMinimizar.TabStop = false;
+            // 
+            // btnSideBar
+            // 
+            this.btnSideBar.Image = global::DA_ProjetoFinal.Properties.Resources.menu;
+            this.btnSideBar.Location = new System.Drawing.Point(10, 20);
+            this.btnSideBar.Name = "btnSideBar";
+            this.btnSideBar.Size = new System.Drawing.Size(25, 22);
+            this.btnSideBar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnSideBar.TabIndex = 2;
+            this.btnSideBar.TabStop = false;
+            this.btnSideBar.Click += new System.EventHandler(this.btnSideBar_Click);
+            // 
+            // pictureFechar
+            // 
+            this.pictureFechar.Image = global::DA_ProjetoFinal.Properties.Resources.x;
+            this.pictureFechar.Location = new System.Drawing.Point(763, 20);
+            this.pictureFechar.Name = "pictureFechar";
+            this.pictureFechar.Size = new System.Drawing.Size(25, 22);
+            this.pictureFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureFechar.TabIndex = 6;
+            this.pictureFechar.TabStop = false;
             // 
             // panel2
             // 
@@ -107,10 +141,22 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(3, 10);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(197, 39);
+            this.panel1.Size = new System.Drawing.Size(197, 83);
             this.panel1.TabIndex = 10;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DA_ProjetoFinal.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(0, -3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(194, 86);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // btnHomePage
             // 
@@ -122,7 +168,7 @@
             this.btnHomePage.HoverImage = global::DA_ProjetoFinal.Properties.Resources.home_active_small;
             this.btnHomePage.Image = global::DA_ProjetoFinal.Properties.Resources.home_normal_small;
             this.btnHomePage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHomePage.Location = new System.Drawing.Point(3, 48);
+            this.btnHomePage.Location = new System.Drawing.Point(3, 99);
             this.btnHomePage.Name = "btnHomePage";
             this.btnHomePage.NormalForeColor = System.Drawing.Color.White;
             this.btnHomePage.NormalImage = global::DA_ProjetoFinal.Properties.Resources.home_normal_small;
@@ -144,7 +190,7 @@
             this.btnMenu.HoverImage = global::DA_ProjetoFinal.Properties.Resources.wine_active_small;
             this.btnMenu.Image = global::DA_ProjetoFinal.Properties.Resources.wine_normal_small;
             this.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenu.Location = new System.Drawing.Point(3, 101);
+            this.btnMenu.Location = new System.Drawing.Point(3, 152);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.NormalForeColor = System.Drawing.Color.White;
             this.btnMenu.NormalImage = global::DA_ProjetoFinal.Properties.Resources.wine_normal_small;
@@ -166,7 +212,7 @@
             this.btnPlates.HoverImage = global::DA_ProjetoFinal.Properties.Resources.dinner_active_small;
             this.btnPlates.Image = global::DA_ProjetoFinal.Properties.Resources.dinner_normal_small;
             this.btnPlates.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPlates.Location = new System.Drawing.Point(3, 154);
+            this.btnPlates.Location = new System.Drawing.Point(3, 205);
             this.btnPlates.Name = "btnPlates";
             this.btnPlates.NormalForeColor = System.Drawing.Color.White;
             this.btnPlates.NormalImage = global::DA_ProjetoFinal.Properties.Resources.dinner_normal_small;
@@ -188,7 +234,7 @@
             this.btnExtras.HoverImage = global::DA_ProjetoFinal.Properties.Resources.expansion_active_small;
             this.btnExtras.Image = global::DA_ProjetoFinal.Properties.Resources.expansion_normal_small;
             this.btnExtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExtras.Location = new System.Drawing.Point(3, 207);
+            this.btnExtras.Location = new System.Drawing.Point(3, 258);
             this.btnExtras.Name = "btnExtras";
             this.btnExtras.NormalForeColor = System.Drawing.Color.White;
             this.btnExtras.NormalImage = global::DA_ProjetoFinal.Properties.Resources.expansion_normal_small;
@@ -210,7 +256,7 @@
             this.btnReservas.HoverImage = global::DA_ProjetoFinal.Properties.Resources.reception_active_small;
             this.btnReservas.Image = global::DA_ProjetoFinal.Properties.Resources.reception_normal_small;
             this.btnReservas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReservas.Location = new System.Drawing.Point(3, 260);
+            this.btnReservas.Location = new System.Drawing.Point(3, 311);
             this.btnReservas.Name = "btnReservas";
             this.btnReservas.NormalForeColor = System.Drawing.Color.White;
             this.btnReservas.NormalImage = global::DA_ProjetoFinal.Properties.Resources.reception_normal_small;
@@ -232,7 +278,7 @@
             this.btnTickets.HoverImage = global::DA_ProjetoFinal.Properties.Resources.penalties_active_small;
             this.btnTickets.Image = global::DA_ProjetoFinal.Properties.Resources.penalties_normal_small_png;
             this.btnTickets.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTickets.Location = new System.Drawing.Point(3, 313);
+            this.btnTickets.Location = new System.Drawing.Point(3, 364);
             this.btnTickets.Name = "btnTickets";
             this.btnTickets.NormalForeColor = System.Drawing.Color.White;
             this.btnTickets.NormalImage = global::DA_ProjetoFinal.Properties.Resources.penalties_normal_small_png;
@@ -254,7 +300,7 @@
             this.btnFunct.HoverImage = global::DA_ProjetoFinal.Properties.Resources.employee_active_small;
             this.btnFunct.Image = global::DA_ProjetoFinal.Properties.Resources.employee_normal_small;
             this.btnFunct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFunct.Location = new System.Drawing.Point(3, 366);
+            this.btnFunct.Location = new System.Drawing.Point(3, 417);
             this.btnFunct.Name = "btnFunct";
             this.btnFunct.NormalForeColor = System.Drawing.Color.White;
             this.btnFunct.NormalImage = global::DA_ProjetoFinal.Properties.Resources.employee_normal_small;
@@ -276,7 +322,7 @@
             this.btnClients.HoverImage = global::DA_ProjetoFinal.Properties.Resources.customer_active_small;
             this.btnClients.Image = global::DA_ProjetoFinal.Properties.Resources.customer_normal_small;
             this.btnClients.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClients.Location = new System.Drawing.Point(3, 419);
+            this.btnClients.Location = new System.Drawing.Point(3, 470);
             this.btnClients.Name = "btnClients";
             this.btnClients.NormalForeColor = System.Drawing.Color.White;
             this.btnClients.NormalImage = global::DA_ProjetoFinal.Properties.Resources.customer_normal_small;
@@ -288,37 +334,6 @@
             this.btnClients.UseVisualStyleBackColor = true;
             this.btnClients.Click += new System.EventHandler(this.btnClients_Click);
             // 
-            // pictureMinimizar
-            // 
-            this.pictureMinimizar.Image = global::DA_ProjetoFinal.Properties.Resources.minus;
-            this.pictureMinimizar.Location = new System.Drawing.Point(732, 20);
-            this.pictureMinimizar.Name = "pictureMinimizar";
-            this.pictureMinimizar.Size = new System.Drawing.Size(25, 22);
-            this.pictureMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureMinimizar.TabIndex = 3;
-            this.pictureMinimizar.TabStop = false;
-            // 
-            // btnSideBar
-            // 
-            this.btnSideBar.Image = global::DA_ProjetoFinal.Properties.Resources.menu;
-            this.btnSideBar.Location = new System.Drawing.Point(10, 20);
-            this.btnSideBar.Name = "btnSideBar";
-            this.btnSideBar.Size = new System.Drawing.Size(25, 22);
-            this.btnSideBar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnSideBar.TabIndex = 2;
-            this.btnSideBar.TabStop = false;
-            this.btnSideBar.Click += new System.EventHandler(this.btnSideBar_Click);
-            // 
-            // pictureFechar
-            // 
-            this.pictureFechar.Image = global::DA_ProjetoFinal.Properties.Resources.x;
-            this.pictureFechar.Location = new System.Drawing.Point(763, 20);
-            this.pictureFechar.Name = "pictureFechar";
-            this.pictureFechar.Size = new System.Drawing.Size(25, 22);
-            this.pictureFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureFechar.TabIndex = 6;
-            this.pictureFechar.TabStop = false;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -327,14 +342,16 @@
             this.Controls.Add(this.panelLoadingArea);
             this.Controls.Add(this.panelSideBar);
             this.Controls.Add(this.panelTop);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
-            this.Text = "Main";
             this.Load += new System.EventHandler(this.Main_Load);
             this.panelTop.ResumeLayout(false);
-            this.panelSideBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureFechar)).EndInit();
+            this.panelSideBar.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -358,5 +375,6 @@
         private System.Windows.Forms.PictureBox pictureFechar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panelLoadingArea;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
