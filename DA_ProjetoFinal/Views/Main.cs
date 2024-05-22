@@ -23,10 +23,25 @@ namespace DA_ProjetoFinal.Views
             InitializeComponent();
             criarEventosBtns(pictureFechar,pictureMinimizar);
             criarEventosPanel(panelTop);
-            initialPosLoading = panelLoadingArea.Location;
+            this.appName = BaseAppName + "Página inicial";
+        }
 
+        private void loadForm(Form form)
+        {
+            foreach (Control ctrl in panelLoadingArea.Controls)
+            {
+                if (ctrl.Name == form.Name)
+                {
+                    return;
+                }
+            }
 
-
+            panelLoadingArea.Controls.Clear();
+            form.TopLevel = false;
+            panelLoadingArea.Controls.Add(form);
+            form.Dock = DockStyle.Fill;
+            form.Show();
+            this.Text = appName;
         }
 
         private void Main_Load(object sender, EventArgs e)
@@ -71,6 +86,7 @@ namespace DA_ProjetoFinal.Views
         {
             appName = BaseAppName + "Página inicial";
             FormHomePage form = new FormHomePage();
+            form.Name = "FormHomePage";
             loadForm(form);
         }
 
@@ -80,28 +96,12 @@ namespace DA_ProjetoFinal.Views
             timerSideBar.Start();
         }
 
-        private void loadForm(Form form)
-        {
-            foreach (Control ctrl in panelLoadingArea.Controls)
-            {
-                if (ctrl.Name == form.Name)
-                {
-                    return;
-                }
-            }
-
-            panelLoadingArea.Controls.Clear();
-            form.TopLevel = false;
-            panelLoadingArea.Controls.Add(form);
-            form.Dock = DockStyle.Fill;
-            form.Show();
-            this.Text = appName;
-        }
 
         private void btnReservas_Click(object sender, EventArgs e)
         {
             appName = BaseAppName + "Reservas";
             FormReservas form = new FormReservas();
+            form.Name = "FormReservas";
             loadForm(form);
         }
 
@@ -109,6 +109,7 @@ namespace DA_ProjetoFinal.Views
         {
             appName = BaseAppName + "Menus";
             Form form = new FormMenu();
+            form.Name = "FormMenu";
             loadForm(form);
         }
 
@@ -116,6 +117,7 @@ namespace DA_ProjetoFinal.Views
         {
             appName = BaseAppName + "Pratos";
             Form form = new FormPratos();
+            form.Name = "FormPratos";
             loadForm(form);
         }
 
@@ -123,6 +125,7 @@ namespace DA_ProjetoFinal.Views
         {
             appName = BaseAppName + "Extras";
             Form form = new FormExtras();
+            form.Name = "FormExtras";
             loadForm(form);
         }
 
@@ -130,6 +133,7 @@ namespace DA_ProjetoFinal.Views
         {
             appName = BaseAppName + "Multas";
             Form form = new FormMultas();
+            form.Name = "FormMultas";
             loadForm(form);
         }
 
@@ -137,6 +141,7 @@ namespace DA_ProjetoFinal.Views
         {
             appName = BaseAppName + "Funcionários";
             Form form = new FormFuncionarios();
+            form.Name = "FormFuncionarios";
             loadForm(form);
         }
 
@@ -144,6 +149,7 @@ namespace DA_ProjetoFinal.Views
         {
             appName = BaseAppName + "Clientes";
             Form form = new FormClientes();
+            form.Name = "FormClientes";
             loadForm(form);
         }
     }
