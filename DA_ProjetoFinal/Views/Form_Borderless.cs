@@ -11,6 +11,7 @@ namespace DA_ProjetoFinal
     public class Form_Borderless : Form
     {
         private bool mouseDown; // Variável que indica se o rato está a ser pressionado
+        private Panel panelMain;
         private Point lastLocation; // Variável que guarda a última localização do rato
 
         public Form_Borderless()
@@ -45,11 +46,20 @@ namespace DA_ProjetoFinal
 
         private void InitializeComponent()
         {
+            this.panelMain = new System.Windows.Forms.Panel();
             this.SuspendLayout();
+            // 
+            // panelMain
+            // 
+            this.panelMain.Location = new System.Drawing.Point(12, 24);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(585, 507);
+            this.panelMain.TabIndex = 1;
             // 
             // Form_Borderless
             // 
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(609, 555);
+            this.Controls.Add(this.panelMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_Borderless";
             this.Load += new System.EventHandler(this.Form_Borderless_Load);

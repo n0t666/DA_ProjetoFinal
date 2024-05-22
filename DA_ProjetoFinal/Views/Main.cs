@@ -13,19 +13,23 @@ namespace DA_ProjetoFinal.Views
 {
     public partial class Main : Form_Borderless
     {
-        bool sideBarExpanded = false;
+        private bool sideBarExpanded = false;
+        private Point initialPosLoading = new Point();
 
         public Main()
         {
             InitializeComponent();
             criarEventosBtns(pictureFechar,pictureMinimizar);
             criarEventosPanel(panelTop);
+            initialPosLoading = panelLoadingArea.Location;
+
+
 
         }
 
         private void Main_Load(object sender, EventArgs e)
         {
-            loadForm(new FormReservas());
+            loadForm(new FormPratos());
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -44,6 +48,8 @@ namespace DA_ProjetoFinal.Views
                 {
                     timerSideBar.Stop();
                     sideBarExpanded = false;
+                    UtilityController.Center( panelLoadingArea);
+                  
                 }
         
             }
@@ -54,6 +60,7 @@ namespace DA_ProjetoFinal.Views
                 {
                     timerSideBar.Stop();
                     sideBarExpanded = true;
+                    panelLoadingArea.Location = initialPosLoading;
                 }
             }
         }
@@ -94,6 +101,42 @@ namespace DA_ProjetoFinal.Views
         private void btnReservas_Click(object sender, EventArgs e)
         {
             FormReservas form = new FormReservas();
+            loadForm(form);
+        }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            Form form = new FormMenu();
+            loadForm(form);
+        }
+
+        private void btnPlates_Click(object sender, EventArgs e)
+        {
+            Form form = new FormPratos();
+            loadForm(form);
+        }
+
+        private void btnExtras_Click(object sender, EventArgs e)
+        {
+            Form form = new FormExtras();
+            loadForm(form);
+        }
+
+        private void btnTickets_Click(object sender, EventArgs e)
+        {
+            Form form = new FormMultas();
+            loadForm(form);
+        }
+
+        private void btnFunct_Click(object sender, EventArgs e)
+        {
+            Form form = new FormFuncionarios();
+            loadForm(form);
+        }
+
+        private void btnClients_Click(object sender, EventArgs e)
+        {
+            Form form = new FormClientes();
             loadForm(form);
         }
     }

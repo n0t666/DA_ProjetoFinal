@@ -22,5 +22,10 @@ namespace DA_ProjetoFinal.Views
             poisonDateTime1.Value = DateTime.Now;
             poisonComboBox1.Text = "Semana Nº" + UtilityController.GetWeekNumber(poisonDateTime1.Value.Date).ToString();
         }
+
+        private void poisonButton1_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

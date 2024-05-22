@@ -30,19 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelTop = new System.Windows.Forms.Panel();
-            this.panelLoadingArea = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panelLoadingArea = new System.Windows.Forms.Panel();
             this.timerSideBar = new System.Windows.Forms.Timer(this.components);
             this.panelSideBar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnHomePage = new DA_ProjetoFinal.Components.SideBarCustomButton();
-            this.sideBarCustomButton2 = new DA_ProjetoFinal.Components.SideBarCustomButton();
-            this.sideBarCustomButton3 = new DA_ProjetoFinal.Components.SideBarCustomButton();
-            this.sideBarCustomButton4 = new DA_ProjetoFinal.Components.SideBarCustomButton();
+            this.btnMenu = new DA_ProjetoFinal.Components.SideBarCustomButton();
+            this.btnPlates = new DA_ProjetoFinal.Components.SideBarCustomButton();
+            this.btnExtras = new DA_ProjetoFinal.Components.SideBarCustomButton();
             this.btnReservas = new DA_ProjetoFinal.Components.SideBarCustomButton();
-            this.sideBarCustomButton6 = new DA_ProjetoFinal.Components.SideBarCustomButton();
-            this.sideBarCustomButton7 = new DA_ProjetoFinal.Components.SideBarCustomButton();
-            this.sideBarCustomButton8 = new DA_ProjetoFinal.Components.SideBarCustomButton();
+            this.btnTickets = new DA_ProjetoFinal.Components.SideBarCustomButton();
+            this.btnFunct = new DA_ProjetoFinal.Components.SideBarCustomButton();
+            this.btnClients = new DA_ProjetoFinal.Components.SideBarCustomButton();
             this.pictureMinimizar = new System.Windows.Forms.PictureBox();
             this.btnSideBar = new System.Windows.Forms.PictureBox();
             this.pictureFechar = new System.Windows.Forms.PictureBox();
@@ -66,20 +66,20 @@
             this.panelTop.TabIndex = 0;
             this.panelTop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTop_Paint);
             // 
-            // panelLoadingArea
-            // 
-            this.panelLoadingArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panelLoadingArea.Location = new System.Drawing.Point(194, 63);
-            this.panelLoadingArea.Name = "panelLoadingArea";
-            this.panelLoadingArea.Size = new System.Drawing.Size(609, 555);
-            this.panelLoadingArea.TabIndex = 2;
-            // 
             // panel2
             // 
             this.panel2.Location = new System.Drawing.Point(191, 63);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(597, 39);
             this.panel2.TabIndex = 11;
+            // 
+            // panelLoadingArea
+            // 
+            this.panelLoadingArea.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panelLoadingArea.Location = new System.Drawing.Point(194, 63);
+            this.panelLoadingArea.Name = "panelLoadingArea";
+            this.panelLoadingArea.Size = new System.Drawing.Size(609, 555);
+            this.panelLoadingArea.TabIndex = 2;
             // 
             // timerSideBar
             // 
@@ -91,13 +91,13 @@
             this.panelSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.panelSideBar.Controls.Add(this.panel1);
             this.panelSideBar.Controls.Add(this.btnHomePage);
-            this.panelSideBar.Controls.Add(this.sideBarCustomButton2);
-            this.panelSideBar.Controls.Add(this.sideBarCustomButton3);
-            this.panelSideBar.Controls.Add(this.sideBarCustomButton4);
+            this.panelSideBar.Controls.Add(this.btnMenu);
+            this.panelSideBar.Controls.Add(this.btnPlates);
+            this.panelSideBar.Controls.Add(this.btnExtras);
             this.panelSideBar.Controls.Add(this.btnReservas);
-            this.panelSideBar.Controls.Add(this.sideBarCustomButton6);
-            this.panelSideBar.Controls.Add(this.sideBarCustomButton7);
-            this.panelSideBar.Controls.Add(this.sideBarCustomButton8);
+            this.panelSideBar.Controls.Add(this.btnTickets);
+            this.panelSideBar.Controls.Add(this.btnFunct);
+            this.panelSideBar.Controls.Add(this.btnClients);
             this.panelSideBar.Location = new System.Drawing.Point(0, 63);
             this.panelSideBar.MaximumSize = new System.Drawing.Size(202, 555);
             this.panelSideBar.MinimumSize = new System.Drawing.Size(44, 555);
@@ -134,68 +134,71 @@
             this.btnHomePage.UseVisualStyleBackColor = true;
             this.btnHomePage.Click += new System.EventHandler(this.sideBarCustomButton1_Click);
             // 
-            // sideBarCustomButton2
+            // btnMenu
             // 
-            this.sideBarCustomButton2.FlatAppearance.BorderSize = 0;
-            this.sideBarCustomButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sideBarCustomButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.sideBarCustomButton2.ForeColor = System.Drawing.Color.White;
-            this.sideBarCustomButton2.HoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(221)))), ((int)(((byte)(51)))));
-            this.sideBarCustomButton2.HoverImage = global::DA_ProjetoFinal.Properties.Resources.home_active_small;
-            this.sideBarCustomButton2.Image = global::DA_ProjetoFinal.Properties.Resources.home_normal_small;
-            this.sideBarCustomButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sideBarCustomButton2.Location = new System.Drawing.Point(3, 101);
-            this.sideBarCustomButton2.Name = "sideBarCustomButton2";
-            this.sideBarCustomButton2.NormalForeColor = System.Drawing.Color.White;
-            this.sideBarCustomButton2.NormalImage = global::DA_ProjetoFinal.Properties.Resources.home_normal_small;
-            this.sideBarCustomButton2.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.sideBarCustomButton2.Size = new System.Drawing.Size(197, 47);
-            this.sideBarCustomButton2.TabIndex = 12;
-            this.sideBarCustomButton2.Text = "  Menu";
-            this.sideBarCustomButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.sideBarCustomButton2.UseVisualStyleBackColor = true;
+            this.btnMenu.FlatAppearance.BorderSize = 0;
+            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.btnMenu.ForeColor = System.Drawing.Color.White;
+            this.btnMenu.HoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(221)))), ((int)(((byte)(51)))));
+            this.btnMenu.HoverImage = global::DA_ProjetoFinal.Properties.Resources.wine_active_small;
+            this.btnMenu.Image = global::DA_ProjetoFinal.Properties.Resources.wine_normal_small;
+            this.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenu.Location = new System.Drawing.Point(3, 101);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.NormalForeColor = System.Drawing.Color.White;
+            this.btnMenu.NormalImage = global::DA_ProjetoFinal.Properties.Resources.wine_normal_small;
+            this.btnMenu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnMenu.Size = new System.Drawing.Size(197, 47);
+            this.btnMenu.TabIndex = 12;
+            this.btnMenu.Text = "  Menu";
+            this.btnMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMenu.UseVisualStyleBackColor = true;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
-            // sideBarCustomButton3
+            // btnPlates
             // 
-            this.sideBarCustomButton3.FlatAppearance.BorderSize = 0;
-            this.sideBarCustomButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sideBarCustomButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.sideBarCustomButton3.ForeColor = System.Drawing.Color.White;
-            this.sideBarCustomButton3.HoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(221)))), ((int)(((byte)(51)))));
-            this.sideBarCustomButton3.HoverImage = global::DA_ProjetoFinal.Properties.Resources.home_active_small;
-            this.sideBarCustomButton3.Image = global::DA_ProjetoFinal.Properties.Resources.home_normal_small;
-            this.sideBarCustomButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sideBarCustomButton3.Location = new System.Drawing.Point(3, 154);
-            this.sideBarCustomButton3.Name = "sideBarCustomButton3";
-            this.sideBarCustomButton3.NormalForeColor = System.Drawing.Color.White;
-            this.sideBarCustomButton3.NormalImage = global::DA_ProjetoFinal.Properties.Resources.home_normal_small;
-            this.sideBarCustomButton3.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.sideBarCustomButton3.Size = new System.Drawing.Size(197, 47);
-            this.sideBarCustomButton3.TabIndex = 13;
-            this.sideBarCustomButton3.Text = "  Pratos";
-            this.sideBarCustomButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.sideBarCustomButton3.UseVisualStyleBackColor = true;
+            this.btnPlates.FlatAppearance.BorderSize = 0;
+            this.btnPlates.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlates.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.btnPlates.ForeColor = System.Drawing.Color.White;
+            this.btnPlates.HoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(221)))), ((int)(((byte)(51)))));
+            this.btnPlates.HoverImage = global::DA_ProjetoFinal.Properties.Resources.dinner_active_small;
+            this.btnPlates.Image = global::DA_ProjetoFinal.Properties.Resources.dinner_normal_small;
+            this.btnPlates.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPlates.Location = new System.Drawing.Point(3, 154);
+            this.btnPlates.Name = "btnPlates";
+            this.btnPlates.NormalForeColor = System.Drawing.Color.White;
+            this.btnPlates.NormalImage = global::DA_ProjetoFinal.Properties.Resources.dinner_normal_small;
+            this.btnPlates.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnPlates.Size = new System.Drawing.Size(197, 47);
+            this.btnPlates.TabIndex = 13;
+            this.btnPlates.Text = "  Pratos";
+            this.btnPlates.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPlates.UseVisualStyleBackColor = true;
+            this.btnPlates.Click += new System.EventHandler(this.btnPlates_Click);
             // 
-            // sideBarCustomButton4
+            // btnExtras
             // 
-            this.sideBarCustomButton4.FlatAppearance.BorderSize = 0;
-            this.sideBarCustomButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sideBarCustomButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.sideBarCustomButton4.ForeColor = System.Drawing.Color.White;
-            this.sideBarCustomButton4.HoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(221)))), ((int)(((byte)(51)))));
-            this.sideBarCustomButton4.HoverImage = global::DA_ProjetoFinal.Properties.Resources.home_active_small;
-            this.sideBarCustomButton4.Image = global::DA_ProjetoFinal.Properties.Resources.home_normal_small;
-            this.sideBarCustomButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sideBarCustomButton4.Location = new System.Drawing.Point(3, 207);
-            this.sideBarCustomButton4.Name = "sideBarCustomButton4";
-            this.sideBarCustomButton4.NormalForeColor = System.Drawing.Color.White;
-            this.sideBarCustomButton4.NormalImage = global::DA_ProjetoFinal.Properties.Resources.home_normal_small;
-            this.sideBarCustomButton4.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.sideBarCustomButton4.Size = new System.Drawing.Size(197, 47);
-            this.sideBarCustomButton4.TabIndex = 14;
-            this.sideBarCustomButton4.Text = "  Extras";
-            this.sideBarCustomButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.sideBarCustomButton4.UseVisualStyleBackColor = true;
+            this.btnExtras.FlatAppearance.BorderSize = 0;
+            this.btnExtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.btnExtras.ForeColor = System.Drawing.Color.White;
+            this.btnExtras.HoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(221)))), ((int)(((byte)(51)))));
+            this.btnExtras.HoverImage = global::DA_ProjetoFinal.Properties.Resources.expansion_active_small;
+            this.btnExtras.Image = global::DA_ProjetoFinal.Properties.Resources.expansion_normal_small;
+            this.btnExtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExtras.Location = new System.Drawing.Point(3, 207);
+            this.btnExtras.Name = "btnExtras";
+            this.btnExtras.NormalForeColor = System.Drawing.Color.White;
+            this.btnExtras.NormalImage = global::DA_ProjetoFinal.Properties.Resources.expansion_normal_small;
+            this.btnExtras.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnExtras.Size = new System.Drawing.Size(197, 47);
+            this.btnExtras.TabIndex = 14;
+            this.btnExtras.Text = "  Extras";
+            this.btnExtras.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnExtras.UseVisualStyleBackColor = true;
+            this.btnExtras.Click += new System.EventHandler(this.btnExtras_Click);
             // 
             // btnReservas
             // 
@@ -204,13 +207,13 @@
             this.btnReservas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.btnReservas.ForeColor = System.Drawing.Color.White;
             this.btnReservas.HoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(221)))), ((int)(((byte)(51)))));
-            this.btnReservas.HoverImage = global::DA_ProjetoFinal.Properties.Resources.home_active_small;
-            this.btnReservas.Image = global::DA_ProjetoFinal.Properties.Resources.home_normal_small;
+            this.btnReservas.HoverImage = global::DA_ProjetoFinal.Properties.Resources.reception_active_small;
+            this.btnReservas.Image = global::DA_ProjetoFinal.Properties.Resources.reception_normal_small;
             this.btnReservas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReservas.Location = new System.Drawing.Point(3, 260);
             this.btnReservas.Name = "btnReservas";
             this.btnReservas.NormalForeColor = System.Drawing.Color.White;
-            this.btnReservas.NormalImage = global::DA_ProjetoFinal.Properties.Resources.home_normal_small;
+            this.btnReservas.NormalImage = global::DA_ProjetoFinal.Properties.Resources.reception_normal_small;
             this.btnReservas.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnReservas.Size = new System.Drawing.Size(197, 47);
             this.btnReservas.TabIndex = 15;
@@ -219,68 +222,71 @@
             this.btnReservas.UseVisualStyleBackColor = true;
             this.btnReservas.Click += new System.EventHandler(this.btnReservas_Click);
             // 
-            // sideBarCustomButton6
+            // btnTickets
             // 
-            this.sideBarCustomButton6.FlatAppearance.BorderSize = 0;
-            this.sideBarCustomButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sideBarCustomButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.sideBarCustomButton6.ForeColor = System.Drawing.Color.White;
-            this.sideBarCustomButton6.HoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(221)))), ((int)(((byte)(51)))));
-            this.sideBarCustomButton6.HoverImage = global::DA_ProjetoFinal.Properties.Resources.home_active_small;
-            this.sideBarCustomButton6.Image = global::DA_ProjetoFinal.Properties.Resources.home_normal_small;
-            this.sideBarCustomButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sideBarCustomButton6.Location = new System.Drawing.Point(3, 313);
-            this.sideBarCustomButton6.Name = "sideBarCustomButton6";
-            this.sideBarCustomButton6.NormalForeColor = System.Drawing.Color.White;
-            this.sideBarCustomButton6.NormalImage = global::DA_ProjetoFinal.Properties.Resources.home_normal_small;
-            this.sideBarCustomButton6.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.sideBarCustomButton6.Size = new System.Drawing.Size(197, 47);
-            this.sideBarCustomButton6.TabIndex = 16;
-            this.sideBarCustomButton6.Text = "  Multas";
-            this.sideBarCustomButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.sideBarCustomButton6.UseVisualStyleBackColor = true;
+            this.btnTickets.FlatAppearance.BorderSize = 0;
+            this.btnTickets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTickets.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.btnTickets.ForeColor = System.Drawing.Color.White;
+            this.btnTickets.HoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(221)))), ((int)(((byte)(51)))));
+            this.btnTickets.HoverImage = global::DA_ProjetoFinal.Properties.Resources.penalties_active_small;
+            this.btnTickets.Image = global::DA_ProjetoFinal.Properties.Resources.penalties_normal_small_png;
+            this.btnTickets.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTickets.Location = new System.Drawing.Point(3, 313);
+            this.btnTickets.Name = "btnTickets";
+            this.btnTickets.NormalForeColor = System.Drawing.Color.White;
+            this.btnTickets.NormalImage = global::DA_ProjetoFinal.Properties.Resources.penalties_normal_small_png;
+            this.btnTickets.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnTickets.Size = new System.Drawing.Size(197, 47);
+            this.btnTickets.TabIndex = 16;
+            this.btnTickets.Text = "  Multas";
+            this.btnTickets.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTickets.UseVisualStyleBackColor = true;
+            this.btnTickets.Click += new System.EventHandler(this.btnTickets_Click);
             // 
-            // sideBarCustomButton7
+            // btnFunct
             // 
-            this.sideBarCustomButton7.FlatAppearance.BorderSize = 0;
-            this.sideBarCustomButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sideBarCustomButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.sideBarCustomButton7.ForeColor = System.Drawing.Color.White;
-            this.sideBarCustomButton7.HoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(221)))), ((int)(((byte)(51)))));
-            this.sideBarCustomButton7.HoverImage = global::DA_ProjetoFinal.Properties.Resources.home_active_small;
-            this.sideBarCustomButton7.Image = global::DA_ProjetoFinal.Properties.Resources.home_normal_small;
-            this.sideBarCustomButton7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sideBarCustomButton7.Location = new System.Drawing.Point(3, 366);
-            this.sideBarCustomButton7.Name = "sideBarCustomButton7";
-            this.sideBarCustomButton7.NormalForeColor = System.Drawing.Color.White;
-            this.sideBarCustomButton7.NormalImage = global::DA_ProjetoFinal.Properties.Resources.home_normal_small;
-            this.sideBarCustomButton7.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.sideBarCustomButton7.Size = new System.Drawing.Size(197, 47);
-            this.sideBarCustomButton7.TabIndex = 17;
-            this.sideBarCustomButton7.Text = "  Funcionários";
-            this.sideBarCustomButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.sideBarCustomButton7.UseVisualStyleBackColor = true;
+            this.btnFunct.FlatAppearance.BorderSize = 0;
+            this.btnFunct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFunct.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.btnFunct.ForeColor = System.Drawing.Color.White;
+            this.btnFunct.HoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(221)))), ((int)(((byte)(51)))));
+            this.btnFunct.HoverImage = global::DA_ProjetoFinal.Properties.Resources.employee_active_small;
+            this.btnFunct.Image = global::DA_ProjetoFinal.Properties.Resources.employee_normal_small;
+            this.btnFunct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFunct.Location = new System.Drawing.Point(3, 366);
+            this.btnFunct.Name = "btnFunct";
+            this.btnFunct.NormalForeColor = System.Drawing.Color.White;
+            this.btnFunct.NormalImage = global::DA_ProjetoFinal.Properties.Resources.employee_normal_small;
+            this.btnFunct.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnFunct.Size = new System.Drawing.Size(197, 47);
+            this.btnFunct.TabIndex = 17;
+            this.btnFunct.Text = "  Funcionários";
+            this.btnFunct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFunct.UseVisualStyleBackColor = true;
+            this.btnFunct.Click += new System.EventHandler(this.btnFunct_Click);
             // 
-            // sideBarCustomButton8
+            // btnClients
             // 
-            this.sideBarCustomButton8.FlatAppearance.BorderSize = 0;
-            this.sideBarCustomButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sideBarCustomButton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.sideBarCustomButton8.ForeColor = System.Drawing.Color.White;
-            this.sideBarCustomButton8.HoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(221)))), ((int)(((byte)(51)))));
-            this.sideBarCustomButton8.HoverImage = global::DA_ProjetoFinal.Properties.Resources.home_active_small;
-            this.sideBarCustomButton8.Image = global::DA_ProjetoFinal.Properties.Resources.home_normal_small;
-            this.sideBarCustomButton8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sideBarCustomButton8.Location = new System.Drawing.Point(3, 419);
-            this.sideBarCustomButton8.Name = "sideBarCustomButton8";
-            this.sideBarCustomButton8.NormalForeColor = System.Drawing.Color.White;
-            this.sideBarCustomButton8.NormalImage = global::DA_ProjetoFinal.Properties.Resources.home_normal_small;
-            this.sideBarCustomButton8.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.sideBarCustomButton8.Size = new System.Drawing.Size(197, 47);
-            this.sideBarCustomButton8.TabIndex = 18;
-            this.sideBarCustomButton8.Text = "  Clientes";
-            this.sideBarCustomButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.sideBarCustomButton8.UseVisualStyleBackColor = true;
+            this.btnClients.FlatAppearance.BorderSize = 0;
+            this.btnClients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClients.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.btnClients.ForeColor = System.Drawing.Color.White;
+            this.btnClients.HoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(221)))), ((int)(((byte)(51)))));
+            this.btnClients.HoverImage = global::DA_ProjetoFinal.Properties.Resources.customer_active_small;
+            this.btnClients.Image = global::DA_ProjetoFinal.Properties.Resources.customer_normal_small;
+            this.btnClients.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClients.Location = new System.Drawing.Point(3, 419);
+            this.btnClients.Name = "btnClients";
+            this.btnClients.NormalForeColor = System.Drawing.Color.White;
+            this.btnClients.NormalImage = global::DA_ProjetoFinal.Properties.Resources.customer_normal_small;
+            this.btnClients.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnClients.Size = new System.Drawing.Size(197, 47);
+            this.btnClients.TabIndex = 18;
+            this.btnClients.Text = "  Clientes";
+            this.btnClients.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClients.UseVisualStyleBackColor = true;
+            this.btnClients.Click += new System.EventHandler(this.btnClients_Click);
             // 
             // pictureMinimizar
             // 
@@ -341,13 +347,13 @@
         private System.Windows.Forms.FlowLayoutPanel panelSideBar;
         private System.Windows.Forms.Panel panel1;
         private Components.SideBarCustomButton btnHomePage;
-        private Components.SideBarCustomButton sideBarCustomButton2;
-        private Components.SideBarCustomButton sideBarCustomButton3;
-        private Components.SideBarCustomButton sideBarCustomButton4;
+        private Components.SideBarCustomButton btnMenu;
+        private Components.SideBarCustomButton btnPlates;
+        private Components.SideBarCustomButton btnExtras;
         private Components.SideBarCustomButton btnReservas;
-        private Components.SideBarCustomButton sideBarCustomButton6;
-        private Components.SideBarCustomButton sideBarCustomButton7;
-        private Components.SideBarCustomButton sideBarCustomButton8;
+        private Components.SideBarCustomButton btnTickets;
+        private Components.SideBarCustomButton btnFunct;
+        private Components.SideBarCustomButton btnClients;
         private System.Windows.Forms.PictureBox pictureMinimizar;
         private System.Windows.Forms.PictureBox pictureFechar;
         private System.Windows.Forms.Panel panel2;

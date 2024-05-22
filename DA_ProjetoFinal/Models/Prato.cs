@@ -28,6 +28,14 @@ namespace DA_ProjetoFinal
 
         public virtual ICollection<Menu> Menu { get; set; }
 
+        public override string ToString()
+        {
+            return Descricao + " - " + Tipo;
+        }
 
     }
+
+    
+
+
 }
