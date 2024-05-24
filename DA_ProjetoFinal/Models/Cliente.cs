@@ -14,9 +14,5 @@ namespace DA_ProjetoFinal
 
         public ICollection<Fatura> Fatura { get; set; }
 
-        public override string ToString()
-        {
-            return Nome;
-        }
     }
 }

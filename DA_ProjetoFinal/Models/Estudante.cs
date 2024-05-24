@@ -10,5 +10,10 @@ namespace DA_ProjetoFinal
     {
 
         public int NumEstudante { get; set; }
+
+        public override string ToString()
+        {
+            return "Estudante: " + Nome + " (" + NumEstudante + ")";
+        }
     }
 }

@@ -9,5 +9,10 @@ namespace DA_ProjetoFinal
     internal class Funcionario: Utilizador
     {
         public string Username { get; set; }
+
+        public override string ToString()
+        {
+            return "Funcionario: " + Nome;
+        }
     }
 }

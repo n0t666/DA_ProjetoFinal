@@ -53,7 +53,7 @@ namespace DA_ProjetoFinal.Controllers
             return Enum.GetValues(typeof(TipoPrato)).Cast<TipoPrato>().ToList();
         }
 
-        public static int obterNumeroPratos() // Função que permite obter o número de pratos
+        public static int ObterNumeroPratos() // Função que permite obter o número de pratos
         {
             using (var context = new CantinaContext())
             {

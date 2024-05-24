@@ -28,127 +28,236 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.hopeRichTextBox1 = new ReaLTaiizor.Controls.HopeRichTextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dungeonLabel4 = new ReaLTaiizor.Controls.DungeonLabel();
+            this.labelUtilizadorAtual = new ReaLTaiizor.Controls.DungeonLabel();
+            this.btnSelecionarUtilizador = new ReaLTaiizor.Controls.AloneButton();
+            this.btnPaginateVoltar = new ReaLTaiizor.Controls.AloneButton();
+            this.btnPaginateAvancar = new ReaLTaiizor.Controls.AloneButton();
+            this.comboTipoUtilizador = new ReaLTaiizor.Controls.PoisonComboBox();
+            this.txtMenuDia = new ReaLTaiizor.Controls.HopeRichTextBox();
             this.poisonButton1 = new ReaLTaiizor.Controls.PoisonButton();
-            this.poisonComboBox2 = new ReaLTaiizor.Controls.PoisonComboBox();
-            this.poisonComboBox1 = new ReaLTaiizor.Controls.PoisonComboBox();
-            this.poisonDateTime1 = new ReaLTaiizor.Controls.PoisonDateTime();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.comboUtilizador = new ReaLTaiizor.Controls.PoisonComboBox();
+            this.comboSemana = new ReaLTaiizor.Controls.PoisonComboBox();
+            this.datePickAtual = new ReaLTaiizor.Controls.PoisonDateTime();
+            this.picUtilizadorPfp = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picUtilizadorPfp)).BeginInit();
             this.SuspendLayout();
             // 
-            // hopeRichTextBox1
+            // panel1
             // 
-            this.hopeRichTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
-            this.hopeRichTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.hopeRichTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
-            this.hopeRichTextBox1.Hint = "";
-            this.hopeRichTextBox1.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            this.hopeRichTextBox1.Location = new System.Drawing.Point(97, 317);
-            this.hopeRichTextBox1.MaxLength = 32767;
-            this.hopeRichTextBox1.Multiline = true;
-            this.hopeRichTextBox1.Name = "hopeRichTextBox1";
-            this.hopeRichTextBox1.PasswordChar = '\0';
-            this.hopeRichTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.hopeRichTextBox1.SelectedText = "";
-            this.hopeRichTextBox1.SelectionLength = 0;
-            this.hopeRichTextBox1.SelectionStart = 0;
-            this.hopeRichTextBox1.Size = new System.Drawing.Size(422, 162);
-            this.hopeRichTextBox1.TabIndex = 44;
-            this.hopeRichTextBox1.TabStop = false;
-            this.hopeRichTextBox1.Text = "hopeRichTextBox1";
-            this.hopeRichTextBox1.UseSystemPasswordChar = false;
+            this.panel1.Controls.Add(this.dungeonLabel4);
+            this.panel1.Controls.Add(this.labelUtilizadorAtual);
+            this.panel1.Controls.Add(this.btnSelecionarUtilizador);
+            this.panel1.Controls.Add(this.btnPaginateVoltar);
+            this.panel1.Controls.Add(this.btnPaginateAvancar);
+            this.panel1.Controls.Add(this.comboTipoUtilizador);
+            this.panel1.Controls.Add(this.txtMenuDia);
+            this.panel1.Controls.Add(this.poisonButton1);
+            this.panel1.Controls.Add(this.comboUtilizador);
+            this.panel1.Controls.Add(this.comboSemana);
+            this.panel1.Controls.Add(this.datePickAtual);
+            this.panel1.Controls.Add(this.picUtilizadorPfp);
+            this.panel1.Location = new System.Drawing.Point(39, 51);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(531, 502);
+            this.panel1.TabIndex = 0;
+            // 
+            // dungeonLabel4
+            // 
+            this.dungeonLabel4.AutoSize = true;
+            this.dungeonLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.dungeonLabel4.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.dungeonLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.dungeonLabel4.Location = new System.Drawing.Point(-3, 200);
+            this.dungeonLabel4.Name = "dungeonLabel4";
+            this.dungeonLabel4.Size = new System.Drawing.Size(124, 20);
+            this.dungeonLabel4.TabIndex = 66;
+            this.dungeonLabel4.Text = "Alterar utilizador:";
+            // 
+            // labelUtilizadorAtual
+            // 
+            this.labelUtilizadorAtual.AutoSize = true;
+            this.labelUtilizadorAtual.BackColor = System.Drawing.Color.Transparent;
+            this.labelUtilizadorAtual.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.labelUtilizadorAtual.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.labelUtilizadorAtual.Location = new System.Drawing.Point(-4, 160);
+            this.labelUtilizadorAtual.Name = "labelUtilizadorAtual";
+            this.labelUtilizadorAtual.Size = new System.Drawing.Size(162, 30);
+            this.labelUtilizadorAtual.TabIndex = 63;
+            this.labelUtilizadorAtual.Text = "Utilizador atual:";
+            // 
+            // btnSelecionarUtilizador
+            // 
+            this.btnSelecionarUtilizador.BackColor = System.Drawing.Color.Transparent;
+            this.btnSelecionarUtilizador.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSelecionarUtilizador.EnabledCalc = true;
+            this.btnSelecionarUtilizador.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSelecionarUtilizador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(133)))), ((int)(((byte)(142)))));
+            this.btnSelecionarUtilizador.Location = new System.Drawing.Point(331, 258);
+            this.btnSelecionarUtilizador.Name = "btnSelecionarUtilizador";
+            this.btnSelecionarUtilizador.Size = new System.Drawing.Size(135, 22);
+            this.btnSelecionarUtilizador.TabIndex = 62;
+            this.btnSelecionarUtilizador.Text = "SELECIONAR";
+            this.btnSelecionarUtilizador.Click += new ReaLTaiizor.Controls.AloneButton.ClickEventHandler(this.btnSelecionarUtilizador_Click);
+            // 
+            // btnPaginateVoltar
+            // 
+            this.btnPaginateVoltar.BackColor = System.Drawing.Color.Transparent;
+            this.btnPaginateVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPaginateVoltar.EnabledCalc = true;
+            this.btnPaginateVoltar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnPaginateVoltar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(133)))), ((int)(((byte)(142)))));
+            this.btnPaginateVoltar.Location = new System.Drawing.Point(262, 258);
+            this.btnPaginateVoltar.Name = "btnPaginateVoltar";
+            this.btnPaginateVoltar.Size = new System.Drawing.Size(43, 22);
+            this.btnPaginateVoltar.TabIndex = 60;
+            this.btnPaginateVoltar.Text = "<";
+            this.btnPaginateVoltar.Click += new ReaLTaiizor.Controls.AloneButton.ClickEventHandler(this.btnPaginateVoltar_Click);
+            // 
+            // btnPaginateAvancar
+            // 
+            this.btnPaginateAvancar.BackColor = System.Drawing.Color.Transparent;
+            this.btnPaginateAvancar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPaginateAvancar.EnabledCalc = true;
+            this.btnPaginateAvancar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPaginateAvancar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(133)))), ((int)(((byte)(142)))));
+            this.btnPaginateAvancar.Location = new System.Drawing.Point(478, 258);
+            this.btnPaginateAvancar.Name = "btnPaginateAvancar";
+            this.btnPaginateAvancar.Size = new System.Drawing.Size(43, 22);
+            this.btnPaginateAvancar.TabIndex = 61;
+            this.btnPaginateAvancar.Text = ">";
+            this.btnPaginateAvancar.Click += new ReaLTaiizor.Controls.AloneButton.ClickEventHandler(this.btnPaginateAvancar_Click);
+            // 
+            // comboTipoUtilizador
+            // 
+            this.comboTipoUtilizador.FormattingEnabled = true;
+            this.comboTipoUtilizador.ItemHeight = 23;
+            this.comboTipoUtilizador.Items.AddRange(new object[] {
+            "Funcionário",
+            "Cliente"});
+            this.comboTipoUtilizador.Location = new System.Drawing.Point(0, 223);
+            this.comboTipoUtilizador.Name = "comboTipoUtilizador";
+            this.comboTipoUtilizador.PromptText = "Introduza o tipo de utilizador..";
+            this.comboTipoUtilizador.Size = new System.Drawing.Size(224, 29);
+            this.comboTipoUtilizador.TabIndex = 59;
+            this.comboTipoUtilizador.UseSelectable = true;
+            this.comboTipoUtilizador.SelectionChangeCommitted += new System.EventHandler(this.comboTipoUtilizador_SelectionChangeCommitted);
+            // 
+            // txtMenuDia
+            // 
+            this.txtMenuDia.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
+            this.txtMenuDia.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtMenuDia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
+            this.txtMenuDia.Hint = "";
+            this.txtMenuDia.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
+            this.txtMenuDia.Location = new System.Drawing.Point(3, 333);
+            this.txtMenuDia.MaxLength = 32767;
+            this.txtMenuDia.Multiline = true;
+            this.txtMenuDia.Name = "txtMenuDia";
+            this.txtMenuDia.PasswordChar = '\0';
+            this.txtMenuDia.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtMenuDia.SelectedText = "";
+            this.txtMenuDia.SelectionLength = 0;
+            this.txtMenuDia.SelectionStart = 0;
+            this.txtMenuDia.Size = new System.Drawing.Size(520, 132);
+            this.txtMenuDia.TabIndex = 58;
+            this.txtMenuDia.TabStop = false;
+            this.txtMenuDia.Text = "hopeRichTextBox1";
+            this.txtMenuDia.UseSystemPasswordChar = false;
             // 
             // poisonButton1
             // 
-            this.poisonButton1.Location = new System.Drawing.Point(94, 485);
+            this.poisonButton1.Location = new System.Drawing.Point(54, 471);
             this.poisonButton1.Name = "poisonButton1";
             this.poisonButton1.Size = new System.Drawing.Size(425, 23);
-            this.poisonButton1.TabIndex = 43;
+            this.poisonButton1.TabIndex = 57;
             this.poisonButton1.Text = "poisonButton1";
             this.poisonButton1.UseSelectable = true;
-            this.poisonButton1.Click += new System.EventHandler(this.poisonButton1_Click);
             // 
-            // poisonComboBox2
+            // comboUtilizador
             // 
-            this.poisonComboBox2.FormattingEnabled = true;
-            this.poisonComboBox2.ItemHeight = 23;
-            this.poisonComboBox2.Location = new System.Drawing.Point(303, 219);
-            this.poisonComboBox2.Name = "poisonComboBox2";
-            this.poisonComboBox2.Size = new System.Drawing.Size(216, 29);
-            this.poisonComboBox2.TabIndex = 42;
-            this.poisonComboBox2.UseSelectable = true;
+            this.comboUtilizador.FormattingEnabled = true;
+            this.comboUtilizador.ItemHeight = 23;
+            this.comboUtilizador.Location = new System.Drawing.Point(262, 223);
+            this.comboUtilizador.Name = "comboUtilizador";
+            this.comboUtilizador.PromptText = "Selecione o utilizador...";
+            this.comboUtilizador.Size = new System.Drawing.Size(259, 29);
+            this.comboUtilizador.TabIndex = 56;
+            this.comboUtilizador.UseSelectable = true;
+            this.comboUtilizador.SelectedIndexChanged += new System.EventHandler(this.comboUtilizador_SelectedIndexChanged);
             // 
-            // poisonComboBox1
+            // comboSemana
             // 
-            this.poisonComboBox1.FormattingEnabled = true;
-            this.poisonComboBox1.ItemHeight = 23;
-            this.poisonComboBox1.Location = new System.Drawing.Point(303, 282);
-            this.poisonComboBox1.Name = "poisonComboBox1";
-            this.poisonComboBox1.Size = new System.Drawing.Size(216, 29);
-            this.poisonComboBox1.TabIndex = 41;
-            this.poisonComboBox1.UseSelectable = true;
+            this.comboSemana.FormattingEnabled = true;
+            this.comboSemana.ItemHeight = 23;
+            this.comboSemana.Location = new System.Drawing.Point(286, 293);
+            this.comboSemana.Name = "comboSemana";
+            this.comboSemana.Size = new System.Drawing.Size(235, 29);
+            this.comboSemana.TabIndex = 55;
+            this.comboSemana.UseSelectable = true;
             // 
-            // poisonDateTime1
+            // datePickAtual
             // 
-            this.poisonDateTime1.Location = new System.Drawing.Point(97, 282);
-            this.poisonDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
-            this.poisonDateTime1.Name = "poisonDateTime1";
-            this.poisonDateTime1.Size = new System.Drawing.Size(200, 29);
-            this.poisonDateTime1.Style = ReaLTaiizor.Enum.Poison.ColorStyle.Black;
-            this.poisonDateTime1.TabIndex = 40;
+            this.datePickAtual.Location = new System.Drawing.Point(0, 293);
+            this.datePickAtual.MinimumSize = new System.Drawing.Size(0, 29);
+            this.datePickAtual.Name = "datePickAtual";
+            this.datePickAtual.Size = new System.Drawing.Size(194, 29);
+            this.datePickAtual.Style = ReaLTaiizor.Enum.Poison.ColorStyle.Black;
+            this.datePickAtual.TabIndex = 54;
             // 
-            // label1
+            // picUtilizadorPfp
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(89, 219);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 25);
-            this.label1.TabIndex = 39;
-            this.label1.Text = "Utilizador atual:";
+            this.picUtilizadorPfp.Image = global::DA_ProjetoFinal.Properties.Resources.default_user;
+            this.picUtilizadorPfp.Location = new System.Drawing.Point(154, 0);
+            this.picUtilizadorPfp.Name = "picUtilizadorPfp";
+            this.picUtilizadorPfp.Size = new System.Drawing.Size(215, 157);
+            this.picUtilizadorPfp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picUtilizadorPfp.TabIndex = 52;
+            this.picUtilizadorPfp.TabStop = false;
             // 
-            // pictureBox1
+            // panel2
             // 
-            this.pictureBox1.Image = global::DA_ProjetoFinal.Properties.Resources.default_user;
-            this.pictureBox1.Location = new System.Drawing.Point(199, 46);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(215, 157);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 38;
-            this.pictureBox1.TabStop = false;
+            this.panel2.Location = new System.Drawing.Point(-1, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(610, 29);
+            this.panel2.TabIndex = 1;
             // 
             // FormHomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(609, 555);
-            this.Controls.Add(this.hopeRichTextBox1);
-            this.Controls.Add(this.poisonButton1);
-            this.Controls.Add(this.poisonComboBox2);
-            this.Controls.Add(this.poisonComboBox1);
-            this.Controls.Add(this.poisonDateTime1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormHomePage";
             this.Text = "HomePage";
             this.Load += new System.EventHandler(this.FormHomePage_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picUtilizadorPfp)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private ReaLTaiizor.Controls.HopeRichTextBox hopeRichTextBox1;
+        private System.Windows.Forms.Panel panel1;
+        private ReaLTaiizor.Controls.HopeRichTextBox txtMenuDia;
         private ReaLTaiizor.Controls.PoisonButton poisonButton1;
-        private ReaLTaiizor.Controls.PoisonComboBox poisonComboBox2;
-        private ReaLTaiizor.Controls.PoisonComboBox poisonComboBox1;
-        private ReaLTaiizor.Controls.PoisonDateTime poisonDateTime1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private ReaLTaiizor.Controls.PoisonComboBox comboUtilizador;
+        private ReaLTaiizor.Controls.PoisonComboBox comboSemana;
+        private ReaLTaiizor.Controls.PoisonDateTime datePickAtual;
+        private System.Windows.Forms.PictureBox picUtilizadorPfp;
+        private ReaLTaiizor.Controls.PoisonComboBox comboTipoUtilizador;
+        private System.Windows.Forms.Panel panel2;
+        private ReaLTaiizor.Controls.AloneButton btnPaginateVoltar;
+        private ReaLTaiizor.Controls.AloneButton btnPaginateAvancar;
+        private ReaLTaiizor.Controls.AloneButton btnSelecionarUtilizador;
+        private ReaLTaiizor.Controls.DungeonLabel dungeonLabel4;
+        private ReaLTaiizor.Controls.DungeonLabel labelUtilizadorAtual;
     }
 }

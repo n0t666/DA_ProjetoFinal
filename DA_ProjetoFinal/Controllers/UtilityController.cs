@@ -13,6 +13,9 @@ namespace DA_ProjetoFinal
     {
 
         // Função que permite obter o número da semana de uma determinada data
+
+        public static int currentUtilizador;
+
         public static int GetWeekNumber(DateTime date)
         {
             Calendar calendar = CultureInfo.CurrentCulture.Calendar;

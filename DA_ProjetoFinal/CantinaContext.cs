@@ -17,6 +17,18 @@ namespace DA_ProjetoFinal
         public DbSet<Menu> Menus { get; set; }
         public DbSet<Prato> Pratos { get; set; }
 
+        public DbSet<Utilizador> Utilizadores { get; set; }
+
+        public DbSet<Funcionario> Funcionarios { get; set; }
+
+        public DbSet<Professor> Professores { get; set;}
+
+        public DbSet<Estudante> Estudantes { get; set; }
+
+        public DbSet<ItemFatura> ItemFaturas { get; set;}
+
+
+
 
 
 

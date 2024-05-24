@@ -143,8 +143,8 @@ namespace DA_ProjetoFinal.Views
 
         private void updatePagination()
         {
-            btnPaginateAvancar.Enabled = paginaAtual * tamanhoPagina < PratoController.obterNumeroPratos(); // Verificar se é possível avançar para a próxima página
-            btnPaginateVoltar.Enabled = tamanhoPagina > 1; // Verificar se é possível voltar para a página anterior
+            btnPaginateAvancar.Enabled = paginaAtual * tamanhoPagina < PratoController.ObterNumeroPratos(); // Verificar se é possível avançar para a próxima página
+            btnPaginateVoltar.Enabled = paginaAtual  > 1; // Verificar se é possível voltar para a página anterior
         }
 
 
@@ -156,6 +156,7 @@ namespace DA_ProjetoFinal.Views
         // Função que permite mostrar os dados do prato selecionado na combobox
         private void obterDadosDropDown(int indexEspecifico = -1)
         {
+            if(comboBoxPratos.Items.Count > 0) { 
             if (indexEspecifico >=0)
             {
                 comboBoxPratos.SelectedItem = indexEspecifico;
@@ -186,6 +187,14 @@ namespace DA_ProjetoFinal.Views
 
             lblDescricao.Text = prato.Descricao;
             lblTipo.Text = prato.Tipo.ToString();
+            }
+            else
+            {
+                lblDescricao.Text = "";
+                lblTipo.Text = "";
+                lblAtivo.Text = "";
+                lblSelecionado.Text = "";
+            }
             tabPageListarPratos.Refresh(); // Necessário para atualizar os controlos, para certificar-se que os dados são mostrados corretamente
         }
 
@@ -232,8 +241,8 @@ namespace DA_ProjetoFinal.Views
                 {
                     MessageBox.Show("Ocorreu um erro ao apagar o prato", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-               
             }
+            pratoSelecionado = null;
         }
 
         private void btnPaginateVoltar_Click_1(object sender, EventArgs e)
@@ -266,6 +275,10 @@ namespace DA_ProjetoFinal.Views
                     {
                         pratoSelecionado = null;
                         foreverTabPage1.SelectedIndex = 0;
+                        notificationPrato.Visible = true;
+                        notificationPrato.Style = ReaLTaiizor.Controls.FoxNotification.Styles.Green;
+                        notificationPrato.Text = "Prato editado com sucesso";
+                        timerNotification.Start();
                     }
                     else
                     {

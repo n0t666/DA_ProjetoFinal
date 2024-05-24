@@ -17,6 +17,7 @@ namespace DA_ProjetoFinal.Views
         private Point initialPosLoading = new Point();
         private string BaseAppName = "FoodFlow | ";
         private string appName;
+        private int utilizadorAtual;
 
         public Main()
         {
@@ -24,6 +25,7 @@ namespace DA_ProjetoFinal.Views
             criarEventosBtns(pictureFechar,pictureMinimizar);
             criarEventosPanel(panelTop);
             this.appName = BaseAppName + "Página inicial";
+            initialPosLoading = panelLoadingArea.Location;
         }
 
         private void loadForm(Form form)
@@ -87,6 +89,7 @@ namespace DA_ProjetoFinal.Views
             appName = BaseAppName + "Página inicial";
             FormHomePage form = new FormHomePage();
             form.Name = "FormHomePage";
+            form.UtilizadorSelectedChanged +=  Utilizador_SelectedChanged;
             loadForm(form);
         }
 
@@ -100,7 +103,7 @@ namespace DA_ProjetoFinal.Views
         private void btnReservas_Click(object sender, EventArgs e)
         {
             appName = BaseAppName + "Reservas";
-            FormReservas form = new FormReservas();
+            FormReservas form = new FormReservas(utilizadorAtual);
             form.Name = "FormReservas";
             loadForm(form);
         }
@@ -152,5 +155,11 @@ namespace DA_ProjetoFinal.Views
             form.Name = "FormClientes";
             loadForm(form);
         }
+
+        private void Utilizador_SelectedChanged(object sender, int utilizador) // Evento que permite obter o id do utilizador selecionado, o trigger deste evento é feito no form FormHomePage
+        {
+            utilizadorAtual = utilizador;
+        }
+
     }
 }

@@ -9,5 +9,11 @@ namespace DA_ProjetoFinal
     internal class Professor:Cliente
     {
         public string Email { get; set; }
+
+        public override string ToString()
+        {
+            return "Professor: " + Nome;
+        }
     }
+
 }

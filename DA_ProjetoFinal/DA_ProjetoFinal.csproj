@@ -71,6 +71,16 @@
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\PratoController.cs" />
     <Compile Include="Controllers\UtilityController.cs" />
+    <Compile Include="Controllers\UtilizadorController.cs" />
+    <Compile Include="Migrations\202405182258031_InitialCreate.cs" />
+    <Compile Include="Migrations\202405182258031_InitialCreate.Designer.cs">
+      <DependentUpon>202405182258031_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202405240151118_initial.cs" />
+    <Compile Include="Migrations\202405240151118_initial.Designer.cs">
+      <DependentUpon>202405240151118_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Estudante.cs" />
     <Compile Include="Models\Extra.cs" />
@@ -133,6 +143,12 @@
     <Compile Include="Views\FormReservas.Designer.cs">
       <DependentUpon>FormReservas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\FormSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormSettings.Designer.cs">
+      <DependentUpon>FormSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Form_Borderless.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +160,12 @@
     </Compile>
     <EmbeddedResource Include="Components\SideBarCustomButton.resx">
       <DependentUpon>SideBarCustomButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405182258031_InitialCreate.resx">
+      <DependentUpon>202405182258031_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405240151118_initial.resx">
+      <DependentUpon>202405240151118_initial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -163,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormReservas.resx">
       <DependentUpon>FormReservas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormSettings.resx">
+      <DependentUpon>FormSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Form_Borderless.resx">
       <DependentUpon>Form_Borderless.cs</DependentUpon>
@@ -206,6 +231,7 @@
     <Content Include="Resources\Images\Icons\penalties_normal_small.png.png" />
     <Content Include="Resources\Images\Icons\reception_active_small.png" />
     <Content Include="Resources\Images\Icons\reception_normal_small.png" />
+    <Content Include="Resources\Images\Icons\setting.png" />
     <Content Include="Resources\Images\Icons\wine_active_small.png" />
     <Content Include="Resources\Images\Icons\wine_normal_small.png" />
     <Content Include="Resources\Images\Icons\x.png" />

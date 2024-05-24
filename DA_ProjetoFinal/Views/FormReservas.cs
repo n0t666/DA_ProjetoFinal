@@ -12,14 +12,15 @@ namespace DA_ProjetoFinal.Views
 {
     public partial class FormReservas : Form
     {
-        public FormReservas()
+        public FormReservas(int utilizadorAtual)
         {
             InitializeComponent();
             comboBoxClientes.Items.Clear();
             comboBoxClientes.AutoCompleteMode = AutoCompleteMode.Suggest;
             comboBoxClientes.AutoCompleteSource = AutoCompleteSource.ListItems;
             comboBoxClientes.DataSource = ClienteController.GetClientes();         
-            comboBoxClientes.SelectedIndex = -1;    
+            comboBoxClientes.SelectedIndex = -1;
+            MessageBox.Show(utilizadorAtual.ToString());
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

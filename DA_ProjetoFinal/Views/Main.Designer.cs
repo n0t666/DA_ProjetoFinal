@@ -48,13 +48,22 @@
             this.btnTickets = new DA_ProjetoFinal.Components.SideBarCustomButton();
             this.btnFunct = new DA_ProjetoFinal.Components.SideBarCustomButton();
             this.btnClients = new DA_ProjetoFinal.Components.SideBarCustomButton();
+            this.hopeRichTextBox1 = new ReaLTaiizor.Controls.HopeRichTextBox();
+            this.poisonButton1 = new ReaLTaiizor.Controls.PoisonButton();
+            this.poisonComboBox2 = new ReaLTaiizor.Controls.PoisonComboBox();
+            this.poisonComboBox1 = new ReaLTaiizor.Controls.PoisonComboBox();
+            this.poisonDateTime1 = new ReaLTaiizor.Controls.PoisonDateTime();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureFechar)).BeginInit();
+            this.panelLoadingArea.SuspendLayout();
             this.panelSideBar.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTop
@@ -110,6 +119,13 @@
             // panelLoadingArea
             // 
             this.panelLoadingArea.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panelLoadingArea.Controls.Add(this.hopeRichTextBox1);
+            this.panelLoadingArea.Controls.Add(this.poisonButton1);
+            this.panelLoadingArea.Controls.Add(this.poisonComboBox2);
+            this.panelLoadingArea.Controls.Add(this.poisonComboBox1);
+            this.panelLoadingArea.Controls.Add(this.poisonDateTime1);
+            this.panelLoadingArea.Controls.Add(this.label1);
+            this.panelLoadingArea.Controls.Add(this.pictureBox2);
             this.panelLoadingArea.Location = new System.Drawing.Point(194, 63);
             this.panelLoadingArea.Name = "panelLoadingArea";
             this.panelLoadingArea.Size = new System.Drawing.Size(609, 555);
@@ -334,6 +350,86 @@
             this.btnClients.UseVisualStyleBackColor = true;
             this.btnClients.Click += new System.EventHandler(this.btnClients_Click);
             // 
+            // hopeRichTextBox1
+            // 
+            this.hopeRichTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
+            this.hopeRichTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.hopeRichTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
+            this.hopeRichTextBox1.Hint = "";
+            this.hopeRichTextBox1.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
+            this.hopeRichTextBox1.Location = new System.Drawing.Point(97, 317);
+            this.hopeRichTextBox1.MaxLength = 32767;
+            this.hopeRichTextBox1.Multiline = true;
+            this.hopeRichTextBox1.Name = "hopeRichTextBox1";
+            this.hopeRichTextBox1.PasswordChar = '\0';
+            this.hopeRichTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.hopeRichTextBox1.SelectedText = "";
+            this.hopeRichTextBox1.SelectionLength = 0;
+            this.hopeRichTextBox1.SelectionStart = 0;
+            this.hopeRichTextBox1.Size = new System.Drawing.Size(422, 162);
+            this.hopeRichTextBox1.TabIndex = 51;
+            this.hopeRichTextBox1.TabStop = false;
+            this.hopeRichTextBox1.Text = "hopeRichTextBox1";
+            this.hopeRichTextBox1.UseSystemPasswordChar = false;
+            // 
+            // poisonButton1
+            // 
+            this.poisonButton1.Location = new System.Drawing.Point(94, 485);
+            this.poisonButton1.Name = "poisonButton1";
+            this.poisonButton1.Size = new System.Drawing.Size(425, 23);
+            this.poisonButton1.TabIndex = 50;
+            this.poisonButton1.Text = "poisonButton1";
+            this.poisonButton1.UseSelectable = true;
+            // 
+            // poisonComboBox2
+            // 
+            this.poisonComboBox2.FormattingEnabled = true;
+            this.poisonComboBox2.ItemHeight = 23;
+            this.poisonComboBox2.Location = new System.Drawing.Point(303, 219);
+            this.poisonComboBox2.Name = "poisonComboBox2";
+            this.poisonComboBox2.Size = new System.Drawing.Size(216, 29);
+            this.poisonComboBox2.TabIndex = 49;
+            this.poisonComboBox2.UseSelectable = true;
+            // 
+            // poisonComboBox1
+            // 
+            this.poisonComboBox1.FormattingEnabled = true;
+            this.poisonComboBox1.ItemHeight = 23;
+            this.poisonComboBox1.Location = new System.Drawing.Point(303, 282);
+            this.poisonComboBox1.Name = "poisonComboBox1";
+            this.poisonComboBox1.Size = new System.Drawing.Size(216, 29);
+            this.poisonComboBox1.TabIndex = 48;
+            this.poisonComboBox1.UseSelectable = true;
+            // 
+            // poisonDateTime1
+            // 
+            this.poisonDateTime1.Location = new System.Drawing.Point(97, 282);
+            this.poisonDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
+            this.poisonDateTime1.Name = "poisonDateTime1";
+            this.poisonDateTime1.Size = new System.Drawing.Size(200, 29);
+            this.poisonDateTime1.Style = ReaLTaiizor.Enum.Poison.ColorStyle.Black;
+            this.poisonDateTime1.TabIndex = 47;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(89, 219);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(161, 25);
+            this.label1.TabIndex = 46;
+            this.label1.Text = "Utilizador atual:";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::DA_ProjetoFinal.Properties.Resources.default_user;
+            this.pictureBox2.Location = new System.Drawing.Point(199, 46);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(215, 157);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 45;
+            this.pictureBox2.TabStop = false;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -349,9 +445,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureFechar)).EndInit();
+            this.panelLoadingArea.ResumeLayout(false);
+            this.panelLoadingArea.PerformLayout();
             this.panelSideBar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -376,5 +475,12 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panelLoadingArea;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private ReaLTaiizor.Controls.HopeRichTextBox hopeRichTextBox1;
+        private ReaLTaiizor.Controls.PoisonButton poisonButton1;
+        private ReaLTaiizor.Controls.PoisonComboBox poisonComboBox2;
+        private ReaLTaiizor.Controls.PoisonComboBox poisonComboBox1;
+        private ReaLTaiizor.Controls.PoisonDateTime poisonDateTime1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
