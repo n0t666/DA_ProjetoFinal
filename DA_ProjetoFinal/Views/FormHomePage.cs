@@ -1,4 +1,6 @@
 ﻿using DA_ProjetoFinal.Controllers;
+using ReaLTaiizor.Controls;
+using ReaLTaiizor.Extension.Poison;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,25 +25,32 @@ namespace DA_ProjetoFinal.Views
         private int numeroFuncionarios;
         private int numeroClientes;
         private bool selectedCliente;
-
         private int numeroUtilizador;
 
-        public event EventHandler <int> UtilizadorSelectedChanged;
+        private bool firstTime;
 
-        public FormHomePage()
+        public event EventHandler <int> UtilizadorSelectedChanged;
+        public event EventHandler <bool> HomePage_FirsTimeLoad;
+
+        public FormHomePage(bool firstTime)
         {
             InitializeComponent();
+            this.firstTime = firstTime;
         }
 
         private void FormHomePage_Load(object sender, EventArgs e)
         {
+            if (firstTime)
+            {
+                criarLoading();
+                HomePage_FirsTimeLoad?.Invoke(this, false);
+            }
+            else
+            {
+                criarLoading(false, true);
+            }
             datePickAtual.Value = DateTime.Now;
-            comboSemana.Text = "Semana Nº" + UtilityController.GetWeekNumber(datePickAtual.Value.Date).ToString();
-            utilizadores = UtilizadorController.GetUtilizadores();
-            numeroFuncionarios = utilizadores.Where(u => u is Funcionario).Count();
-            numeroClientes = utilizadores.Where(u => u is Cliente).Count();
-            btnPaginateAvancar.Enabled = false;
-            btnPaginateVoltar.Enabled = false;
+            carregadorDados();
         }
 
 
@@ -127,5 +136,53 @@ namespace DA_ProjetoFinal.Views
 
             UtilizadorSelectedChanged?.Invoke(this, numeroUtilizador); 
         }
+
+        private async void carregadorDados()
+        {
+            await ObterTodosUtilizadores();
+
+            numeroFuncionarios = utilizadores.Where(u => u is Funcionario).Count();
+            numeroClientes = utilizadores.Where(u => u is Cliente).Count();
+            btnPaginateAvancar.Enabled = false;
+            btnPaginateVoltar.Enabled = false;
+
+            criarLoading(false, true);
+        }
+
+        async Task ObterTodosUtilizadores()
+        {
+            await Task.Run(() => { this.utilizadores = UtilizadorController.GetUtilizadores(); });
+            labelLoading.Text = "Dados carregados";
+            await Task.Delay(1000);
+        }
+
+        private void criarLoading(bool loadingVisible = true,bool controlsVisible = false)
+        {
+            foreach (Control control in panel1.Controls)
+            {
+                if (control.Name == "labelLoading" || control.Name == "spinnerLoading")
+                {
+                    control.Visible = loadingVisible;
+                }
+                else
+                {
+                    control.Visible = controlsVisible;
+                }
+            }
+
+        }
+
+        private void pictureInfoWeek_Click(object sender, EventArgs e)
+        {
+            UtilityController.GetWeeKStart(datePickAtual.Value.Date);
+            Form form = new FormSemana(datePickAtual.Value.Date);
+            form.Show();
+        }
+
+        private void datePickAtual_ValueChanged(object sender, EventArgs e)
+        {
+            comboSemana.Text = "Semana Nº" + UtilityController.GetWeekNumber(datePickAtual.Value.Date).ToString();
+        }
+
     }
 }

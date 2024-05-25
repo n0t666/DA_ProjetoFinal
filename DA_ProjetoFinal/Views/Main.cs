@@ -18,6 +18,7 @@ namespace DA_ProjetoFinal.Views
         private string BaseAppName = "FoodFlow | ";
         private string appName;
         private int utilizadorAtual;
+        private bool firstTimeHome = true;
 
         public Main()
         {
@@ -48,7 +49,7 @@ namespace DA_ProjetoFinal.Views
 
         private void Main_Load(object sender, EventArgs e)
         {
-            loadForm(new FormPratos());
+            loadForm(new FormHomePage(firstTimeHome));
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -87,9 +88,10 @@ namespace DA_ProjetoFinal.Views
         private void sideBarCustomButton1_Click(object sender, EventArgs e)
         {
             appName = BaseAppName + "Página inicial";
-            FormHomePage form = new FormHomePage();
+            FormHomePage form = new FormHomePage(firstTimeHome);
             form.Name = "FormHomePage";
             form.UtilizadorSelectedChanged +=  Utilizador_SelectedChanged;
+            form.HomePage_FirsTimeLoad += HomePage_FirsTimeLoad;
             loadForm(form);
         }
 
@@ -160,6 +162,12 @@ namespace DA_ProjetoFinal.Views
         {
             utilizadorAtual = utilizador;
         }
+
+        private void HomePage_FirsTimeLoad(object sender, bool firstTime)
+        {
+            firstTimeHome = firstTime;      
+        }
+
 
     }
 }

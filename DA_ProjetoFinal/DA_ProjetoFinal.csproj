@@ -69,6 +69,7 @@
       <DependentUpon>SideBarCustomButton.cs</DependentUpon>
     </Compile>
     <Compile Include="Controllers\ClienteController.cs" />
+    <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\PratoController.cs" />
     <Compile Include="Controllers\UtilityController.cs" />
     <Compile Include="Controllers\UtilizadorController.cs" />
@@ -143,6 +144,12 @@
     <Compile Include="Views\FormReservas.Designer.cs">
       <DependentUpon>FormReservas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\FormSemana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormSemana.Designer.cs">
+      <DependentUpon>FormSemana.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\FormSettings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +193,9 @@
     <EmbeddedResource Include="Views\FormReservas.resx">
       <DependentUpon>FormReservas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormSemana.resx">
+      <DependentUpon>FormSemana.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\FormSettings.resx">
       <DependentUpon>FormSettings.cs</DependentUpon>
     </EmbeddedResource>
@@ -223,6 +233,7 @@
     <Content Include="Resources\Images\Icons\home_active.png" />
     <Content Include="Resources\Images\Icons\home_active_small.png" />
     <Content Include="Resources\Images\Icons\home_normal_small.png" />
+    <Content Include="Resources\Images\Icons\info.png" />
     <Content Include="Resources\Images\Icons\logo.png" />
     <Content Include="Resources\Images\Icons\menu.png" />
     <Content Include="Resources\Images\Icons\minimize.png" />

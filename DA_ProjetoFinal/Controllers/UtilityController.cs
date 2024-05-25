@@ -23,6 +23,13 @@ namespace DA_ProjetoFinal
             return week;
         }
 
+        public static DateTime GetWeeKStart(DateTime date)
+        {
+            DateTime start = date.AddDays(-(int)date.DayOfWeek + (int)DayOfWeek.Monday); 
+            return start;
+
+        }
+
         
         // Função que permite centrar um controlo no eixo X
         public static void Center(Control control)
