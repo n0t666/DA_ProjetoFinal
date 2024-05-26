@@ -27,7 +27,34 @@ namespace DA_ProjetoFinal
         {
             DateTime start = date.AddDays(-(int)date.DayOfWeek + (int)DayOfWeek.Monday); 
             return start;
+        }
 
+        public static decimal GetDecimal(string value,string valueType)
+        {
+            decimal result;
+
+            try
+            {
+                if (decimal.TryParse(value, out result))
+                {
+                    return result;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Erro ao converter o " + valueType + " para decimal", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Erro ao tentar ler o " + valueType, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
+
+            return 0;
         }
 
         

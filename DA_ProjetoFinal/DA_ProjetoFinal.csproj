@@ -69,6 +69,7 @@
       <DependentUpon>SideBarCustomButton.cs</DependentUpon>
     </Compile>
     <Compile Include="Controllers\ClienteController.cs" />
+    <Compile Include="Controllers\ExtraController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\PratoController.cs" />
     <Compile Include="Controllers\UtilityController.cs" />
@@ -184,6 +185,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\FormExtras.resx">
+      <DependentUpon>FormExtras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\FormHomePage.resx">
       <DependentUpon>FormHomePage.cs</DependentUpon>
     </EmbeddedResource>

@@ -49,7 +49,8 @@ namespace DA_ProjetoFinal.Views
 
         private void Main_Load(object sender, EventArgs e)
         {
-            loadForm(new FormHomePage(firstTimeHome));
+            btnHomePage.PerformClick();
+
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -87,6 +88,7 @@ namespace DA_ProjetoFinal.Views
 
         private void sideBarCustomButton1_Click(object sender, EventArgs e)
         {
+       
             appName = BaseAppName + "Página inicial";
             FormHomePage form = new FormHomePage(firstTimeHome);
             form.Name = "FormHomePage";
@@ -165,7 +167,17 @@ namespace DA_ProjetoFinal.Views
 
         private void HomePage_FirsTimeLoad(object sender, bool firstTime)
         {
-            firstTimeHome = firstTime;      
+            firstTimeHome = firstTime;
+            changeSideState(true);
+        }
+
+        private void changeSideState(bool state) 
+        {
+            foreach(Control ctrl in panelSideBar.Controls)
+            {
+                ctrl.Enabled = state;
+
+            }
         }
 
 

@@ -8,7 +8,7 @@ namespace DA_ProjetoFinal
 {
     internal class UtilizadorController
     {
-        public static List<Utilizador> GetUtilizadores()
+        public static List<Utilizador> Get()
         {
             using (var context = new CantinaContext())
             {
@@ -17,7 +17,7 @@ namespace DA_ProjetoFinal
 
         }
 
-        public static List<Utilizador> PaginacaoUtilizadores(int pagina, int tamanhoPagina)
+        public static List<Utilizador> Paginar(int pagina, int tamanhoPagina)
         {
             using (var context = new CantinaContext())
             {
@@ -29,7 +29,7 @@ namespace DA_ProjetoFinal
             }
         }
 
-        public static int ObterNumeroUtilizadores()
+        public static int ObterNumero()
         {
             using (var context = new CantinaContext())
             {

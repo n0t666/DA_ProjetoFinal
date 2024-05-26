@@ -3,100 +3,35 @@
   "WorkspaceRootPath": "E:\\Documentos\\DA_ProjetoFinal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|e:\\documentos\\da_projetofinal\\da_projetofinal\\views\\formsemana.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\views\\formsemana.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|e:\\documentos\\da_projetofinal\\da_projetofinal\\views\\formextras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\views\\formextras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|E:\\Documentos\\DA_ProjetoFinal\\da_projetofinal\\views\\formhomepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\views\\formhomepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|e:\\documentos\\da_projetofinal\\da_projetofinal\\views\\formpratos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\views\\formpratos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|e:\\documentos\\da_projetofinal\\da_projetofinal\\views\\formhomepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\views\\formhomepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|e:\\documentos\\da_projetofinal\\da_projetofinal\\views\\form_borderless.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\views\\form_borderless.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|e:\\documentos\\da_projetofinal\\da_projetofinal\\views\\form_borderless.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\views\\form_borderless.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|e:\\documentos\\da_projetofinal\\da_projetofinal\\views\\formsemana.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\views\\formsemana.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|E:\\Documentos\\DA_ProjetoFinal\\da_projetofinal\\views\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\views\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|e:\\documentos\\da_projetofinal\\da_projetofinal\\controllers\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\controllers\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|e:\\documentos\\da_projetofinal\\da_projetofinal\\models\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\models\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|E:\\Documentos\\DA_ProjetoFinal\\da_projetofinal\\controllers\\pratocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\controllers\\pratocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|e:\\documentos\\da_projetofinal\\da_projetofinal\\controllers\\utilizadorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\controllers\\utilizadorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|E:\\Documentos\\DA_ProjetoFinal\\da_projetofinal\\controllers\\utilitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\controllers\\utilitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|e:\\documentos\\da_projetofinal\\da_projetofinal\\views\\main.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\views\\main.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|e:\\documentos\\da_projetofinal\\da_projetofinal\\views\\formhomepage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\views\\formhomepage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|e:\\documentos\\da_projetofinal\\da_projetofinal\\views\\formpratos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\views\\formpratos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/DA_ProjetoFinal.CantinaContext/True/SqlTable/dbo.Extras.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|e:\\documentos\\da_projetofinal\\da_projetofinal\\views\\formextras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\views\\formextras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|E:\\Documentos\\DA_ProjetoFinal\\da_projetofinal\\models\\estudante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\models\\estudante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|e:\\documentos\\da_projetofinal\\da_projetofinal\\controllers\\extracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\controllers\\extracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|E:\\Documentos\\DA_ProjetoFinal\\da_projetofinal\\views\\formpratos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\views\\formpratos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|e:\\documentos\\da_projetofinal\\da_projetofinal\\views\\formpratos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\views\\formpratos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|E:\\Documentos\\DA_ProjetoFinal\\da_projetofinal\\views\\formreservas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\views\\formreservas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|e:\\documentos\\da_projetofinal\\da_projetofinal\\controllers\\utilizadorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\controllers\\utilizadorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|E:\\Documentos\\DA_ProjetoFinal\\da_projetofinal\\models\\reserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\models\\reserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|E:\\Documentos\\DA_ProjetoFinal\\da_projetofinal\\models\\professor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\models\\professor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|E:\\Documentos\\DA_ProjetoFinal\\da_projetofinal\\views\\formreservas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\views\\formreservas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|E:\\Documentos\\DA_ProjetoFinal\\da_projetofinal\\models\\funcionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\models\\funcionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|E:\\Documentos\\DA_ProjetoFinal\\da_projetofinal\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|e:\\documentos\\da_projetofinal\\da_projetofinal\\controllers\\pratocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\controllers\\pratocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -106,309 +41,108 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Form_Borderless.cs [Design]",
-              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\Form_Borderless.cs",
-              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Views\\Form_Borderless.cs",
-              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\Form_Borderless.cs [Design]",
-              "RelativeToolTip": "DA_ProjetoFinal\\Views\\Form_Borderless.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T20:20:41.25Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Menu.cs",
-              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Models\\Menu.cs",
-              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Models\\Menu.cs",
-              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Models\\Menu.cs",
-              "RelativeToolTip": "DA_ProjetoFinal\\Models\\Menu.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T19:50:00.022Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MenuController.cs",
-              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Controllers\\MenuController.cs",
-              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Controllers\\MenuController.cs",
-              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Controllers\\MenuController.cs",
-              "RelativeToolTip": "DA_ProjetoFinal\\Controllers\\MenuController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T19:47:59.731Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "UtilityController.cs",
-              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Controllers\\UtilityController.cs",
-              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Controllers\\UtilityController.cs",
-              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Controllers\\UtilityController.cs",
-              "RelativeToolTip": "DA_ProjetoFinal\\Controllers\\UtilityController.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAiwBsAAABYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T03:24:45.797Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Main.cs",
-              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\Main.cs",
-              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Views\\Main.cs",
-              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\Main.cs",
-              "RelativeToolTip": "DA_ProjetoFinal\\Views\\Main.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAwwDMAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T03:13:45.559Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormHomePage.cs",
-              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormHomePage.cs",
-              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Views\\FormHomePage.cs",
-              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormHomePage.cs",
-              "RelativeToolTip": "DA_ProjetoFinal\\Views\\FormHomePage.cs",
-              "ViewState": "AQIAAJ4AAAAAAAAAAAAxwLkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T02:00:37.402Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FormHomePage.cs [Design]",
-              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormHomePage.cs",
-              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Views\\FormHomePage.cs",
-              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormHomePage.cs [Design]",
-              "RelativeToolTip": "DA_ProjetoFinal\\Views\\FormHomePage.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T02:00:36.099Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FormSemana.cs",
-              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormSemana.cs",
-              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Views\\FormSemana.cs",
-              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormSemana.cs",
-              "RelativeToolTip": "DA_ProjetoFinal\\Views\\FormSemana.cs",
-              "ViewState": "AQIAAGMAAAAAAAAAAAAgwIEAAAAMAAAA",
+              "Title": "FormExtras.cs",
+              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormExtras.cs",
+              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Views\\FormExtras.cs",
+              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormExtras.cs",
+              "RelativeToolTip": "DA_ProjetoFinal\\Views\\FormExtras.cs",
+              "ViewState": "AQIAAFcAAAAAAAAAAADwv2YAAABLAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T18:05:40.052Z",
+              "WhenOpened": "2024-05-26T02:17:19.272Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Form_Borderless.cs",
-              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\Form_Borderless.cs",
-              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Views\\Form_Borderless.cs",
-              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\Form_Borderless.cs",
-              "RelativeToolTip": "DA_ProjetoFinal\\Views\\Form_Borderless.cs",
-              "ViewState": "AQIAAGAAAAAAAAAAAAAkwHEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T20:19:57.948Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FormSemana.cs [Design]",
-              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormSemana.cs",
-              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Views\\FormSemana.cs",
-              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormSemana.cs [Design]",
-              "RelativeToolTip": "DA_ProjetoFinal\\Views\\FormSemana.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T18:05:29.001Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "PratoController.cs",
-              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Controllers\\PratoController.cs",
-              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Controllers\\PratoController.cs",
-              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Controllers\\PratoController.cs",
-              "RelativeToolTip": "DA_ProjetoFinal\\Controllers\\PratoController.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAgwCgAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T02:22:33.783Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "UtilizadorController.cs",
-              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Controllers\\UtilizadorController.cs",
-              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Controllers\\UtilizadorController.cs",
-              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Controllers\\UtilizadorController.cs",
-              "RelativeToolTip": "DA_ProjetoFinal\\Controllers\\UtilizadorController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T17:24:47.857Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Main.Designer.cs",
-              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\Main.Designer.cs",
-              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Views\\Main.Designer.cs",
-              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\Main.Designer.cs",
-              "RelativeToolTip": "DA_ProjetoFinal\\Views\\Main.Designer.cs",
-              "ViewState": "AQIAAMcAAAAAAAAAAAAgwNkAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T19:18:31.025Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "FormHomePage.Designer.cs",
-              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormHomePage.Designer.cs",
-              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Views\\FormHomePage.Designer.cs",
-              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormHomePage.Designer.cs",
-              "RelativeToolTip": "DA_ProjetoFinal\\Views\\FormHomePage.Designer.cs",
-              "ViewState": "AQIAAMkAAAAAAAAAAAAjwBABAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T17:59:27.472Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "FormPratos.cs [Design]",
-              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormPratos.cs",
-              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Views\\FormPratos.cs",
-              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormPratos.cs [Design]",
-              "RelativeToolTip": "DA_ProjetoFinal\\Views\\FormPratos.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T18:48:10.903Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
               "Title": "FormExtras.cs [Design]",
               "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormExtras.cs",
               "RelativeDocumentMoniker": "DA_ProjetoFinal\\Views\\FormExtras.cs",
               "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormExtras.cs [Design]",
               "RelativeToolTip": "DA_ProjetoFinal\\Views\\FormExtras.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T18:05:52.597Z",
+              "WhenOpened": "2024-05-26T03:22:01.79Z",
+              "IsPinned": true,
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 2,
+              "Title": "dbo.Extras [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/DA_ProjetoFinal.CantinaContext/True/SqlTable/dbo.Extras.sql",
+              "ToolTip": "dbo.Extras [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-05-26T03:43:16.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "FormPratos.cs",
               "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormPratos.cs",
               "RelativeDocumentMoniker": "DA_ProjetoFinal\\Views\\FormPratos.cs",
               "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormPratos.cs",
               "RelativeToolTip": "DA_ProjetoFinal\\Views\\FormPratos.cs",
-              "ViewState": "AQIAALIAAAAAAAAAAAAIwLYAAAAQAAAA",
+              "ViewState": "AQIAAAMBAAAAAAAAAAAUwHAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T02:22:28.391Z",
+              "WhenOpened": "2024-05-26T03:13:42.641Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Estudante.cs",
-              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Models\\Estudante.cs",
-              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Models\\Estudante.cs",
-              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Models\\Estudante.cs",
-              "RelativeToolTip": "DA_ProjetoFinal\\Models\\Estudante.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T01:55:15.423Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Professor.cs",
-              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Models\\Professor.cs",
-              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Models\\Professor.cs",
-              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Models\\Professor.cs",
-              "RelativeToolTip": "DA_ProjetoFinal\\Models\\Professor.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T01:53:04.117Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Reserva.cs",
-              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Models\\Reserva.cs",
-              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Models\\Reserva.cs",
-              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Models\\Reserva.cs",
-              "RelativeToolTip": "DA_ProjetoFinal\\Models\\Reserva.cs",
+              "DocumentIndex": 6,
+              "Title": "UtilizadorController.cs",
+              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Controllers\\UtilizadorController.cs",
+              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Controllers\\UtilizadorController.cs",
+              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Controllers\\UtilizadorController.cs",
+              "RelativeToolTip": "DA_ProjetoFinal\\Controllers\\UtilizadorController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T03:27:03.567Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "FormReservas.cs [Design]",
-              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormReservas.cs",
-              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Views\\FormReservas.cs",
-              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormReservas.cs [Design]",
-              "RelativeToolTip": "DA_ProjetoFinal\\Views\\FormReservas.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T03:27:07.729Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "FormReservas.cs",
-              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormReservas.cs",
-              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Views\\FormReservas.cs",
-              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormReservas.cs",
-              "RelativeToolTip": "DA_ProjetoFinal\\Views\\FormReservas.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAApwBYAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T03:27:09.351Z",
+              "WhenOpened": "2024-05-26T03:26:26.903Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Cliente.cs",
-              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Models\\Cliente.cs",
-              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Models\\Cliente.cs",
-              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Models\\Cliente.cs",
-              "RelativeToolTip": "DA_ProjetoFinal\\Models\\Cliente.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "DocumentIndex": 7,
+              "Title": "PratoController.cs",
+              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Controllers\\PratoController.cs",
+              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Controllers\\PratoController.cs",
+              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Controllers\\PratoController.cs",
+              "RelativeToolTip": "DA_ProjetoFinal\\Controllers\\PratoController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T01:55:06.318Z"
+              "WhenOpened": "2024-05-26T03:25:51.212Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Funcionario.cs",
-              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Models\\Funcionario.cs",
-              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Models\\Funcionario.cs",
-              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Models\\Funcionario.cs",
-              "RelativeToolTip": "DA_ProjetoFinal\\Models\\Funcionario.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAApAAAA",
+              "DocumentIndex": 4,
+              "Title": "ExtraController.cs",
+              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Controllers\\ExtraController.cs",
+              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Controllers\\ExtraController.cs",
+              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Controllers\\ExtraController.cs",
+              "RelativeToolTip": "DA_ProjetoFinal\\Controllers\\ExtraController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T01:54:33.733Z"
+              "WhenOpened": "2024-05-26T03:14:24.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormPratos.cs [Design]",
+              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormPratos.cs",
+              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Views\\FormPratos.cs",
+              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormPratos.cs [Design]",
+              "RelativeToolTip": "DA_ProjetoFinal\\Views\\FormPratos.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T03:13:06.767Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

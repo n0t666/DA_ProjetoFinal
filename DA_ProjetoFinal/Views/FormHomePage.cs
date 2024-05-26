@@ -151,7 +151,7 @@ namespace DA_ProjetoFinal.Views
 
         async Task ObterTodosUtilizadores()
         {
-            await Task.Run(() => { this.utilizadores = UtilizadorController.GetUtilizadores(); });
+            await Task.Run(() => { this.utilizadores = UtilizadorController.Get(); });
             labelLoading.Text = "Dados carregados";
             await Task.Delay(1000);
         }

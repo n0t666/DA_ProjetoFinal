@@ -9,7 +9,7 @@ namespace DA_ProjetoFinal
     internal class MenuController
     {
 
-        public static List<Menu> GetMenuBetweenDates(DateTime inicio, DateTime fim)
+        public static List<Menu> GetBetweenDates(DateTime inicio, DateTime fim)
         {
             using (var context = new CantinaContext())
             {

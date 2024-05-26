@@ -33,7 +33,7 @@ namespace DA_ProjetoFinal.Views
         {
             DateTime inicioSemanaAtual = UtilityController.GetWeeKStart(data);
             DateTime fimSemanaAtual = inicioSemanaAtual.AddDays(4);
-            menus = MenuController.GetMenuBetweenDates(inicioSemanaAtual, fimSemanaAtual);
+            menus = MenuController.GetBetweenDates(inicioSemanaAtual, fimSemanaAtual);
             data = inicioSemanaAtual;
             for (int i = 1; i < 6; i++)
             {

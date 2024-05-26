@@ -41,7 +41,7 @@ namespace DA_ProjetoFinal.Views
                 try
                 {
                     TipoPrato tipoPrato = (TipoPrato)comboBoxTipos.SelectedItem; // Obter o tipo de prato selecionado na combobox
-                    sucesso = PratoController.AdicionarPrato(txtDescricao.Text, tipoPrato, checkBoxAtivo.Checked);
+                    sucesso = PratoController.Adicionar(txtDescricao.Text, tipoPrato, checkBoxAtivo.Checked);
                     if (sucesso) // Se o prato for adicionado com sucesso, mostra uma mensagem de sucesso e limpa os campos preenchidos
                     {
                         txtDescricao.Text = "";
@@ -82,7 +82,7 @@ namespace DA_ProjetoFinal.Views
         private void FormPratos_Load(object sender, EventArgs e)
         {
             List<TipoPrato> tipos = new List<TipoPrato>(); 
-            tipos = PratoController.ObterTiposPrato(); // Ao carregar o forms, obtem-se todos os tipos de prato
+            tipos = PratoController.GetTipos(); // Ao carregar o forms, obtem-se todos os tipos de prato
 
 
             foreach (TipoPrato tipo in tipos) // Popular as comboboxes(da página de edição e criação) com os tipos de prato
@@ -133,7 +133,7 @@ namespace DA_ProjetoFinal.Views
         // Função que permite carregar os pratos existentes, na combobox
         private void loadPratos()
         {
-                pratos = PratoController.PaginacaoPratos(paginaAtual, tamanhoPagina);
+                pratos = PratoController.Paginar(paginaAtual, tamanhoPagina);
                 comboBoxPratos.DataSource = pratos;
                 comboBoxPratos.DisplayMember = "Descricao"; // Mostrar a descrição do prato na combobox
                 updatePagination(); // Atualizar os botões de paginação,ou seja,  se existe mais pratos que possam ser mostrados
@@ -143,7 +143,7 @@ namespace DA_ProjetoFinal.Views
 
         private void updatePagination()
         {
-            btnPaginateAvancar.Enabled = paginaAtual * tamanhoPagina < PratoController.ObterNumeroPratos(); // Verificar se é possível avançar para a próxima página
+            btnPaginateAvancar.Enabled = paginaAtual * tamanhoPagina < PratoController.ObterNumero(); // Verificar se é possível avançar para a próxima página
             btnPaginateVoltar.Enabled = paginaAtual  > 1; // Verificar se é possível voltar para a página anterior
         }
 
@@ -231,7 +231,7 @@ namespace DA_ProjetoFinal.Views
         {
             if (pratoSelecionado !=null) // Se houver um prato selecionado, apaga o prato
             {
-                bool sucesso = PratoController.ApagarPrato(pratoSelecionado.Id);
+                bool sucesso = PratoController.Apagar(pratoSelecionado.Id);
                 if (sucesso)
                 {
                     loadPratos();
@@ -270,7 +270,7 @@ namespace DA_ProjetoFinal.Views
                 try
                 {
                     TipoPrato tipoPrato = (TipoPrato)comboBoxEditTipo.SelectedItem;
-                    sucesso = PratoController.EditarPrato(pratoSelecionado.Id, txtEditDesc.Text, tipoPrato, checkAtivoEdit.Checked);
+                    sucesso = PratoController.Editar(pratoSelecionado.Id, txtEditDesc.Text, tipoPrato, checkAtivoEdit.Checked);
                     if (sucesso)
                     {
                         pratoSelecionado = null;
