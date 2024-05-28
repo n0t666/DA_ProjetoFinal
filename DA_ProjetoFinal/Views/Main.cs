@@ -19,6 +19,7 @@ namespace DA_ProjetoFinal.Views
         private string appName;
         private int utilizadorAtual;
         private bool firstTimeHome = true;
+        private string currentLoadedFormName;
 
         public Main()
         {
@@ -31,18 +32,21 @@ namespace DA_ProjetoFinal.Views
 
         private void loadForm(Form form)
         {
+
             foreach (Control ctrl in panelLoadingArea.Controls)
             {
                 if (ctrl.Name == form.Name)
                 {
                     return;
                 }
+ 
             }
 
             panelLoadingArea.Controls.Clear();
             form.TopLevel = false;
             panelLoadingArea.Controls.Add(form);
             form.Dock = DockStyle.Fill;
+            currentLoadedFormName = form.Name;
             form.Show();
             this.Text = appName;
         }
@@ -50,7 +54,7 @@ namespace DA_ProjetoFinal.Views
         private void Main_Load(object sender, EventArgs e)
         {
             btnHomePage.PerformClick();
-
+            changeSideState(false);
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -70,7 +74,10 @@ namespace DA_ProjetoFinal.Views
                     timerSideBar.Stop();
                     sideBarExpanded = false;
                     UtilityController.Center( panelLoadingArea);
-                  
+                    if(currentLoadedFormName == "FormReservas" || currentLoadedFormName == "FormPratos " || currentLoadedFormName == "FormExtras")
+                    {
+                        this.BackColor = Color.FromArgb(33, 37, 41);
+                    }                
                 }
         
             }
@@ -82,8 +89,10 @@ namespace DA_ProjetoFinal.Views
                     timerSideBar.Stop();
                     sideBarExpanded = true;
                     panelLoadingArea.Location = initialPosLoading;
+                    this.BackColor = Color.White;
                 }
             }
+            this.Refresh();
         }
 
         private void sideBarCustomButton1_Click(object sender, EventArgs e)
@@ -173,12 +182,15 @@ namespace DA_ProjetoFinal.Views
 
         private void changeSideState(bool state) 
         {
+
+
             foreach(Control ctrl in panelSideBar.Controls)
             {
                 ctrl.Enabled = state;
 
             }
         }
+
 
 
     }
