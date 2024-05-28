@@ -40,15 +40,6 @@ namespace DA_ProjetoFinal.Views
 
         private void FormHomePage_Load(object sender, EventArgs e)
         {
-            if (firstTime)
-            {
-                criarLoading();
-                HomePage_FirsTimeLoad?.Invoke(this, false);
-            }
-            else
-            {
-                criarLoading(false, true);
-            }
             datePickAtual.Value = DateTime.Now;
             carregadorDados();
         }
@@ -139,14 +130,27 @@ namespace DA_ProjetoFinal.Views
 
         private async void carregadorDados()
         {
+            if (firstTime)
+            {
+                criarLoading();
+            }
+            else
+            {
+                criarLoading(false, true);
+            }
             await ObterTodosUtilizadores();
+            if (firstTime)
+            {
+                HomePage_FirsTimeLoad?.Invoke(this, false);
+                criarLoading(false, true);
+            }
+
 
             numeroFuncionarios = utilizadores.Where(u => u is Funcionario).Count();
             numeroClientes = utilizadores.Where(u => u is Cliente).Count();
             btnPaginateAvancar.Enabled = false;
             btnPaginateVoltar.Enabled = false;
 
-            criarLoading(false, true);
         }
 
         async Task ObterTodosUtilizadores()

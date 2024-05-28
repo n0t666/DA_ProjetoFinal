@@ -31,6 +31,7 @@ namespace DA_ProjetoFinal.Views
 
         private void loadForm(Form form)
         {
+
             foreach (Control ctrl in panelLoadingArea.Controls)
             {
                 if (ctrl.Name == form.Name)
@@ -50,6 +51,7 @@ namespace DA_ProjetoFinal.Views
         private void Main_Load(object sender, EventArgs e)
         {
             btnHomePage.PerformClick();
+            changeSideState(false);
 
         }
 
@@ -173,6 +175,8 @@ namespace DA_ProjetoFinal.Views
 
         private void changeSideState(bool state) 
         {
+
+
             foreach(Control ctrl in panelSideBar.Controls)
             {
                 ctrl.Enabled = state;
