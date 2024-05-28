@@ -19,6 +19,7 @@ namespace DA_ProjetoFinal.Views
         private string appName;
         private int utilizadorAtual;
         private bool firstTimeHome = true;
+        private string currentLoadedFormName;
 
         public Main()
         {
@@ -38,12 +39,14 @@ namespace DA_ProjetoFinal.Views
                 {
                     return;
                 }
+ 
             }
 
             panelLoadingArea.Controls.Clear();
             form.TopLevel = false;
             panelLoadingArea.Controls.Add(form);
             form.Dock = DockStyle.Fill;
+            currentLoadedFormName = form.Name;
             form.Show();
             this.Text = appName;
         }
@@ -52,7 +55,6 @@ namespace DA_ProjetoFinal.Views
         {
             btnHomePage.PerformClick();
             changeSideState(false);
-
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -72,7 +74,10 @@ namespace DA_ProjetoFinal.Views
                     timerSideBar.Stop();
                     sideBarExpanded = false;
                     UtilityController.Center( panelLoadingArea);
-                  
+                    if(currentLoadedFormName == "FormReservas" || currentLoadedFormName == "FormPratos " || currentLoadedFormName == "FormExtras")
+                    {
+                        this.BackColor = Color.FromArgb(33, 37, 41);
+                    }                
                 }
         
             }
@@ -84,8 +89,10 @@ namespace DA_ProjetoFinal.Views
                     timerSideBar.Stop();
                     sideBarExpanded = true;
                     panelLoadingArea.Location = initialPosLoading;
+                    this.BackColor = Color.White;
                 }
             }
+            this.Refresh();
         }
 
         private void sideBarCustomButton1_Click(object sender, EventArgs e)
@@ -183,6 +190,7 @@ namespace DA_ProjetoFinal.Views
 
             }
         }
+
 
 
     }

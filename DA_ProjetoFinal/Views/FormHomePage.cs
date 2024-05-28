@@ -186,6 +186,7 @@ namespace DA_ProjetoFinal.Views
         private void datePickAtual_ValueChanged(object sender, EventArgs e)
         {
             comboSemana.Text = "Semana Nº" + UtilityController.GetWeekNumber(datePickAtual.Value.Date).ToString();
+            this.Refresh();
         }
 
     }

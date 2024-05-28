@@ -3,19 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Leandro\\Documents\\DA_ProjetoFinal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|c:\\users\\leandro\\documents\\da_projetofinal\\da_projetofinal\\views\\formextras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\views\\formextras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|c:\\users\\leandro\\documents\\da_projetofinal\\da_projetofinal\\views\\formhomepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\views\\formhomepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|c:\\users\\leandro\\documents\\da_projetofinal\\da_projetofinal\\views\\formhomepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\views\\formhomepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|c:\\users\\leandro\\documents\\da_projetofinal\\da_projetofinal\\views\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\views\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|c:\\users\\leandro\\documents\\da_projetofinal\\da_projetofinal\\views\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\views\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|C:\\Users\\Leandro\\Documents\\DA_ProjetoFinal\\da_projetofinal\\views\\formpratos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\views\\formpratos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/DA_ProjetoFinal.CantinaContext/True/SqlTable/dbo.Extras.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|C:\\Users\\Leandro\\Documents\\DA_ProjetoFinal\\da_projetofinal\\views\\formextras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\views\\formextras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|c:\\users\\leandro\\documents\\da_projetofinal\\da_projetofinal\\views\\formextras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\views\\formextras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|C:\\Users\\Leandro\\Documents\\DA_ProjetoFinal\\da_projetofinal\\controllers\\extracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -41,17 +50,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "FormExtras.cs",
               "DocumentMoniker": "C:\\Users\\Leandro\\Documents\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormExtras.cs",
               "RelativeDocumentMoniker": "DA_ProjetoFinal\\Views\\FormExtras.cs",
               "ToolTip": "C:\\Users\\Leandro\\Documents\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormExtras.cs",
               "RelativeToolTip": "DA_ProjetoFinal\\Views\\FormExtras.cs",
-              "ViewState": "AQIAAFcAAAAAAAAAAADwv2YAAAAgAAAA",
+              "ViewState": "AQIAAFcAAAAAAAAAAADwv10AAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-26T02:17:19.272Z",
               "IsPinned": true,
@@ -59,27 +68,57 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FormExtras.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Leandro\\Documents\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormExtras.cs",
-              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Views\\FormExtras.cs",
-              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormExtras.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "FormHomePage.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Leandro\\Documents\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormHomePage.cs",
+              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Views\\FormHomePage.cs",
+              "ToolTip": "C:\\Users\\Leandro\\Documents\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormHomePage.cs [Design]",
+              "RelativeToolTip": "DA_ProjetoFinal\\Views\\FormHomePage.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T03:22:01.79Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "dbo.Extras [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/DA_ProjetoFinal.CantinaContext/True/SqlTable/dbo.Extras.sql",
-              "ToolTip": "dbo.Extras [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-05-26T03:43:16.52Z"
+              "WhenOpened": "2024-05-28T11:08:29.756Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "FormHomePage.cs",
+              "DocumentMoniker": "C:\\Users\\Leandro\\Documents\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormHomePage.cs",
+              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Views\\FormHomePage.cs",
+              "ToolTip": "C:\\Users\\Leandro\\Documents\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormHomePage.cs",
+              "RelativeToolTip": "DA_ProjetoFinal\\Views\\FormHomePage.cs",
+              "ViewState": "AQIAAKQAAAAAAAAAAADwv7wAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T10:36:20.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Main.cs",
+              "DocumentMoniker": "C:\\Users\\Leandro\\Documents\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\Main.cs",
+              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Views\\Main.cs",
+              "ToolTip": "C:\\Users\\Leandro\\Documents\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\Main.cs",
+              "RelativeToolTip": "DA_ProjetoFinal\\Views\\Main.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAowDIAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T10:33:24.716Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Main.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Leandro\\Documents\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\Main.cs",
+              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Views\\Main.cs",
+              "ToolTip": "C:\\Users\\Leandro\\Documents\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\Main.cs [Design]",
+              "RelativeToolTip": "DA_ProjetoFinal\\Views\\Main.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T10:33:14.89Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "FormPratos.cs",
               "DocumentMoniker": "C:\\Users\\Leandro\\Documents\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormPratos.cs",
               "RelativeDocumentMoniker": "DA_ProjetoFinal\\Views\\FormPratos.cs",
@@ -87,11 +126,12 @@
               "RelativeToolTip": "DA_ProjetoFinal\\Views\\FormPratos.cs",
               "ViewState": "AQIAAAMBAAAAAAAAAAAUwHAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T03:13:42.641Z"
+              "WhenOpened": "2024-05-26T03:13:42.641Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "UtilizadorController.cs",
               "DocumentMoniker": "C:\\Users\\Leandro\\Documents\\DA_ProjetoFinal\\DA_ProjetoFinal\\Controllers\\UtilizadorController.cs",
               "RelativeDocumentMoniker": "DA_ProjetoFinal\\Controllers\\UtilizadorController.cs",
@@ -103,7 +143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "PratoController.cs",
               "DocumentMoniker": "C:\\Users\\Leandro\\Documents\\DA_ProjetoFinal\\DA_ProjetoFinal\\Controllers\\PratoController.cs",
               "RelativeDocumentMoniker": "DA_ProjetoFinal\\Controllers\\PratoController.cs",
@@ -115,7 +155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "ExtraController.cs",
               "DocumentMoniker": "C:\\Users\\Leandro\\Documents\\DA_ProjetoFinal\\DA_ProjetoFinal\\Controllers\\ExtraController.cs",
               "RelativeDocumentMoniker": "DA_ProjetoFinal\\Controllers\\ExtraController.cs",
@@ -127,13 +167,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "FormPratos.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Leandro\\Documents\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormPratos.cs",
               "RelativeDocumentMoniker": "DA_ProjetoFinal\\Views\\FormPratos.cs",
-              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormPratos.cs [Design]",
+              "ToolTip": "C:\\Users\\Leandro\\Documents\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormPratos.cs [Design]",
+              "RelativeToolTip": "DA_ProjetoFinal\\Views\\FormPratos.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T03:13:06.767Z"
+              "WhenOpened": "2024-05-26T03:13:06.767Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
