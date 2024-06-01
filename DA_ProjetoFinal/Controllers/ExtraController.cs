@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -78,7 +79,11 @@ namespace DA_ProjetoFinal
                     extra.Descricao = descricao;
                     extra.Preco = preco;
                     extra.Ativo = ativo;
-                    context.SaveChanges();
+                    var entry = context.Entry(extra);
+                    if (entry.State == EntityState.Modified) // Verificar se de facto houve alterações no objeto
+                    {
+                        context.SaveChanges();
+                    }
                     return true;
                 }
             }

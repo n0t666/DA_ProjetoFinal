@@ -18,7 +18,7 @@ namespace DA_ProjetoFinal.Views
             comboBoxClientes.Items.Clear();
             comboBoxClientes.AutoCompleteMode = AutoCompleteMode.Suggest;
             comboBoxClientes.AutoCompleteSource = AutoCompleteSource.ListItems;
-            comboBoxClientes.DataSource = ClienteController.GetClientes();         
+            comboBoxClientes.DataSource = ClienteController.Get();         
             comboBoxClientes.SelectedIndex = -1;
             MessageBox.Show(utilizadorAtual.ToString());
         }

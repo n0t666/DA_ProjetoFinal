@@ -10,7 +10,7 @@ namespace DA_ProjetoFinal
     {
         public int Id { get; set; }
         public string Nome { get; set; }
-        public int Nif { get; set; }
+        public string Nif { get; set; }
 
         public string FotoDePerfil { get; set; }
     }

@@ -157,6 +157,7 @@ namespace DA_ProjetoFinal.Views
         {
             await Task.Run(() => { this.utilizadores = UtilizadorController.Get(); });
             labelLoading.Text = "Dados carregados";
+            UtilityController.Center(labelLoading);
             await Task.Delay(1000);
         }
 
@@ -173,6 +174,7 @@ namespace DA_ProjetoFinal.Views
                     control.Visible = controlsVisible;
                 }
             }
+          
 
         }
 

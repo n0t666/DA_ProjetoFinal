@@ -9,7 +9,7 @@ namespace DA_ProjetoFinal
     internal class Estudante: Cliente
     {
 
-        public int NumEstudante { get; set; }
+        public string NumEstudante { get; set; }
 
         public override string ToString()
         {

@@ -134,7 +134,7 @@
             this.notificationExtra.Size = new System.Drawing.Size(234, 40);
             this.notificationExtra.Style = ReaLTaiizor.Controls.FoxNotification.Styles.Red;
             this.notificationExtra.TabIndex = 8;
-            this.notificationExtra.Text = "Prato adicionado com sucesso!";
+            this.notificationExtra.Text = "Extra adicionado com sucesso!";
             this.notificationExtra.Visible = false;
             this.notificationExtra.YellowBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(248)))), ((int)(((byte)(225)))));
             this.notificationExtra.YellowBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(235)))), ((int)(((byte)(200)))));

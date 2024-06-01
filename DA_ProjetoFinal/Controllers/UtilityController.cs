@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -67,6 +68,20 @@ namespace DA_ProjetoFinal
 
             control.Left = Convert.ToInt32(centrado);
 
+        }
+
+        public static bool IsEmailValid(string email)
+        {
+            try
+            {
+                MailAddress m = new System.Net.Mail.MailAddress(email);
+                return true;
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("O email introduzido não é válido", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
@@ -91,7 +92,11 @@ namespace DA_ProjetoFinal.Controllers
                     prato.Descricao = descricao;
                     prato.Tipo = tipo;
                     prato.Ativo = activo;
-                    context.SaveChanges();
+                    var entry = context.Entry(prato);
+                    if (entry.State == EntityState.Modified) // Verificar se de facto houve alterações no objeto
+                    {
+                        context.SaveChanges();
+                    }
                 }
                 return true;
             }

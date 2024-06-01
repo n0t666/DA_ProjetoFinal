@@ -89,7 +89,7 @@ namespace DA_ProjetoFinal.Views
                     timerSideBar.Stop();
                     sideBarExpanded = true;
                     panelLoadingArea.Location = initialPosLoading;
-                    this.BackColor = Color.White;
+                    this.BackColor = Color.FromName("Control");
                 }
             }
             this.Refresh();
@@ -183,12 +183,11 @@ namespace DA_ProjetoFinal.Views
         private void changeSideState(bool state) 
         {
 
-
             foreach(Control ctrl in panelSideBar.Controls)
             {
                 ctrl.Enabled = state;
-
             }
+            btnSideBar.Enabled = state;
         }
 
 

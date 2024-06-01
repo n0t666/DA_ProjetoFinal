@@ -69,9 +69,11 @@
       <DependentUpon>SideBarCustomButton.cs</DependentUpon>
     </Compile>
     <Compile Include="Controllers\ClienteController.cs" />
+    <Compile Include="Controllers\EstudanteController.cs" />
     <Compile Include="Controllers\ExtraController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\PratoController.cs" />
+    <Compile Include="Controllers\ProfessorController.cs" />
     <Compile Include="Controllers\UtilityController.cs" />
     <Compile Include="Controllers\UtilizadorController.cs" />
     <Compile Include="Migrations\202405182258031_InitialCreate.cs" />
@@ -81,6 +83,10 @@
     <Compile Include="Migrations\202405240151118_initial.cs" />
     <Compile Include="Migrations\202405240151118_initial.Designer.cs">
       <DependentUpon>202405240151118_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202405310148586_Changed types.cs" />
+    <Compile Include="Migrations\202405310148586_Changed types.Designer.cs">
+      <DependentUpon>202405310148586_Changed types.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Cliente.cs" />
@@ -175,6 +181,9 @@
     <EmbeddedResource Include="Migrations\202405240151118_initial.resx">
       <DependentUpon>202405240151118_initial.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405310148586_Changed types.resx">
+      <DependentUpon>202405310148586_Changed types.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -185,6 +194,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\FormClientes.resx">
+      <DependentUpon>FormClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\FormExtras.resx">
       <DependentUpon>FormExtras.cs</DependentUpon>
     </EmbeddedResource>
@@ -237,6 +249,7 @@
     <Content Include="Resources\Images\Icons\home_active.png" />
     <Content Include="Resources\Images\Icons\home_active_small.png" />
     <Content Include="Resources\Images\Icons\home_normal_small.png" />
+    <Content Include="Resources\Images\Icons\icons8-search-500.png" />
     <Content Include="Resources\Images\Icons\info.png" />
     <Content Include="Resources\Images\Icons\logo.png" />
     <Content Include="Resources\Images\Icons\menu.png" />
