@@ -71,6 +71,7 @@
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\EstudanteController.cs" />
     <Compile Include="Controllers\ExtraController.cs" />
+    <Compile Include="Controllers\FuncionarioController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\PratoController.cs" />
     <Compile Include="Controllers\ProfessorController.cs" />
@@ -199,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormExtras.resx">
       <DependentUpon>FormExtras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormFuncionarios.resx">
+      <DependentUpon>FormFuncionarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormHomePage.resx">
       <DependentUpon>FormHomePage.cs</DependentUpon>

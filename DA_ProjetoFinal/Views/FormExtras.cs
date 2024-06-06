@@ -255,7 +255,7 @@ namespace DA_ProjetoFinal.Views
                     sucesso = ExtraController.Editar(selectedExtra.Id,txtEditDesc.Text, preco, checkAtivoEdit.Checked); 
                     if (sucesso) 
                     {
-                        selectedExtra = null;
+                     selectedExtra = null;
                         tabPageExtras.SelectedIndex = 0;
                         notificationExtra.Visible = true;
                         notificationExtra.Style = ReaLTaiizor.Controls.FoxNotification.Styles.Green;

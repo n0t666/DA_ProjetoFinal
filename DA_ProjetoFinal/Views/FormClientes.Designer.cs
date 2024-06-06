@@ -45,7 +45,6 @@
             this.btnSubmit = new ReaLTaiizor.Controls.HopeRoundButton();
             this.tabPageListarCliente = new System.Windows.Forms.TabPage();
             this.comboTipoUtilizadorList = new ReaLTaiizor.Controls.PoisonComboBox();
-            this.picSearch = new System.Windows.Forms.PictureBox();
             this.comboBoxClientes = new ReaLTaiizor.Controls.PoisonComboBox();
             this.numSaldo = new ReaLTaiizor.Controls.CrownNumeric();
             this.btnCarregar = new ReaLTaiizor.Controls.LostButton();
@@ -180,11 +179,11 @@
             this.txtNomeEdit = new ReaLTaiizor.Controls.SmallTextBox();
             this.btnSubmitEdit = new ReaLTaiizor.Controls.HopeRoundButton();
             this.timerNotification = new System.Windows.Forms.Timer(this.components);
+            this.picSearch = new System.Windows.Forms.PictureBox();
             this.tabPageClientes.SuspendLayout();
             this.tabPageCriarCliente.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabPageListarCliente.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSaldo)).BeginInit();
             this.flowLayoutPanel20.SuspendLayout();
             this.flowLayoutPanel21.SuspendLayout();
@@ -225,6 +224,7 @@
             this.flowLayoutPanel2.SuspendLayout();
             this.tabPageEditarCliente.SuspendLayout();
             this.panelSelecionadoEdit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picSearch)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPageClientes
@@ -463,7 +463,6 @@
             // 
             this.tabPageListarCliente.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tabPageListarCliente.Controls.Add(this.comboTipoUtilizadorList);
-            this.tabPageListarCliente.Controls.Add(this.picSearch);
             this.tabPageListarCliente.Controls.Add(this.comboBoxClientes);
             this.tabPageListarCliente.Controls.Add(this.numSaldo);
             this.tabPageListarCliente.Controls.Add(this.btnCarregar);
@@ -479,6 +478,7 @@
             this.tabPageListarCliente.Controls.Add(this.flowLayoutPanel2);
             this.tabPageListarCliente.Controls.Add(this.btnPaginateVoltar);
             this.tabPageListarCliente.Controls.Add(this.btnPaginateAvancar);
+            this.tabPageListarCliente.Controls.Add(this.picSearch);
             this.tabPageListarCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.tabPageListarCliente.Location = new System.Drawing.Point(4, 64);
             this.tabPageListarCliente.Name = "tabPageListarCliente";
@@ -501,17 +501,6 @@
             this.comboTipoUtilizadorList.Text = "Selecione um tipo de utilizador";
             this.comboTipoUtilizadorList.UseSelectable = true;
             this.comboTipoUtilizadorList.SelectionChangeCommitted += new System.EventHandler(this.comboTipoUtilizadorList_SelectionChangeCommitted_1);
-            // 
-            // picSearch
-            // 
-            this.picSearch.Image = global::DA_ProjetoFinal.Properties.Resources.icons8_search_500;
-            this.picSearch.Location = new System.Drawing.Point(532, 86);
-            this.picSearch.Name = "picSearch";
-            this.picSearch.Size = new System.Drawing.Size(35, 29);
-            this.picSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picSearch.TabIndex = 32;
-            this.picSearch.TabStop = false;
-            this.picSearch.Click += new System.EventHandler(this.picSearch_Click);
             // 
             // comboBoxClientes
             // 
@@ -2139,6 +2128,17 @@
             this.timerNotification.Interval = 3000;
             this.timerNotification.Tick += new System.EventHandler(this.timerNotification_Tick);
             // 
+            // picSearch
+            // 
+            this.picSearch.Image = global::DA_ProjetoFinal.Properties.Resources.icons8_search_500;
+            this.picSearch.Location = new System.Drawing.Point(532, 86);
+            this.picSearch.Name = "picSearch";
+            this.picSearch.Size = new System.Drawing.Size(35, 29);
+            this.picSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picSearch.TabIndex = 32;
+            this.picSearch.TabStop = false;
+            this.picSearch.Click += new System.EventHandler(this.picSearch_Click);
+            // 
             // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2154,7 +2154,6 @@
             this.panel1.PerformLayout();
             this.tabPageListarCliente.ResumeLayout(false);
             this.tabPageListarCliente.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSaldo)).EndInit();
             this.flowLayoutPanel20.ResumeLayout(false);
             this.flowLayoutPanel20.PerformLayout();
@@ -2234,6 +2233,7 @@
             this.tabPageEditarCliente.PerformLayout();
             this.panelSelecionadoEdit.ResumeLayout(false);
             this.panelSelecionadoEdit.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picSearch)).EndInit();
             this.ResumeLayout(false);
 
         }

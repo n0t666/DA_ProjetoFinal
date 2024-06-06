@@ -54,3 +54,6 @@ C:\Users\Leandro\Documents\DA_ProjetoFinal\DA_ProjetoFinal\obj\Debug\DA_ProjetoF
 C:\Users\Leandro\Documents\DA_ProjetoFinal\DA_ProjetoFinal\obj\Debug\DA_ProjetoFinal.pdb
 E:\Documentos\DA_ProjetoFinal\DA_ProjetoFinal\obj\Debug\DA_ProjetoFinal.Views.FormClientes.resources
 E:\Documentos\DA_ProjetoFinal\DA_ProjetoFinal\obj\Debug\DA_ProjetoFinal.Migrations.Changedtypes.resources
+C:\Users\Leandro\Documents\DA_ProjetoFinal\DA_ProjetoFinal\obj\Debug\DA_ProjetoFinal.Migrations.Changedtypes.resources
+C:\Users\Leandro\Documents\DA_ProjetoFinal\DA_ProjetoFinal\obj\Debug\DA_ProjetoFinal.Views.FormClientes.resources
+C:\Users\Leandro\Documents\DA_ProjetoFinal\DA_ProjetoFinal\obj\Debug\DA_ProjetoFinal.Views.FormFuncionarios.resources
