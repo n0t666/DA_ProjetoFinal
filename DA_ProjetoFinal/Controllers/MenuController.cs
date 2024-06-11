@@ -11,11 +11,16 @@ namespace DA_ProjetoFinal
 
         public static List<Menu> GetBetweenDates(DateTime inicio, DateTime fim)
         {
+            try { 
             using (var context = new CantinaContext())
             {
                 return context.Menus
                     .Where(m => m.DataHora >= inicio && m.DataHora <= fim)
                     .ToList();
+            }
+            }catch (Exception)
+            {
+                return null;
             }
         }
     }

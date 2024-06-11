@@ -45,8 +45,7 @@ namespace DA_ProjetoFinal.Views
             {
                 bool sucesso;
                 decimal preco = UtilityController.GetDecimal(txtPreco.Text, "preço");
-                try
-                {
+       
                     sucesso = ExtraController.Adicionar(txtDescricao.Text,preco ,checkBoxAtivo.Checked); // Adicionar o extra
                     if (sucesso) // Se o prato for adicionado com sucesso, mostra uma mensagem de sucesso e limpa os campos preenchidos
                     {
@@ -66,11 +65,7 @@ namespace DA_ProjetoFinal.Views
                         timerNotification.Start();
 
                     }
-                }
-                catch(Exception ex)
-                {
-                   
-                }
+
 
              
             }
@@ -250,8 +245,7 @@ namespace DA_ProjetoFinal.Views
             {
                 bool sucesso;
                 decimal preco = UtilityController.GetDecimal(txtEditPreco.Text, "preço");
-                try
-                {
+       
                     sucesso = ExtraController.Editar(selectedExtra.Id,txtEditDesc.Text, preco, checkAtivoEdit.Checked); 
                     if (sucesso) 
                     {
@@ -269,11 +263,8 @@ namespace DA_ProjetoFinal.Views
                         notificationExtra.Text = "Ocorreu um erro ao editar o extra";
                         timerNotification.Start();
                     }
-                }
-                catch (Exception ex)
-                {
+                
 
-                }
 
 
             }

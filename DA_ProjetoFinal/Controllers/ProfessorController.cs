@@ -29,11 +29,23 @@ namespace DA_ProjetoFinal
                 return true;
             }
             }
-            catch (Exception EX)
+            catch (FormatException)
             {
-                MessageBox.Show(EX.Message);
-                return false;
+                MessageBox.Show("O NIF apenas pode conter números", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            catch (ArgumentNullException)
+            {
+                MessageBox.Show("Preencha todos os campos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (ArgumentException)
+            {
+                MessageBox.Show("Os dados que introduziu não são válidos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro inesperado " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return false;
         }
 
         public static bool Editar(int id, string nome, string nif, string email)
@@ -60,11 +72,23 @@ namespace DA_ProjetoFinal
                     return true;
                 }
             }
-            catch (Exception EX)
+            catch (FormatException)
             {
-                MessageBox.Show(EX.Message);
-                return false;
+                MessageBox.Show("O NIF apenas pode conter números", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            catch (ArgumentNullException)
+            {
+                MessageBox.Show("Preencha todos os campos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (ArgumentException)
+            {
+                MessageBox.Show("Os dados que introduziu não são válidos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro inesperado " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return false;
         }
 
     }

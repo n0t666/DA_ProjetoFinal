@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DA_ProjetoFinal
 {
@@ -10,10 +11,19 @@ namespace DA_ProjetoFinal
     {
         public static List<Cliente> Get()
         {
+            try
+            {
+
             using (var context = new CantinaContext())
             {
                 return context.Clientes.ToList();
             }
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+            
         }
 
         public static List<Cliente> GetByType(string tipo)
@@ -80,8 +90,10 @@ namespace DA_ProjetoFinal
                     return true;
                 }
             }
-            catch (Exception)
+
+            catch (Exception ex)
             {
+                MessageBox.Show("Ocorreu um erro ao carregar o saldo: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
         }

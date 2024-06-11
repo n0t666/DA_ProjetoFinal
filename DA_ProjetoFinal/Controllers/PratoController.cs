@@ -5,6 +5,7 @@ using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DA_ProjetoFinal.Controllers
 {
@@ -31,10 +32,19 @@ namespace DA_ProjetoFinal.Controllers
                 }
                 return true;
             }
+            catch (ArgumentNullException)
+            {
+                MessageBox.Show("Preencha todos os campos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (ArgumentException)
+            {
+                MessageBox.Show("Os dados que introduziu não são válidos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             catch (Exception)
             {
-                return false;
+                MessageBox.Show("Ocorreu um erro inesperado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            return false;
         }
 
         // Função que permite obter todos os pratos com paginação
@@ -100,10 +110,19 @@ namespace DA_ProjetoFinal.Controllers
                 }
                 return true;
             }
+            catch (ArgumentNullException)
+            {
+                MessageBox.Show("Preencha todos os campos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (ArgumentException)
+            {
+                MessageBox.Show("Os dados que introduziu não são válidos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             catch (Exception)
             {
-                return false;
+                MessageBox.Show("Ocorreu um erro inesperado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            return false;
         }
     }
 

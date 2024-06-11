@@ -21,7 +21,7 @@ namespace DA_ProjetoFinal.Views
 
         //-----------------Variáveis relacionadas com a seleção de pratos-----------------
         private List<Prato> pratos;
-        private Prato pratoSelecionado; 
+        private Prato pratoSelecionado;
         //------------------------------------------------------------------------
 
         public FormPratos()
@@ -35,53 +35,41 @@ namespace DA_ProjetoFinal.Views
             {
                 MessageBox.Show("Preencha todos os campos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
-            } else
+            }
+            else
             {
                 bool sucesso;
-                try
-                {
-                    TipoPrato tipoPrato = (TipoPrato)comboBoxTipos.SelectedItem; // Obter o tipo de prato selecionado na combobox
-                    sucesso = PratoController.Adicionar(txtDescricao.Text, tipoPrato, checkBoxAtivo.Checked);
-                    if (sucesso) // Se o prato for adicionado com sucesso, mostra uma mensagem de sucesso e limpa os campos preenchidos
-                    {
-                        txtDescricao.Text = "";
-                        comboBoxTipos.SelectedIndex = 0;
-                        checkBoxAtivo.Checked = false;
-                        notificationPrato.Visible = true;
-                        notificationPrato.Style = ReaLTaiizor.Controls.FoxNotification.Styles.Green;
-                        notificationPrato.Text = "Prato adicionado com sucesso";
-                        timerNotification.Start();
-                    }
-                    else // caso contrário, mostra uma mensagem de erro
-                    {
-                        notificationPrato.Visible = true;
-                        notificationPrato.Style = ReaLTaiizor.Controls.FoxNotification.Styles.Red;
-                        notificationPrato.Text = "Ocorreu um erro ao guardar o prato";
-                        timerNotification.Start();
 
-                    }
-                }
-                catch (ArgumentNullException)
+                TipoPrato tipoPrato = (TipoPrato)comboBoxTipos.SelectedItem; // Obter o tipo de prato selecionado na combobox
+                sucesso = PratoController.Adicionar(txtDescricao.Text, tipoPrato, checkBoxAtivo.Checked);
+                if (sucesso) // Se o prato for adicionado com sucesso, mostra uma mensagem de sucesso e limpa os campos preenchidos
                 {
-                    MessageBox.Show("Preencha todos os campos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtDescricao.Text = "";
+                    comboBoxTipos.SelectedIndex = 0;
+                    checkBoxAtivo.Checked = false;
+                    notificationPrato.Visible = true;
+                    notificationPrato.Style = ReaLTaiizor.Controls.FoxNotification.Styles.Green;
+                    notificationPrato.Text = "Prato adicionado com sucesso";
+                    timerNotification.Start();
                 }
-                catch (ArgumentException)
+                else // caso contrário, mostra uma mensagem de erro
                 {
-                    MessageBox.Show("Os dados que introduziu não são válidos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    notificationPrato.Visible = true;
+                    notificationPrato.Style = ReaLTaiizor.Controls.FoxNotification.Styles.Red;
+                    notificationPrato.Text = "Ocorreu um erro ao guardar o prato";
+                    timerNotification.Start();
+
                 }
-                catch (Exception)
-                {
-                    MessageBox.Show("Ocorreu um erro inesperado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            
-                
+
+
+
             }
         }
 
 
         private void FormPratos_Load(object sender, EventArgs e)
         {
-            List<TipoPrato> tipos = new List<TipoPrato>(); 
+            List<TipoPrato> tipos = new List<TipoPrato>();
             tipos = PratoController.GetTipos(); // Ao carregar o forms, obtem-se todos os tipos de prato
 
 
@@ -102,7 +90,7 @@ namespace DA_ProjetoFinal.Views
 
         private void foreverTabPage1_SelectedIndexChanged(object sender, EventArgs e) // Evento que é chamado sempre que a tabpage é alterada
         {
-            switch(foreverTabPage1.SelectedIndex)
+            switch (foreverTabPage1.SelectedIndex)
             {
                 case 0: // Adicionar prato
                     break;
@@ -110,7 +98,7 @@ namespace DA_ProjetoFinal.Views
                     loadPratos();
                     break;
                 case 2: // Editar prato
-                    if(pratoSelecionado != null) // Se um prato estiver selecionado, mostra os campos para editar e preenche-os com os dados do prato selecionado
+                    if (pratoSelecionado != null) // Se um prato estiver selecionado, mostra os campos para editar e preenche-os com os dados do prato selecionado
                     {
                         panelSelecionadoEdit.Visible = true;
                         panelSelecionadoEdit.Location = panel1.Location;
@@ -133,18 +121,18 @@ namespace DA_ProjetoFinal.Views
         // Função que permite carregar os pratos existentes, na combobox
         private void loadPratos()
         {
-                pratos = PratoController.Paginar(paginaAtual, tamanhoPagina);
-                comboBoxPratos.DataSource = pratos;
-                comboBoxPratos.DisplayMember = "Descricao"; // Mostrar a descrição do prato na combobox
-                updatePagination(); // Atualizar os botões de paginação,ou seja,  se existe mais pratos que possam ser mostrados
-                obterDadosDropDown(0); // Automaticamente obter os dados do primeiro prato da lista
+            pratos = PratoController.Paginar(paginaAtual, tamanhoPagina);
+            comboBoxPratos.DataSource = pratos;
+            comboBoxPratos.DisplayMember = "Descricao"; // Mostrar a descrição do prato na combobox
+            updatePagination(); // Atualizar os botões de paginação,ou seja,  se existe mais pratos que possam ser mostrados
+            obterDadosDropDown(0); // Automaticamente obter os dados do primeiro prato da lista
         }
 
 
         private void updatePagination()
         {
             btnPaginateAvancar.Enabled = paginaAtual * tamanhoPagina < PratoController.ObterNumero(); // Verificar se é possível avançar para a próxima página
-            btnPaginateVoltar.Enabled = paginaAtual  > 1; // Verificar se é possível voltar para a página anterior
+            btnPaginateVoltar.Enabled = paginaAtual > 1; // Verificar se é possível voltar para a página anterior
         }
 
 
@@ -156,37 +144,38 @@ namespace DA_ProjetoFinal.Views
         // Função que permite mostrar os dados do prato selecionado na combobox
         private void obterDadosDropDown(int indexEspecifico = -1)
         {
-            if(comboBoxPratos.Items.Count > 0) { 
-            if (indexEspecifico >=0)
+            if (comboBoxPratos.Items.Count > 0)
             {
-                comboBoxPratos.SelectedItem = indexEspecifico;
-            }
-            Prato prato = (Prato)comboBoxPratos.SelectedItem;
+                if (indexEspecifico >= 0)
+                {
+                    comboBoxPratos.SelectedItem = indexEspecifico;
+                }
+                Prato prato = (Prato)comboBoxPratos.SelectedItem;
 
 
-            if (prato.Ativo)
-            {
-                lblAtivo.Text = "Ativo";
-                lblAtivo.ForeColor = Color.Green;
-            }
-            else
-            {
-                lblAtivo.Text = "Inativo";
-                lblAtivo.ForeColor = Color.Red;
-            }
+                if (prato.Ativo)
+                {
+                    lblAtivo.Text = "Ativo";
+                    lblAtivo.ForeColor = Color.Green;
+                }
+                else
+                {
+                    lblAtivo.Text = "Inativo";
+                    lblAtivo.ForeColor = Color.Red;
+                }
 
 
-            if (pratoSelecionado != null && prato.Id == pratoSelecionado.Id) // Verificar se o prato selecionado é o mesmo que o prato que está a ser mostrado, com base no id
-            {
-                lblSelecionado.Text = "Selecionado";
-            }
-            else
-            {
-                lblSelecionado.Text = "";
-            }
+                if (pratoSelecionado != null && prato.Id == pratoSelecionado.Id) // Verificar se o prato selecionado é o mesmo que o prato que está a ser mostrado, com base no id
+                {
+                    lblSelecionado.Text = "Selecionado";
+                }
+                else
+                {
+                    lblSelecionado.Text = "";
+                }
 
-            lblDescricao.Text = prato.Descricao;
-            lblTipo.Text = prato.Tipo.ToString();
+                lblDescricao.Text = prato.Descricao;
+                lblTipo.Text = prato.Tipo.ToString();
             }
             else
             {
@@ -207,12 +196,12 @@ namespace DA_ProjetoFinal.Views
             obterDadosDropDown(0);
         }
 
-        
+
         private void btnSelecionar_Click(object sender, EventArgs e)
         {
-            if(comboBoxPratos.SelectedIndex >= 0) 
+            if (comboBoxPratos.SelectedIndex >= 0)
             {
-                if(pratoSelecionado != null && pratoSelecionado.Id == ((Prato)comboBoxPratos.SelectedItem).Id) // Se o prato já estiver selecionado, desseleciona o prato
+                if (pratoSelecionado != null && pratoSelecionado.Id == ((Prato)comboBoxPratos.SelectedItem).Id) // Se o prato já estiver selecionado, desseleciona o prato
                 {
                     pratoSelecionado = null;
                     lblSelecionado.Text = "";
@@ -222,14 +211,14 @@ namespace DA_ProjetoFinal.Views
                     pratoSelecionado = (Prato)comboBoxPratos.SelectedItem;
                     lblSelecionado.Text = "Selecionado";
                 }
-                
+
             }
 
         }
 
         private void btnApagar_Click(object sender, EventArgs e)
         {
-            if (pratoSelecionado !=null) // Se houver um prato selecionado, apaga o prato
+            if (pratoSelecionado != null) // Se houver um prato selecionado, apaga o prato
             {
                 bool sucesso = PratoController.Apagar(pratoSelecionado.Id);
                 if (sucesso)
@@ -259,7 +248,7 @@ namespace DA_ProjetoFinal.Views
                 MessageBox.Show("Preencha todos os campos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            else if(pratoSelecionado == null)
+            else if (pratoSelecionado == null)
             {
                 MessageBox.Show("Selecione um prato", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -267,47 +256,35 @@ namespace DA_ProjetoFinal.Views
             else
             {
                 bool sucesso;
-                try
-                {
-                    TipoPrato tipoPrato = (TipoPrato)comboBoxEditTipo.SelectedItem;
-                    sucesso = PratoController.Editar(pratoSelecionado.Id, txtEditDesc.Text, tipoPrato, checkAtivoEdit.Checked);
-                    if (sucesso)
-                    {
-                        pratoSelecionado = null;
-                        foreverTabPage1.SelectedIndex = 0;
-                        notificationPrato.Visible = true;
-                        notificationPrato.Style = ReaLTaiizor.Controls.FoxNotification.Styles.Green;
-                        notificationPrato.Text = "Prato editado com sucesso";
-                        timerNotification.Start();
-                    }
-                    else
-                    {
-                        foreverTabPage1.SelectedIndex = 0;
-                        notificationPrato.Visible = true;
-                        notificationPrato.Style = ReaLTaiizor.Controls.FoxNotification.Styles.Red;
-                        notificationPrato.Text = "Ocorreu um erro ao guardar o prato";
-                        timerNotification.Start();
-                       
 
-                    }
-                }
-                catch (ArgumentNullException)
+                TipoPrato tipoPrato = (TipoPrato)comboBoxEditTipo.SelectedItem;
+                sucesso = PratoController.Editar(pratoSelecionado.Id, txtEditDesc.Text, tipoPrato, checkAtivoEdit.Checked);
+                if (sucesso)
                 {
-                    MessageBox.Show("Preencha todos os campos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    pratoSelecionado = null;
+                    foreverTabPage1.SelectedIndex = 0;
+                    notificationPrato.Visible = true;
+                    notificationPrato.Style = ReaLTaiizor.Controls.FoxNotification.Styles.Green;
+                    notificationPrato.Text = "Prato editado com sucesso";
+                    timerNotification.Start();
                 }
-                catch (ArgumentException)
+                else
                 {
-                    MessageBox.Show("Os dados que introduziu não são válidos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    foreverTabPage1.SelectedIndex = 0;
+                    notificationPrato.Visible = true;
+                    notificationPrato.Style = ReaLTaiizor.Controls.FoxNotification.Styles.Red;
+                    notificationPrato.Text = "Ocorreu um erro ao guardar o prato";
+                    timerNotification.Start();
+
+
                 }
-                catch (Exception)
-                {
-                    MessageBox.Show("Ocorreu um erro inesperado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+
+
 
 
             }
 
         }
     }
-    }
-   
+}
+

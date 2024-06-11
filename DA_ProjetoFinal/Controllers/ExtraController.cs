@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DA_ProjetoFinal
 {
@@ -30,6 +31,7 @@ namespace DA_ProjetoFinal
             }
             catch (Exception)
             {
+               MessageBox.Show("Erro ao adicionar o extra");
                 return false;
             }
         }
@@ -65,6 +67,7 @@ namespace DA_ProjetoFinal
             }
             catch (Exception)
             {
+                MessageBox.Show("Erro ao apagar o extra");
                 return false;
             }
         }
@@ -89,8 +92,9 @@ namespace DA_ProjetoFinal
             }
             catch (Exception)
             {
-                return false;
+               MessageBox.Show("Erro ao editar o extra");
             }
+            return false;
         }
     }
 }

@@ -29,10 +29,19 @@ namespace DA_ProjetoFinal
                 return true;
             }
             }
+            catch (ArgumentNullException)
+            {
+                MessageBox.Show("Preencha todos os campos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (ArgumentException)
+            {
+                MessageBox.Show("Os dados que introduziu não são válidos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             catch (Exception)
             {
-                return false;
+                MessageBox.Show("Ocorreu um erro inesperado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            return false;
         }
 
         public static bool Editar(int id, string nome, string nif, string numEstudante)
@@ -58,10 +67,19 @@ namespace DA_ProjetoFinal
                     return true;
                 }
             }
+            catch (ArgumentNullException)
+            {
+                MessageBox.Show("Preencha todos os campos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (ArgumentException)
+            {
+                MessageBox.Show("Os dados que introduziu não são válidos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             catch (Exception)
             {
-                return false;
+                MessageBox.Show("Ocorreu um erro inesperado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            return false;
         }
 
     }

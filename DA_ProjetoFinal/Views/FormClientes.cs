@@ -58,47 +58,35 @@ namespace DA_ProjetoFinal.Views
 
                     if (tipoCliente == "Estudante")
                     {
-                        if(string.IsNullOrEmpty(txtNumEstudante.Text))
+                        if (string.IsNullOrEmpty(txtNumEstudante.Text))
                         {
                             MessageBox.Show("Preencha todos os campos!");
                             return;
                         }
                         else
                         {
-                            if (!txtNumEstudante.Text.All(char.IsDigit)) 
+                            if (!txtNumEstudante.Text.All(char.IsDigit))
                             {
                                 MessageBox.Show("O número de estudante apenas pode conter números", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 return;
                             }
-                            try
+
+                            sucesso = EstudanteController.Adicionar(txtNome.Text, txtNif.Text, txtNumEstudante.Text);
+                            if (sucesso)
                             {
-                                sucesso =  EstudanteController.Adicionar(txtNome.Text, txtNif.Text, txtNumEstudante.Text);
-                                if (sucesso)
-                                {
-                                  criarNotificacao("Estudante criado com sucesso!", ReaLTaiizor.Controls.FoxNotification.Styles.Green);
-                                    txtNif.Text = "";
-                                    txtNome.Text = "";
-                                    txtNumEstudante.Text = "";
-                                    txtEmail.Text = "";
-                                    comboTipoUtilizador.SelectedIndex = 0;
-                                }
-                                else
-                                {
-                                    criarNotificacao("Ocorreu um erro ao criar o estudante", ReaLTaiizor.Controls.FoxNotification.Styles.Red);
-                                }
+                                criarNotificacao("Estudante criado com sucesso!", ReaLTaiizor.Controls.FoxNotification.Styles.Green);
+                                txtNif.Text = "";
+                                txtNome.Text = "";
+                                txtNumEstudante.Text = "";
+                                txtEmail.Text = "";
+                                comboTipoUtilizador.SelectedIndex = 0;
                             }
-                            catch (ArgumentNullException)
+                            else
                             {
-                                MessageBox.Show("Preencha todos os campos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                criarNotificacao("Ocorreu um erro ao criar o estudante", ReaLTaiizor.Controls.FoxNotification.Styles.Red);
                             }
-                            catch (ArgumentException)
-                            {
-                                MessageBox.Show("Os dados que introduziu não são válidos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                            catch (Exception)
-                            {
-                                MessageBox.Show("Ocorreu um erro inesperado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
+
+
                         }
 
                     }
@@ -115,37 +103,22 @@ namespace DA_ProjetoFinal.Views
                             {
                                 return;
                             }
-                            try
+
+                            sucesso = ProfessorController.Adicionar(txtNome.Text, txtNif.Text, txtEmail.Text);
+                            if (sucesso)
                             {
-                                sucesso = ProfessorController.Adicionar(txtNome.Text, txtNif.Text, txtEmail.Text);
-                                if (sucesso)
-                                {
-                                    criarNotificacao("Professor criado com sucesso!", ReaLTaiizor.Controls.FoxNotification.Styles.Green);
-                                    txtNif.Text = "";
-                                    txtNome.Text = "";
-                                    txtEmail.Text = "";
-                                    comboTipoUtilizador.SelectedIndex = 0;
-                                }else
-                                {
-                                    criarNotificacao("Ocorreu um erro ao criar o professor", ReaLTaiizor.Controls.FoxNotification.Styles.Red);
-                                }
+                                criarNotificacao("Professor criado com sucesso!", ReaLTaiizor.Controls.FoxNotification.Styles.Green);
+                                txtNif.Text = "";
+                                txtNome.Text = "";
+                                txtEmail.Text = "";
+                                comboTipoUtilizador.SelectedIndex = 0;
                             }
-                            catch (FormatException)
+                            else
                             {
-                                MessageBox.Show("O NIF apenas pode conter números", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                criarNotificacao("Ocorreu um erro ao criar o professor", ReaLTaiizor.Controls.FoxNotification.Styles.Red);
                             }
-                            catch (ArgumentNullException)
-                            {
-                                MessageBox.Show("Preencha todos os campos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                            catch (ArgumentException)
-                            {
-                                MessageBox.Show("Os dados que introduziu não são válidos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                            catch (Exception ex)
-                            {
-                                MessageBox.Show("Ocorreu um erro inesperado " + ex.Message , "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
+
+
                         }
                     }
                     else
@@ -240,32 +213,28 @@ namespace DA_ProjetoFinal.Views
 
         private void btnCarregar_Click(object sender, EventArgs e)
         {
-            if(selectedCliente != null)
+            if (selectedCliente != null)
             {
-                if(numSaldo.Value > 0) { 
-                try
+                if (numSaldo.Value > 0)
                 {
+
                     decimal valor = numSaldo.Value;
                     bool sucesso = ClienteController.CarregarSaldo(selectedCliente.Id, valor);
                     if (sucesso)
                     {
-                        MessageBox.Show("Foi feito um carregamento de " + valor.ToString() + "€ " , "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Foi feito um carregamento de " + valor.ToString() + "€ ", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         loadClientes();
                         obterDadosClientes(true);
-                        }
+                    }
                     else
                     {
                         MessageBox.Show("Ocorreu um erro ao carregar o saldo", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                catch(Exception ex)
+                else
                 {
-                    MessageBox.Show("Ocorreu um erro ao carregar o saldo: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                }
-                else {                    
                     MessageBox.Show("O valor a carregar tem de ser superior a 0", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                               }
+                }
             }
             else
             {
@@ -274,7 +243,7 @@ namespace DA_ProjetoFinal.Views
         }
 
 
-       
+
         private void numSaldo_KeyPress(object sender, KeyPressEventArgs e) // Quando uma tecla é pressionada no campo de saldo, verifica se é um número ou um ponto (para permitir valores decimais)
         {
             if (!(char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == '.')) // Permite também a tecla de backspace
@@ -304,7 +273,7 @@ namespace DA_ProjetoFinal.Views
                 comboBoxClientes.AutoCompleteSource = AutoCompleteSource.ListItems;
 
                 updatePagination();
-                if(startOnSelected && selectedCliente != null)
+                if (startOnSelected && selectedCliente != null)
                 {
                     if (selectedClienteIndex >= 0)
                     {
@@ -378,7 +347,7 @@ namespace DA_ProjetoFinal.Views
                     lblEmailNumEs.Text = "Email:";
                     lblEmailNumValue.Text = ((Professor)cliente).Email;
                 }
-                
+
                 lblSaldo.Text = cliente.Saldo.ToString() + "€";
             }
             else
@@ -479,7 +448,7 @@ namespace DA_ProjetoFinal.Views
         }
 
         private int procurarIndiceClientes(Cliente cliente)
-        { 
+        {
             foreach (Cliente c in comboBoxClientes.Items)
             {
                 if (c.Id == cliente.Id)
@@ -492,127 +461,99 @@ namespace DA_ProjetoFinal.Views
 
         private void btnSubmitEdit_Click(object sender, EventArgs e)
         {
-                 
-                if (string.IsNullOrEmpty(txtNifEdit.Text) || string.IsNullOrEmpty(txtNomeEdit.Text))
+
+            if (string.IsNullOrEmpty(txtNifEdit.Text) || string.IsNullOrEmpty(txtNomeEdit.Text))
+            {
+                MessageBox.Show("Preencha todos os campos!");
+                return;
+            }
+            else
+            {
+                bool sucesso;
+
+                if (!txtNifEdit.Text.All(char.IsDigit))
                 {
-                    MessageBox.Show("Preencha todos os campos!");
+                    MessageBox.Show("O NIF apenas pode conter números", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                else
+
+
+                if (selectedCliente is Estudante)
                 {
-                    bool sucesso;
-
-                    if (!txtNifEdit.Text.All(char.IsDigit))
+                    if (string.IsNullOrEmpty(txtNumEstudEdit.Text))
                     {
-                        MessageBox.Show("O NIF apenas pode conter números", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Preencha todos os campos!");
                         return;
-                    }
-
-
-                    if (selectedCliente is Estudante)
-                    {
-                        if (string.IsNullOrEmpty(txtNumEstudEdit.Text))
-                        {
-                            MessageBox.Show("Preencha todos os campos!");
-                            return;
-                        }
-                        else
-                        {
-                            if (!txtNumEstudEdit.Text.All(char.IsDigit))
-                            {
-                                MessageBox.Show("O número de estudante apenas pode conter números", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                return;
-                            }
-                            try
-                            {
-                                sucesso = EstudanteController.Editar(selectedCliente.Id,txtNomeEdit.Text, txtNifEdit.Text, txtNumEstudEdit.Text);
-                                if (sucesso)
-                                {
-                                    selectedCliente = null;
-                                    selectedClienteIndex = -1;
-                                    tabPageClientes.SelectedIndex = 0;
-                                    criarNotificacao("Estudante editado com sucesso!", ReaLTaiizor.Controls.FoxNotification.Styles.Green);
-                                   
-                                }
-                                else
-                                {
-                                selectedCliente = null;
-                                selectedClienteIndex = -1;
-                                tabPageClientes.SelectedIndex = 0;
-                                criarNotificacao("Ocorreu um erro ao editar o estudante", ReaLTaiizor.Controls.FoxNotification.Styles.Red);
-                                }
-                            }
-                            catch (ArgumentNullException)
-                            {
-                                MessageBox.Show("Preencha todos os campos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                            catch (ArgumentException)
-                            {
-                                MessageBox.Show("Os dados que introduziu não são válidos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                            catch (Exception)
-                            {
-                                MessageBox.Show("Ocorreu um erro inesperado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                        }
-
-                    }
-                    else if (selectedCliente is Professor)
-                    {
-                        if (string.IsNullOrEmpty(txtEmailEdit.Text))
-                        {
-                            MessageBox.Show("Preencha todos os campos!");
-                            return;
-                        }
-                        else
-                        {
-                            if (!UtilityController.IsEmailValid(txtEmailEdit.Text))
-                            {
-                                return;
-                            }
-                            try
-                            {
-                                sucesso = ProfessorController.Editar(selectedCliente.Id,txtNomeEdit.Text, txtNifEdit.Text, txtEmailEdit.Text);
-                                if (sucesso)
-                                {
-                                selectedCliente = null;
-                                selectedClienteIndex = -1;
-                                tabPageClientes.SelectedIndex = 0;
-                                criarNotificacao("Professor editado com sucesso!", ReaLTaiizor.Controls.FoxNotification.Styles.Green);
-                                }
-                                else
-                                {
-                                selectedCliente = null;
-                                selectedClienteIndex = -1;
-                                tabPageClientes.SelectedIndex = 0;
-                                criarNotificacao("Ocorreu um erro ao editar o professor", ReaLTaiizor.Controls.FoxNotification.Styles.Red);
-                                }
-                            }
-                            catch (FormatException)
-                            {
-                                MessageBox.Show("O NIF apenas pode conter números", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                            catch (ArgumentNullException)
-                            {
-                                MessageBox.Show("Preencha todos os campos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                            catch (ArgumentException)
-                            {
-                                MessageBox.Show("Os dados que introduziu não são válidos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                            catch (Exception ex)
-                            {
-                                MessageBox.Show("Ocorreu um erro inesperado " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                        }
                     }
                     else
                     {
-                        MessageBox.Show("Não foi possível editar o cliente selecionado!");
+                        if (!txtNumEstudEdit.Text.All(char.IsDigit))
+                        {
+                            MessageBox.Show("O número de estudante apenas pode conter números", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+
+                        sucesso = EstudanteController.Editar(selectedCliente.Id, txtNomeEdit.Text, txtNifEdit.Text, txtNumEstudEdit.Text);
+                        if (sucesso)
+                        {
+                            selectedCliente = null;
+                            selectedClienteIndex = -1;
+                            tabPageClientes.SelectedIndex = 0;
+                            criarNotificacao("Estudante editado com sucesso!", ReaLTaiizor.Controls.FoxNotification.Styles.Green);
+
+                        }
+                        else
+                        {
+                            selectedCliente = null;
+                            selectedClienteIndex = -1;
+                            tabPageClientes.SelectedIndex = 0;
+                            criarNotificacao("Ocorreu um erro ao editar o estudante", ReaLTaiizor.Controls.FoxNotification.Styles.Red);
+                        }
+
+
+                    }
+
+                }
+                else if (selectedCliente is Professor)
+                {
+                    if (string.IsNullOrEmpty(txtEmailEdit.Text))
+                    {
+                        MessageBox.Show("Preencha todos os campos!");
                         return;
                     }
-                }
+                    else
+                    {
+                        if (!UtilityController.IsEmailValid(txtEmailEdit.Text))
+                        {
+                            return;
+                        }
 
+                        sucesso = ProfessorController.Editar(selectedCliente.Id, txtNomeEdit.Text, txtNifEdit.Text, txtEmailEdit.Text);
+                        if (sucesso)
+                        {
+                            selectedCliente = null;
+                            selectedClienteIndex = -1;
+                            tabPageClientes.SelectedIndex = 0;
+                            criarNotificacao("Professor editado com sucesso!", ReaLTaiizor.Controls.FoxNotification.Styles.Green);
+                        }
+                        else
+                        {
+                            selectedCliente = null;
+                            selectedClienteIndex = -1;
+                            tabPageClientes.SelectedIndex = 0;
+                            criarNotificacao("Ocorreu um erro ao editar o professor", ReaLTaiizor.Controls.FoxNotification.Styles.Red);
+                        }
+
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Não foi possível editar o cliente selecionado!");
+                    return;
+                }
             }
+
         }
+    }
 }
