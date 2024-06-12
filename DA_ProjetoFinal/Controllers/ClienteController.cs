@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -86,6 +87,13 @@ namespace DA_ProjetoFinal
                         return false;
                     }
                     cliente.Saldo += valor;
+
+                    var entry = context.Entry(cliente);
+                    if (entry.State == EntityState.Modified)
+                    {
+                        context.SaveChanges();
+                    }
+
                     context.SaveChanges();
                     return true;
                 }

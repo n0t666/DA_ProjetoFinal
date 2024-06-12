@@ -57,6 +57,8 @@ namespace DA_ProjetoFinal.Views
                     break;
             }
             paginaAtual = 1;
+            comboUtilizador.ResetText();
+            comboUtilizador.DataSource = null;
             obterDadosUtilizadores(selectedCliente);
         }
 
@@ -108,6 +110,7 @@ namespace DA_ProjetoFinal.Views
 
 
             comboUtilizador.DataSource = utilizadoresPaginados;
+            comboUtilizador.DisplayMember = "Nome";
 
             updatePagination(numeroUtilizadores);
         }
@@ -159,6 +162,8 @@ namespace DA_ProjetoFinal.Views
             labelLoading.Text = "Dados carregados";
             UtilityController.Center(labelLoading);
             await Task.Delay(1000);
+
+            var funcionarios = utilizadores.OfType<Funcionario>().ToList();
         }
 
         private void criarLoading(bool loadingVisible = true,bool controlsVisible = false)

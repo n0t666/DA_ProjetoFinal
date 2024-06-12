@@ -35,7 +35,7 @@ namespace DA_ProjetoFinal.Views
             DateTime fimSemanaAtual = inicioSemanaAtual.AddDays(4);
             menus = MenuController.GetBetweenDates(inicioSemanaAtual, fimSemanaAtual);
             labelNumeroSemana.Text = "Semana Nº " + UtilityController.GetWeekNumber(data).ToString();
-            labelSemanaRange.Text = "(" + inicioSemanaAtual.ToShortDateString() + " - " + fimSemanaAtual.ToShortDateString() + ")";
+            labelSemanaRange.Text = "(" + inicioSemanaAtual.ToShortDateString() + " - " + fimSemanaAtual.AddDays(-1).ToShortDateString() + ")";
 
             for (int i = 1; i < 6; i++)
             {
@@ -53,6 +53,12 @@ namespace DA_ProjetoFinal.Views
                 }
                 else
                 {
+                    DungeonHeaderLabel labelEmpty = new DungeonHeaderLabel();
+                    labelEmpty.Text = "Sem menus disponíveis";
+                    labelEmpty.Font = new Font("Segoe UI", 11, FontStyle.Bold);
+                    labelEmpty.ForeColor = Color.Red;
+                    label.AutoSize = true;
+                    panel.Controls.Add(labelEmpty);
       
                 }
 
@@ -177,6 +183,9 @@ namespace DA_ProjetoFinal.Views
             {
                 FlowLayoutPanel panel = this.Controls.Find("pnl" + i.ToString(), true).FirstOrDefault() as FlowLayoutPanel;
                 panel.Controls.Clear();
+                panel.AutoScroll = false;
+                panel.PerformLayout();
+                panel.AutoScroll = true;  
             }
             this.Refresh();
         }

@@ -17,7 +17,8 @@ namespace DA_ProjetoFinal.Views
         private Point initialPosLoading = new Point();
         private string BaseAppName = "FoodFlow | ";
         private string appName;
-        private int utilizadorAtual;
+        private Utilizador utilizadorAtual;
+        private int utilizadorAtualId;
         private bool firstTimeHome = true;
         private string currentLoadedFormName;
 
@@ -57,10 +58,6 @@ namespace DA_ProjetoFinal.Views
             changeSideState(false);
         }
 
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
      
 
@@ -97,7 +94,6 @@ namespace DA_ProjetoFinal.Views
 
         private void sideBarCustomButton1_Click(object sender, EventArgs e)
         {
-       
             appName = BaseAppName + "Página inicial";
             FormHomePage form = new FormHomePage(firstTimeHome);
             form.Name = "FormHomePage";
@@ -115,14 +111,24 @@ namespace DA_ProjetoFinal.Views
 
         private void btnReservas_Click(object sender, EventArgs e)
         {
+            if (utilizadorAtual == null || !(utilizadorAtual is Funcionario))
+            {
+                MessageBox.Show("Apenas funcionários podem aceder a esta funcionalidade", "Acesso negado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             appName = BaseAppName + "Reservas";
-            FormReservas form = new FormReservas(utilizadorAtual);
+            FormReservas form = new FormReservas(utilizadorAtualId);
             form.Name = "FormReservas";
             loadForm(form);
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
+            if (utilizadorAtual == null || !(utilizadorAtual is Funcionario))
+            {
+                MessageBox.Show("Apenas funcionários podem aceder a esta funcionalidade", "Acesso negado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             appName = BaseAppName + "Menus";
             Form form = new FormMenu();
             form.Name = "FormMenu";
@@ -131,6 +137,11 @@ namespace DA_ProjetoFinal.Views
 
         private void btnPlates_Click(object sender, EventArgs e)
         {
+            if(utilizadorAtual == null || !(utilizadorAtual is Funcionario))
+            {
+                MessageBox.Show("Apenas funcionários podem aceder a esta funcionalidade", "Acesso negado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             appName = BaseAppName + "Pratos";
             Form form = new FormPratos();
             form.Name = "FormPratos";
@@ -139,6 +150,11 @@ namespace DA_ProjetoFinal.Views
 
         private void btnExtras_Click(object sender, EventArgs e)
         {
+            if (utilizadorAtual == null || !(utilizadorAtual is Funcionario))
+            {
+                MessageBox.Show("Apenas funcionários podem aceder a esta funcionalidade", "Acesso negado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             appName = BaseAppName + "Extras";
             Form form = new FormExtras();
             form.Name = "FormExtras";
@@ -147,6 +163,11 @@ namespace DA_ProjetoFinal.Views
 
         private void btnTickets_Click(object sender, EventArgs e)
         {
+            if (utilizadorAtual == null || !(utilizadorAtual is Funcionario))
+            {
+                MessageBox.Show("Apenas funcionários podem aceder a esta funcionalidade", "Acesso negado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             appName = BaseAppName + "Multas";
             Form form = new FormMultas();
             form.Name = "FormMultas";
@@ -163,6 +184,11 @@ namespace DA_ProjetoFinal.Views
 
         private void btnClients_Click(object sender, EventArgs e)
         {
+            if (utilizadorAtual == null || !(utilizadorAtual is Funcionario))
+            {
+                MessageBox.Show("Apenas funcionários podem aceder a esta funcionalidade", "Acesso negado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             appName = BaseAppName + "Clientes";
             Form form = new FormClientes();
             form.Name = "FormClientes";
@@ -171,7 +197,8 @@ namespace DA_ProjetoFinal.Views
 
         private void Utilizador_SelectedChanged(object sender, int utilizador) // Evento que permite obter o id do utilizador selecionado, o trigger deste evento é feito no form FormHomePage
         {
-            utilizadorAtual = utilizador;
+            utilizadorAtualId = utilizador;
+            utilizadorAtual=UtilizadorController.GetById(utilizadorAtualId);
         }
 
         private void HomePage_FirsTimeLoad(object sender, bool firstTime)

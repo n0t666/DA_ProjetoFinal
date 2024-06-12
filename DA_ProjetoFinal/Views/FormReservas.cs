@@ -15,11 +15,6 @@ namespace DA_ProjetoFinal.Views
         public FormReservas(int utilizadorAtual)
         {
             InitializeComponent();
-            comboBoxClientes.Items.Clear();
-            comboBoxClientes.AutoCompleteMode = AutoCompleteMode.Suggest;
-            comboBoxClientes.AutoCompleteSource = AutoCompleteSource.ListItems;
-            comboBoxClientes.DataSource = ClienteController.Get();         
-            comboBoxClientes.SelectedIndex = -1;
             MessageBox.Show(utilizadorAtual.ToString());
         }
 
@@ -35,7 +30,7 @@ namespace DA_ProjetoFinal.Views
 
         private void comboBoxClientes_KeyPress(object sender, KeyPressEventArgs e)
         {
-            comboBoxClientes.DroppedDown = false;
+            
         }
 
 

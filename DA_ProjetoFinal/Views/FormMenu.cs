@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace DA_ProjetoFinal.Views
 {
@@ -81,6 +82,9 @@ namespace DA_ProjetoFinal.Views
                     updatePagination();
                     break;
                 case 1:
+                    panelExtrasListar.Controls.Clear();
+                    panelPratosListar.Controls.Clear();
+                    this.Refresh();
                     paginaAtualExtras = 1;
                     paginaAtualPratos = 1;
                     loadMenus();
@@ -138,6 +142,7 @@ namespace DA_ProjetoFinal.Views
                     populateChecksCreate(updatePratos, updateExtras);
                     break;
                 case 1:
+
                     menusPaginados = menus.Skip((paginaAtualMenus - 1) * tamanhoPagina).Take(tamanhoPagina).ToList();
                     comboBoxMenus.DataSource = menusPaginados;
                     comboBoxMenus.DisplayMember = "DataHora";
@@ -358,6 +363,7 @@ namespace DA_ProjetoFinal.Views
 
             List<int> pratosSelecionadosId = new List<int>();
             List<int> extrasSelecionadosId = new List<int>();
+            int quantidade;
 
             foreach (KeyValuePair<string, bool> entry in checkboxStates)
             {
@@ -378,28 +384,38 @@ namespace DA_ProjetoFinal.Views
                 MessageBox.Show("Selecione entre " + MINIMO_PRATOS_MENU + " e " + MAXIMO_PRATOS_MENU + " pratos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
-            if (extrasSelecionadosId.Count < MINIMO_EXTRAS_MENU || extrasSelecionadosId.Count > MAXIMO_EXTRAS_MENU)
+            else if (extrasSelecionadosId.Count < MINIMO_EXTRAS_MENU || extrasSelecionadosId.Count > MAXIMO_EXTRAS_MENU)
             {
                 MessageBox.Show("Selecione entre " + MINIMO_EXTRAS_MENU + " e " + MAXIMO_EXTRAS_MENU + " extras", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (numPrecoProfessorCreate.Value <= 0 || numPrecoEstudanteCreate.Value <= 0)
+            else if (numPrecoProfessorCreate.Value <= 0 || numPrecoEstudanteCreate.Value <= 0)
             {
                 MessageBox.Show("Insira um preço para o menu", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
-            int quantidade;
-
-            if (numQuantCreate.Value <= 0)
+            else if (numQuantCreate.Value <= 0)
             {
                 MessageBox.Show("Insira uma quantidade para o menu", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            else if (!UtilityController.IsDayOfWeek(dateDataHoraCreate.Value))
+            {
+                MessageBox.Show("A data do menu tem de ser um dia útil", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             else
             {
+                List<Extra> extrasSelecionados = ExtraController.GetAtivosByIds(extrasSelecionadosId);
+                List<Prato> pratosSelecionados = PratoController.GetAtivosByIds(pratosSelecionadosId);
+                int numeroPratosCarne = pratosSelecionados.Where(p => p.Tipo == TipoPrato.Carne).Count();
+                int numeroPratosPeixe = pratosSelecionados.Where(p => p.Tipo == TipoPrato.Peixe).Count();
+                int numeroPratosVegetariano = pratosSelecionados.Where(p => p.Tipo == TipoPrato.Vegetariano).Count();
+                bool sucesso;
+
+
+
                 try
                 {
                     quantidade = Convert.ToInt32(numQuantCreate.Value);
@@ -409,31 +425,40 @@ namespace DA_ProjetoFinal.Views
                     MessageBox.Show("Insira um valor inteiro válido para a quantidade", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+
+                if (quantidade <= 0)
+                {
+                    MessageBox.Show("Insira um valor inteiro válido para a quantidade", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (extrasSelecionados == null || pratosSelecionados == null)
+                {
+                    MessageBox.Show("Erro ao obter os extras e pratos selecionados", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else if (numeroPratosCarne < 1 || numeroPratosPeixe < 1 || numeroPratosVegetariano < 1)
+                {
+                    MessageBox.Show("Selecione pelo menos um prato de carne, peixe e vegetariano", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else
+                {
+                    sucesso = MenuController.Adicionar(dateDataHoraCreate.Value, quantidade, numPrecoEstudanteCreate.Value, numPrecoProfessorCreate.Value, extrasSelecionados, pratosSelecionados);
+                }
+
+
+                if (sucesso)
+                {
+                    MessageBox.Show("Menu adicionado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    limparDados();
+                }
+                else
+                {
+                    MessageBox.Show("Erro ao adicionar o menu", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
 
-            List<Extra> extrasSelecionados = ExtraController.GetAtivosByIds(extrasSelecionadosId);
-            List<Prato> pratosSelecionados = PratoController.GetAtivosByIds(pratosSelecionadosId);
-            bool sucesso;
-            if (extrasSelecionados == null || pratosSelecionados == null)
-            {
-                MessageBox.Show("Erro ao obter os extras e pratos selecionados", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            else
-            {
-                sucesso = MenuController.Adicionar(dateDataHoraCreate.Value, quantidade, numPrecoEstudanteCreate.Value, numPrecoProfessorCreate.Value, extrasSelecionados, pratosSelecionados);
-            }
-
-
-            if (sucesso)
-            {
-                MessageBox.Show("Menu adicionado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                limparDados();
-            }
-            else
-            {
-                MessageBox.Show("Erro ao adicionar o menu", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
 
@@ -534,8 +559,9 @@ namespace DA_ProjetoFinal.Views
         {
             if (comboBoxMenus.Items.Count > 0)
             {
-                UtilityController.ClearControls(panelExtrasListar, new List<Type>() { typeof(Label) });
-                UtilityController.ClearControls(panelPratosListar, new List<Type>() { typeof(Label) });
+                panelExtrasListar.Controls.Clear();
+                panelPratosListar.Controls.Clear();
+                this.Refresh();
                 if (indexEspecifico >= 0)
                 {
                     comboBoxMenus.SelectedItem = indexEspecifico;
@@ -577,16 +603,18 @@ namespace DA_ProjetoFinal.Views
                 lblDataHora.Text = "";
                 lblPrecoEst.Text = "";
                 lblPrecoProf.Text = "";
-                UtilityController.ClearControls(panelExtrasListar, new List<Type>() { typeof(Label) });
-                UtilityController.ClearControls(panelPratosListar, new List<Type>() { typeof(Label) });
+                panelExtrasListar.Controls.Clear();
+                panelPratosListar.Controls.Clear();
+                this.Refresh();
             }
 
         }
 
         private void comboBoxMenus_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            UtilityController.ClearControls(panelExtrasListar, new List<Type>() { typeof(Label) });
-            UtilityController.ClearControls(panelPratosListar, new List<Type>() { typeof(Label) });
+            panelExtrasListar.Controls.Clear();
+            panelPratosListar.Controls.Clear();
+            this.Refresh();
             obterDadosDropdown();
         }
 
@@ -727,6 +755,9 @@ namespace DA_ProjetoFinal.Views
             List<int> pratosSelecionadosId = new List<int>();
             List<int> extrasSelecionadosId = new List<int>();
 
+
+
+
             foreach (KeyValuePair<string, bool> entry in checkboxStates)
             {
                 if (entry.Key.Contains(pPrefixEditar) && entry.Value)
@@ -746,28 +777,41 @@ namespace DA_ProjetoFinal.Views
                 MessageBox.Show("Selecione entre " + MINIMO_PRATOS_MENU + " e " + MAXIMO_PRATOS_MENU + " pratos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
-            if (extrasSelecionadosId.Count < MINIMO_EXTRAS_MENU || extrasSelecionadosId.Count > MAXIMO_EXTRAS_MENU)
+            else if (extrasSelecionadosId.Count < MINIMO_EXTRAS_MENU || extrasSelecionadosId.Count > MAXIMO_EXTRAS_MENU)
             {
                 MessageBox.Show("Selecione entre " + MINIMO_EXTRAS_MENU + " e " + MAXIMO_EXTRAS_MENU + " extras", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (numPrecoProfEdit.Value <= 0 || numPrecoEstudanteEdit.Value <= 0)
+            else if (numPrecoProfEdit.Value <= 0 || numPrecoEstudanteEdit.Value <= 0)
             {
                 MessageBox.Show("Insira um preço para o menu", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
-            int quantidade;
-
-            if (numQuantidadeEditar.Value <= 0)
+            else if (numQuantidadeEditar.Value <= 0)
             {
                 MessageBox.Show("Insira uma quantidade para o menu", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            else if (!UtilityController.IsDayOfWeek(dateDataHoraEdit.Value))
+            {
+                MessageBox.Show("A data do menu tem de ser um dia útil", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             else
             {
+
+                List<Extra> extrasSelecionados = ExtraController.GetAtivosByIds(extrasSelecionadosId);
+                List<Prato> pratosSelecionados = PratoController.GetAtivosByIds(pratosSelecionadosId);
+
+                int numeroPratosCarne = pratosSelecionados.Where(p => p.Tipo == TipoPrato.Carne).Count();
+                int numeroPratosPeixe = pratosSelecionados.Where(p => p.Tipo == TipoPrato.Peixe).Count();
+                int numeroPratosVegetariano = pratosSelecionados.Where(p => p.Tipo == TipoPrato.Vegetariano).Count();
+
+
+                int quantidade;
+                bool sucesso;
+
                 try
                 {
                     quantidade = Convert.ToInt32(numQuantidadeEditar.Value);
@@ -777,33 +821,43 @@ namespace DA_ProjetoFinal.Views
                     MessageBox.Show("Insira um valor inteiro válido para a quantidade", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+
+                if (quantidade <= 0)
+                {
+                    MessageBox.Show("Insira um valor inteiro válido para a quantidade", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (extrasSelecionados == null || pratosSelecionados == null)
+                {
+                    MessageBox.Show("Erro ao obter os extras e pratos selecionados", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else if (numeroPratosCarne < 1 || numeroPratosPeixe < 1 || numeroPratosVegetariano < 1)
+                {
+                    MessageBox.Show("Selecione pelo menos um prato de carne, peixe e vegetariano", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else
+                {
+                    sucesso = MenuController.Editar(selectedMenu.Id, dateDataHoraEdit.Value, quantidade, numPrecoEstudanteEdit.Value, numPrecoProfEdit.Value, extrasSelecionados, pratosSelecionados);
+                    selectedMenu = null;
+                    foreverTabPage1.SelectedIndex = 0;
+                }
+
+
+                if (sucesso)
+                {
+                    MessageBox.Show("Menu editado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    limparDados();
+                }
+                else
+                {
+                    MessageBox.Show("Erro ao editar o menu", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
 
-            List<Extra> extrasSelecionados = ExtraController.GetAtivosByIds(extrasSelecionadosId);
-            List<Prato> pratosSelecionados = PratoController.GetAtivosByIds(pratosSelecionadosId);
-            bool sucesso;
-            if (extrasSelecionados == null || pratosSelecionados == null)
-            {
-                MessageBox.Show("Erro ao obter os extras e pratos selecionados", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            else
-            {
-                sucesso = MenuController.Editar(selectedMenu.Id,dateDataHoraEdit.Value, quantidade, numPrecoEstudanteEdit.Value, numPrecoProfEdit.Value, extrasSelecionados, pratosSelecionados);
-                selectedMenu = null;
-                foreverTabPage1.SelectedIndex = 0;
-            }
 
-
-            if (sucesso)
-            {
-                MessageBox.Show("Menu editado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                limparDados();
-            }
-            else
-            {
-                MessageBox.Show("Erro ao editar o menu", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
 
         }
     }

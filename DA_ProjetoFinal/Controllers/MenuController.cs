@@ -34,7 +34,7 @@ namespace DA_ProjetoFinal
             using (var context = new CantinaContext())
             {
                 return context.Menus
-                    .Where(m => m.DataHora >= inicio && m.DataHora <= fim)
+                    .Where(m => m.DataHora.Day >= inicio.Day && m.DataHora.Day <= fim.Day)
                     .Include(m => m.Prato)
                     .Include(m => m.Extra)
                     .OrderBy(m => m.DataHora)
@@ -162,6 +162,17 @@ namespace DA_ProjetoFinal
             }
             return false;
 
+        }
+
+        public static bool Exists(DateTime dataHora,int ignoreID = -1)
+        {
+            using (var context = new CantinaContext())
+            {
+                if (ignoreID != -1)
+                    return context.Menus.Any(m => m.DataHora == dataHora && m.Id != ignoreID);
+                else
+                    return context.Menus.Any(m => m.DataHora == dataHora);
+            }
         }
 
     }

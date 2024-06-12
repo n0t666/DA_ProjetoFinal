@@ -30,6 +30,18 @@ namespace DA_ProjetoFinal
             return start;
         }
 
+        public static bool IsDayOfWeek(DateTime date)
+        {
+            if (date.DayOfWeek == DayOfWeek.Saturday || date.DayOfWeek == DayOfWeek.Sunday)
+            {
+               return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
         public static decimal GetDecimal(string value,string valueType)
         {
             decimal result;
@@ -92,10 +104,11 @@ namespace DA_ProjetoFinal
                 {
                     if (c.GetType() == type)
                     {
-                        c.Dispose();
+                        container.Controls.Remove(c);
                     }
                 } 
             }
+            container.Refresh();
         }
     }
 }

@@ -52,6 +52,8 @@
             this.bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
             this.dateDataHoraCreate = new ReaLTaiizor.Controls.PoisonDateTime();
             this.tabPageListarMenus = new System.Windows.Forms.TabPage();
+            this.dungeonHeaderLabel5 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
+            this.dungeonHeaderLabel1 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
             this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
             this.dungeonHeaderLabel7 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
             this.lblQuantidade = new ReaLTaiizor.Controls.DungeonLabel();
@@ -60,13 +62,11 @@
             this.lblPrecoProf = new ReaLTaiizor.Controls.DungeonLabel();
             this.btnApagar = new ReaLTaiizor.Controls.LostButton();
             this.panelExtrasListar = new System.Windows.Forms.FlowLayoutPanel();
-            this.dungeonHeaderLabel5 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
             this.btnSelecionar = new ReaLTaiizor.Controls.LostButton();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblSelecionado = new ReaLTaiizor.Controls.DungeonLabel();
             this.dungeonHeaderLabel3 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
             this.panelPratosListar = new System.Windows.Forms.FlowLayoutPanel();
-            this.dungeonHeaderLabel1 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.dungeonHeaderLabel4 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
             this.lblPrecoEst = new ReaLTaiizor.Controls.DungeonLabel();
@@ -107,9 +107,7 @@
             this.tabPageListarMenus.SuspendLayout();
             this.flowLayoutPanel6.SuspendLayout();
             this.flowLayoutPanel5.SuspendLayout();
-            this.panelExtrasListar.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            this.panelPratosListar.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.tabPageEditarMenu.SuspendLayout();
@@ -469,6 +467,8 @@
             // tabPageListarMenus
             // 
             this.tabPageListarMenus.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPageListarMenus.Controls.Add(this.dungeonHeaderLabel5);
+            this.tabPageListarMenus.Controls.Add(this.dungeonHeaderLabel1);
             this.tabPageListarMenus.Controls.Add(this.flowLayoutPanel6);
             this.tabPageListarMenus.Controls.Add(this.flowLayoutPanel5);
             this.tabPageListarMenus.Controls.Add(this.btnApagar);
@@ -488,6 +488,30 @@
             this.tabPageListarMenus.Size = new System.Drawing.Size(606, 487);
             this.tabPageListarMenus.TabIndex = 3;
             this.tabPageListarMenus.Text = "Listar menus";
+            // 
+            // dungeonHeaderLabel5
+            // 
+            this.dungeonHeaderLabel5.AutoSize = true;
+            this.dungeonHeaderLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.dungeonHeaderLabel5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.dungeonHeaderLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.dungeonHeaderLabel5.Location = new System.Drawing.Point(345, 205);
+            this.dungeonHeaderLabel5.Name = "dungeonHeaderLabel5";
+            this.dungeonHeaderLabel5.Size = new System.Drawing.Size(56, 20);
+            this.dungeonHeaderLabel5.TabIndex = 14;
+            this.dungeonHeaderLabel5.Text = "Extras:";
+            // 
+            // dungeonHeaderLabel1
+            // 
+            this.dungeonHeaderLabel1.AutoSize = true;
+            this.dungeonHeaderLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.dungeonHeaderLabel1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.dungeonHeaderLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.dungeonHeaderLabel1.Location = new System.Drawing.Point(345, 63);
+            this.dungeonHeaderLabel1.Name = "dungeonHeaderLabel1";
+            this.dungeonHeaderLabel1.Size = new System.Drawing.Size(58, 20);
+            this.dungeonHeaderLabel1.TabIndex = 14;
+            this.dungeonHeaderLabel1.Text = "Pratos:";
             // 
             // flowLayoutPanel6
             // 
@@ -576,25 +600,11 @@
             // 
             this.panelExtrasListar.AutoScroll = true;
             this.panelExtrasListar.BackColor = System.Drawing.Color.Gainsboro;
-            this.panelExtrasListar.Controls.Add(this.dungeonHeaderLabel5);
             this.panelExtrasListar.Location = new System.Drawing.Point(342, 228);
             this.panelExtrasListar.Name = "panelExtrasListar";
             this.panelExtrasListar.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.panelExtrasListar.Size = new System.Drawing.Size(254, 129);
             this.panelExtrasListar.TabIndex = 16;
-            // 
-            // dungeonHeaderLabel5
-            // 
-            this.dungeonHeaderLabel5.AutoSize = true;
-            this.dungeonHeaderLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.panelExtrasListar.SetFlowBreak(this.dungeonHeaderLabel5, true);
-            this.dungeonHeaderLabel5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.dungeonHeaderLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
-            this.dungeonHeaderLabel5.Location = new System.Drawing.Point(3, 0);
-            this.dungeonHeaderLabel5.Name = "dungeonHeaderLabel5";
-            this.dungeonHeaderLabel5.Size = new System.Drawing.Size(56, 20);
-            this.dungeonHeaderLabel5.TabIndex = 14;
-            this.dungeonHeaderLabel5.Text = "Extras:";
             // 
             // btnSelecionar
             // 
@@ -648,25 +658,11 @@
             // 
             this.panelPratosListar.AutoScroll = true;
             this.panelPratosListar.BackColor = System.Drawing.Color.Gainsboro;
-            this.panelPratosListar.Controls.Add(this.dungeonHeaderLabel1);
             this.panelPratosListar.Location = new System.Drawing.Point(342, 86);
             this.panelPratosListar.Name = "panelPratosListar";
             this.panelPratosListar.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.panelPratosListar.Size = new System.Drawing.Size(254, 111);
             this.panelPratosListar.TabIndex = 15;
-            // 
-            // dungeonHeaderLabel1
-            // 
-            this.dungeonHeaderLabel1.AutoSize = true;
-            this.dungeonHeaderLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.panelPratosListar.SetFlowBreak(this.dungeonHeaderLabel1, true);
-            this.dungeonHeaderLabel1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.dungeonHeaderLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
-            this.dungeonHeaderLabel1.Location = new System.Drawing.Point(3, 0);
-            this.dungeonHeaderLabel1.Name = "dungeonHeaderLabel1";
-            this.dungeonHeaderLabel1.Size = new System.Drawing.Size(58, 20);
-            this.dungeonHeaderLabel1.TabIndex = 14;
-            this.dungeonHeaderLabel1.Text = "Pratos:";
             // 
             // flowLayoutPanel3
             // 
@@ -1146,12 +1142,8 @@
             this.flowLayoutPanel6.PerformLayout();
             this.flowLayoutPanel5.ResumeLayout(false);
             this.flowLayoutPanel5.PerformLayout();
-            this.panelExtrasListar.ResumeLayout(false);
-            this.panelExtrasListar.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
-            this.panelPratosListar.ResumeLayout(false);
-            this.panelPratosListar.PerformLayout();
             this.flowLayoutPanel3.ResumeLayout(false);
             this.flowLayoutPanel3.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);

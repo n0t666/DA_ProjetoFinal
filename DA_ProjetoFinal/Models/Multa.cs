@@ -16,5 +16,10 @@ namespace DA_ProjetoFinal
         public int NumeroHoras { get; set; }
 
         public ICollection<Reserva> Reserva { get; set; }
+
+        public string NumeroHorasDisplay
+        {
+            get { return $"{NumeroHoras} horas"; }
+        }
     }
 }

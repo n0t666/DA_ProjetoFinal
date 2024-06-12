@@ -36,5 +36,13 @@ namespace DA_ProjetoFinal
                 return context.Utilizadores.Count();
             }
         }
+
+        public static Utilizador GetById(int id)
+        {
+            using (var context = new CantinaContext())
+            {
+                return context.Utilizadores.Find(id);
+            }
+        }
     }
 }
