@@ -14,7 +14,7 @@
 
 
 
-### Linguagens/Frameworks Utilizdas
+### Linguagens/Frameworks Utilizadas
 
 
 * [![.NET][.NET-shield]][.NET-url]
@@ -25,6 +25,38 @@
 
 Este projeto visa desenvolver uma aplicação desktop funcional para o sistema operativo Windows, focada em facilitar a gestão eficiente de menus e reservas na cantina de uma escola. A aplicação será projetada com funcionalidades abrangentes, incluindo administração de carregamentos de saldo para utilizadores, gestão de reservas de refeições, organização de menus semanais, controlo detalhado de reservas e funcionalidades integradas de faturação.
 
+
+## Funcionalidades principais
+
+- **CRUD dos funcionários:** Criar, apagar e editar funcionários.
+- **CRUD dos menus:** Criar um novo menu associando os extras e os pratos escolhidos e fazer a gestão do mesmo.
+- **Efetuar reservas:** No papel de funcionário, fazer uma reserva para um determinado cliente e posteriormente marcar como concluída.
+- **CRUD dos clientes:** Criar, apagar, editar e realizar o carregamento do saldo dos clientes.
+- **CRUD dos extras:** Gerir extras disponíveis para adicionar aos pedidos.
+- **CRUD dos pratos:** Gerir os pratos disponíveis no menu.
+- **Geração de faturas para as reservas:** Criar faturas detalhadas para as reservas concluídas.
+- **Multas:** Gerir e aplicar multas quando necessário, conforme as políticas estabelecidas.
+
+
+
+
+## Como usar
+
+
+```bash
+# Fazer clone do repositório
+$ git clone https://github.com/n0t666/DA_ProjetoFinal
+
+# Ir no repositório
+$ cd DA_ProjetoFinal
+
+# Abrir o ficheiro DA_ProjetoFinal.sln no Visual Studio
+
+# Correr a aplicação clicando no START
+```
+
+
+
  ## Autores
 Nome Estudante | Número Estudante 
 | :---:| :---: 
@@ -32,6 +64,13 @@ Leandro  Pereira | 2231675
 
 
 
+
+
+## Licença
+
+MIT
+
+---
 
 
 
