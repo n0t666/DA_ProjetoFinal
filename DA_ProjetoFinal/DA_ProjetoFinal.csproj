@@ -207,6 +207,9 @@
     <EmbeddedResource Include="Views\FormHomePage.resx">
       <DependentUpon>FormHomePage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\FormPratos.resx">
       <DependentUpon>FormPratos.cs</DependentUpon>
     </EmbeddedResource>

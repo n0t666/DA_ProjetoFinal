@@ -32,7 +32,7 @@ namespace DA_ProjetoFinal.Views
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(txtNif.Text) || string.IsNullOrEmpty(txtNome.Text) || string.IsNullOrEmpty(txtUsername.Text ))
+            if (string.IsNullOrEmpty(txtNif.Text) || string.IsNullOrEmpty(txtNome.Text) || string.IsNullOrEmpty(txtUsername.Text))
             {
                 MessageBox.Show("Preencha todos os campos!");
                 return;
@@ -53,33 +53,21 @@ namespace DA_ProjetoFinal.Views
 
                 }
 
-                try
+
+                bool sucesso = FuncionarioController.Adicionar(txtNome.Text, txtUsername.Text, txtNif.Text);
+                if (sucesso)
                 {
-                    bool sucesso = FuncionarioController.Adicionar(txtNome.Text, txtUsername.Text, txtNif.Text);
-                    if (sucesso)
-                    {
-                        criarNotificacao("Funcionário criado com sucesso!", ReaLTaiizor.Controls.FoxNotification.Styles.Green);
-                        txtNif.Text = "";
-                        txtNome.Text = "";
-                        txtUsername.Text = "";
-                    }
-                    else
-                    {
-                        criarNotificacao("Ocorreu um erro ao criar o funcionário", ReaLTaiizor.Controls.FoxNotification.Styles.Red);
-                    }
+                    criarNotificacao("Funcionário criado com sucesso!", ReaLTaiizor.Controls.FoxNotification.Styles.Green);
+                    txtNif.Text = "";
+                    txtNome.Text = "";
+                    txtUsername.Text = "";
                 }
-                catch (ArgumentNullException)
+                else
                 {
-                    MessageBox.Show("Preencha todos os campos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    criarNotificacao("Ocorreu um erro ao criar o funcionário", ReaLTaiizor.Controls.FoxNotification.Styles.Red);
                 }
-                catch (ArgumentException)
-                {
-                    MessageBox.Show("Os dados que introduziu não são válidos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Ocorreu um erro inesperado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+
+
             }
         }
 
@@ -225,7 +213,7 @@ namespace DA_ProjetoFinal.Views
                 lblNome.Text = funcionario.Nome;
                 lblUsernameVal.Text = funcionario.Username;
                 lblNif.Text = funcionario.Nif;
-                }
+            }
             else
             {
                 lblSelecionado.Text = "";
@@ -256,53 +244,30 @@ namespace DA_ProjetoFinal.Views
                     return;
                 }
 
-                if (!FuncionarioController.Unique(txtUsernameEdit.Text,selectedFunc.Id))
+                if (!FuncionarioController.Unique(txtUsernameEdit.Text, selectedFunc.Id))
                 {
                     MessageBox.Show("O username inserido já se encontra registado,por favor escolha outro", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
 
                 }
 
-                try
-                {
-                    bool sucesso = FuncionarioController.Editar(selectedFunc.Id, txtNomeEdit.Text, txtNifEdit.Text,txtUsernameEdit.Text);
-                    if (sucesso)
-                    {
-                        selectedFunc = null;
-                        tabPageFuncionarios.SelectedIndex = 0;
-                        criarNotificacao("Funcionário editado com sucesso!", ReaLTaiizor.Controls.FoxNotification.Styles.Green);
 
-                    }
-                    else
-                    {
-                        selectedFunc = null;
-                        tabPageFuncionarios.SelectedIndex = 0;
-                        criarNotificacao("Ocorreu um erro ao editar o Funcionário", ReaLTaiizor.Controls.FoxNotification.Styles.Red);
-                    }
-                }
-                catch (DbEntityValidationException ex)
+                bool sucesso = FuncionarioController.Editar(selectedFunc.Id, txtNomeEdit.Text, txtNifEdit.Text, txtUsernameEdit.Text);
+                if (sucesso)
                 {
-                    foreach (var entityValidationErrors in ex.EntityValidationErrors)
-                    {
-                        foreach (var validationError in entityValidationErrors.ValidationErrors) // Percorrer os erros de validação do modelo Funcionario 
-                        {
-                            MessageBox.Show(" Erro: " + validationError.ErrorMessage);
-                        }
-                    }
+                    selectedFunc = null;
+                    tabPageFuncionarios.SelectedIndex = 0;
+                    criarNotificacao("Funcionário editado com sucesso!", ReaLTaiizor.Controls.FoxNotification.Styles.Green);
 
                 }
-                catch (ArgumentNullException)
+                else
                 {
-                    MessageBox.Show("Preencha todos os campos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    selectedFunc = null;
+                    tabPageFuncionarios.SelectedIndex = 0;
+                    criarNotificacao("Ocorreu um erro ao editar o Funcionário", ReaLTaiizor.Controls.FoxNotification.Styles.Red);
                 }
-                catch (ArgumentException)
-                {
-                    MessageBox.Show("Os dados que introduziu não são válidos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Ocorreu um erro inesperado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+
+
             }
         }
     }

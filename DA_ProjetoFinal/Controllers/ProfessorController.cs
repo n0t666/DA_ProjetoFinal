@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Validation;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,6 +29,16 @@ namespace DA_ProjetoFinal
                 context.SaveChanges();
                 return true;
             }
+            }
+            catch (DbEntityValidationException ex)
+            {
+                foreach (var entityValidationErrors in ex.EntityValidationErrors)
+                {
+                    foreach (var validationError in entityValidationErrors.ValidationErrors) // Percorrer os erros de validação do modelo Funcionario 
+                    {
+                        MessageBox.Show(" Erro: " + validationError.ErrorMessage);
+                    }
+                }
             }
             catch (FormatException)
             {
@@ -70,6 +81,16 @@ namespace DA_ProjetoFinal
                         context.SaveChanges();
                     }
                     return true;
+                }
+            }
+            catch (DbEntityValidationException ex)
+            {
+                foreach (var entityValidationErrors in ex.EntityValidationErrors)
+                {
+                    foreach (var validationError in entityValidationErrors.ValidationErrors) // Percorrer os erros de validação do modelo Funcionario 
+                    {
+                        MessageBox.Show(" Erro: " + validationError.ErrorMessage);
+                    }
                 }
             }
             catch (FormatException)

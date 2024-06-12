@@ -43,7 +43,36 @@ namespace DA_ProjetoFinal
                 return context.Extras.ToList();
             }
         }
-    
+
+        public static List<Extra> GetAtivos()
+        {
+            using (var context = new CantinaContext())
+            {
+                return context.Extras.Where(e => e.Ativo == true).ToList();
+            }
+        }
+
+        public static List <Extra> GetAtivosByIds(List<int> ids)
+        {
+            if (ids == null || ids.Count == 0)
+            {
+                return null;
+            }else
+            {
+                try
+                {
+                    using (var context = new CantinaContext())
+                    {
+                        return context.Extras.Where(e => e.Ativo == true && ids.Contains(e.Id)).ToList();
+                    }
+                }catch (Exception)
+                {
+                    return null;
+                }
+            }   
+        }
+
+
 
         public static int ObterNumero()
         {

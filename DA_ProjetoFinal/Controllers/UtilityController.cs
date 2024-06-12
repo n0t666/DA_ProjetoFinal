@@ -83,5 +83,19 @@ namespace DA_ProjetoFinal
                 return false;
             }
         }
+
+        public static void ClearControls(Control container,List<Type>typesToDelete)
+        {
+            foreach (Control c in container.Controls)
+            {
+               foreach(Type type in typesToDelete )
+                {
+                    if (c.GetType() == type)
+                    {
+                        c.Dispose();
+                    }
+                } 
+            }
+        }
     }
 }

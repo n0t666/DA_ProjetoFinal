@@ -9,6 +9,7 @@ namespace DA_ProjetoFinal
 {
     internal class Utilizador
     {
+        [Key]
         public int Id { get; set; }
 
         [RegularExpression(@"^[a-zA-ZãáàâéêíóõôúüçÇ ]+$", ErrorMessage = "O nome apenas pode conter letras.")] //Apenas letras permitidas e espaços, incluindo acentos

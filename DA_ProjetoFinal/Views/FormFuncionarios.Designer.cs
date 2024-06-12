@@ -32,13 +32,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.bigLabel3 = new ReaLTaiizor.Controls.BigLabel();
             this.bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
+            this.btnSubmit = new ReaLTaiizor.Controls.HopeRoundButton();
             this.txtUsername = new ReaLTaiizor.Controls.SmallTextBox();
             this.bigLabel2 = new ReaLTaiizor.Controls.BigLabel();
             this.txtNif = new ReaLTaiizor.Controls.SmallTextBox();
             this.txtNome = new ReaLTaiizor.Controls.SmallTextBox();
             this.tabPageCriarFuncionario = new System.Windows.Forms.TabPage();
             this.notificationFunc = new ReaLTaiizor.Controls.FoxNotification();
-            this.btnSubmit = new ReaLTaiizor.Controls.HopeRoundButton();
             this.tabPageFuncionarios = new ReaLTaiizor.Controls.ForeverTabPage();
             this.tabPageListarFunc = new System.Windows.Forms.TabPage();
             this.comboBoxFunc = new ReaLTaiizor.Controls.PoisonComboBox();
@@ -248,6 +248,27 @@
             this.bigLabel1.TabIndex = 12;
             this.bigLabel1.Text = "NIF:";
             // 
+            // btnSubmit
+            // 
+            this.btnSubmit.BorderColor = System.Drawing.Color.Transparent;
+            this.btnSubmit.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary;
+            this.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSubmit.DangerColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
+            this.btnSubmit.DefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnSubmit.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnSubmit.HoverTextColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSubmit.InfoColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(147)))), ((int)(((byte)(153)))));
+            this.btnSubmit.Location = new System.Drawing.Point(9, 301);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
+            this.btnSubmit.Size = new System.Drawing.Size(436, 40);
+            this.btnSubmit.SuccessColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(194)))), ((int)(((byte)(58)))));
+            this.btnSubmit.TabIndex = 6;
+            this.btnSubmit.Text = "SUBMETER";
+            this.btnSubmit.TextColor = System.Drawing.Color.White;
+            this.btnSubmit.WarningColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(162)))), ((int)(((byte)(60)))));
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            // 
             // txtUsername
             // 
             this.txtUsername.BackColor = System.Drawing.Color.Transparent;
@@ -352,27 +373,6 @@
             this.notificationFunc.YellowBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(248)))), ((int)(((byte)(225)))));
             this.notificationFunc.YellowBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(235)))), ((int)(((byte)(200)))));
             this.notificationFunc.YellowTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(131)))), ((int)(((byte)(88)))));
-            // 
-            // btnSubmit
-            // 
-            this.btnSubmit.BorderColor = System.Drawing.Color.Transparent;
-            this.btnSubmit.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary;
-            this.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSubmit.DangerColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
-            this.btnSubmit.DefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnSubmit.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnSubmit.HoverTextColor = System.Drawing.Color.WhiteSmoke;
-            this.btnSubmit.InfoColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(147)))), ((int)(((byte)(153)))));
-            this.btnSubmit.Location = new System.Drawing.Point(9, 301);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            this.btnSubmit.Size = new System.Drawing.Size(436, 40);
-            this.btnSubmit.SuccessColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(194)))), ((int)(((byte)(58)))));
-            this.btnSubmit.TabIndex = 6;
-            this.btnSubmit.Text = "SUBMETER";
-            this.btnSubmit.TextColor = System.Drawing.Color.White;
-            this.btnSubmit.WarningColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(162)))), ((int)(((byte)(60)))));
-            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // tabPageFuncionarios
             // 

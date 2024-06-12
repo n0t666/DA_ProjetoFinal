@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace DA_ProjetoFinal
 {
@@ -17,6 +18,8 @@ namespace DA_ProjetoFinal
     [Table("Pratos")] // Especificar o nome da table para evitar que fique com o nome de Pratoes
     internal class Prato
     {
+
+        [Key]
         public int Id { get; set; }
         public string Descricao { get; set; }
 

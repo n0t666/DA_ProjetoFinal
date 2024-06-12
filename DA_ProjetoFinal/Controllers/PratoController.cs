@@ -124,6 +124,41 @@ namespace DA_ProjetoFinal.Controllers
             }
             return false;
         }
+
+        public static List<Prato> Get() // Função que permite obter todos os pratos
+        {
+            using (var context = new CantinaContext())
+            {
+                return context.Pratos.ToList();
+            }
+        }
+
+        public static List<Prato> GetAtivos()
+        {
+            using (var context = new CantinaContext())
+            {
+                return context.Pratos.Where(p => p.Ativo).ToList();
+            }
+        }
+
+        public static List <Prato> GetAtivosByIds(List<int> ids)
+        {
+            if(ids == null || ids.Count == 0)
+            {
+                return null;
+            }
+            else { 
+            try {
+            using (var context = new CantinaContext())
+            {
+                return context.Pratos.Where(p => ids.Contains(p.Id) && p.Ativo).ToList();
+            }
+            }catch (Exception)
+            {
+                return null;
+            }
+            }
+        }
     }
 
       

@@ -166,6 +166,7 @@
             this.lblNome = new ReaLTaiizor.Controls.DungeonLabel();
             this.btnPaginateVoltar = new ReaLTaiizor.Controls.AloneButton();
             this.btnPaginateAvancar = new ReaLTaiizor.Controls.AloneButton();
+            this.picSearch = new System.Windows.Forms.PictureBox();
             this.tabPageEditarCliente = new System.Windows.Forms.TabPage();
             this.lblNotSelected = new ReaLTaiizor.Controls.DungeonHeaderLabel();
             this.panelSelecionadoEdit = new System.Windows.Forms.Panel();
@@ -179,7 +180,6 @@
             this.txtNomeEdit = new ReaLTaiizor.Controls.SmallTextBox();
             this.btnSubmitEdit = new ReaLTaiizor.Controls.HopeRoundButton();
             this.timerNotification = new System.Windows.Forms.Timer(this.components);
-            this.picSearch = new System.Windows.Forms.PictureBox();
             this.tabPageClientes.SuspendLayout();
             this.tabPageCriarCliente.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -222,9 +222,9 @@
             this.flowLayoutPanel18.SuspendLayout();
             this.flowLayoutPanel19.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picSearch)).BeginInit();
             this.tabPageEditarCliente.SuspendLayout();
             this.panelSelecionadoEdit.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picSearch)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPageClientes
@@ -1942,6 +1942,17 @@
             this.btnPaginateAvancar.Text = ">";
             this.btnPaginateAvancar.Click += new ReaLTaiizor.Controls.AloneButton.ClickEventHandler(this.btnPaginateAvancar_Click);
             // 
+            // picSearch
+            // 
+            this.picSearch.Image = global::DA_ProjetoFinal.Properties.Resources.icons8_search_500;
+            this.picSearch.Location = new System.Drawing.Point(532, 86);
+            this.picSearch.Name = "picSearch";
+            this.picSearch.Size = new System.Drawing.Size(35, 29);
+            this.picSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picSearch.TabIndex = 32;
+            this.picSearch.TabStop = false;
+            this.picSearch.Click += new System.EventHandler(this.picSearch_Click);
+            // 
             // tabPageEditarCliente
             // 
             this.tabPageEditarCliente.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -2128,17 +2139,6 @@
             this.timerNotification.Interval = 3000;
             this.timerNotification.Tick += new System.EventHandler(this.timerNotification_Tick);
             // 
-            // picSearch
-            // 
-            this.picSearch.Image = global::DA_ProjetoFinal.Properties.Resources.icons8_search_500;
-            this.picSearch.Location = new System.Drawing.Point(532, 86);
-            this.picSearch.Name = "picSearch";
-            this.picSearch.Size = new System.Drawing.Size(35, 29);
-            this.picSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picSearch.TabIndex = 32;
-            this.picSearch.TabStop = false;
-            this.picSearch.Click += new System.EventHandler(this.picSearch_Click);
-            // 
             // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2229,11 +2229,11 @@
             this.flowLayoutPanel19.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picSearch)).EndInit();
             this.tabPageEditarCliente.ResumeLayout(false);
             this.tabPageEditarCliente.PerformLayout();
             this.panelSelecionadoEdit.ResumeLayout(false);
             this.panelSelecionadoEdit.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picSearch)).EndInit();
             this.ResumeLayout(false);
 
         }
