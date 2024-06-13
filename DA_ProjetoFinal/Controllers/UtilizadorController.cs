@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DA_ProjetoFinal
 {
@@ -43,6 +44,25 @@ namespace DA_ProjetoFinal
             {
                 return context.Utilizadores.Find(id);
             }
+        }
+
+        public static bool AdicionarFotoDePerfil(int id, string caminho)
+        {
+            try {
+            using (var context = new CantinaContext())
+            {
+                var utilizador = context.Utilizadores.Find(id);
+                utilizador.FotoDePerfil = caminho;
+                context.SaveChanges();
+                return true;
+                }
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Erro ao adicionar a foto de perfil");
+                return false;
+            }
+           
         }
     }
 }

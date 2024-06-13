@@ -52,6 +52,11 @@
             this.btnNextWeek = new ReaLTaiizor.Controls.AloneButton();
             this.btnPreviousWeek = new ReaLTaiizor.Controls.AloneButton();
             this.btnCurrentDate = new ReaLTaiizor.Controls.AloneButton();
+            this.btnSelecionar1 = new ReaLTaiizor.Controls.AirButton();
+            this.btnSelecionar2 = new ReaLTaiizor.Controls.AirButton();
+            this.btnSelecionar3 = new ReaLTaiizor.Controls.AirButton();
+            this.btnSelecionar4 = new ReaLTaiizor.Controls.AirButton();
+            this.btnSelecionar5 = new ReaLTaiizor.Controls.AirButton();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             this.SuspendLayout();
@@ -293,7 +298,7 @@
             this.btnNextWeek.EnabledCalc = true;
             this.btnNextWeek.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnNextWeek.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(133)))), ((int)(((byte)(142)))));
-            this.btnNextWeek.Location = new System.Drawing.Point(1318, 597);
+            this.btnNextWeek.Location = new System.Drawing.Point(1317, 636);
             this.btnNextWeek.Name = "btnNextWeek";
             this.btnNextWeek.Size = new System.Drawing.Size(400, 46);
             this.btnNextWeek.TabIndex = 13;
@@ -307,7 +312,7 @@
             this.btnPreviousWeek.EnabledCalc = true;
             this.btnPreviousWeek.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPreviousWeek.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(133)))), ((int)(((byte)(142)))));
-            this.btnPreviousWeek.Location = new System.Drawing.Point(10, 597);
+            this.btnPreviousWeek.Location = new System.Drawing.Point(10, 636);
             this.btnPreviousWeek.Name = "btnPreviousWeek";
             this.btnPreviousWeek.Size = new System.Drawing.Size(400, 46);
             this.btnPreviousWeek.TabIndex = 14;
@@ -321,18 +326,98 @@
             this.btnCurrentDate.EnabledCalc = true;
             this.btnCurrentDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnCurrentDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(133)))), ((int)(((byte)(142)))));
-            this.btnCurrentDate.Location = new System.Drawing.Point(548, 597);
+            this.btnCurrentDate.Location = new System.Drawing.Point(547, 636);
             this.btnCurrentDate.Name = "btnCurrentDate";
             this.btnCurrentDate.Size = new System.Drawing.Size(633, 46);
             this.btnCurrentDate.TabIndex = 15;
             this.btnCurrentDate.Text = "Semana atual";
             this.btnCurrentDate.Click += new ReaLTaiizor.Controls.AloneButton.ClickEventHandler(this.btnCurrentDate_Click);
             // 
+            // btnSelecionar1
+            // 
+            this.btnSelecionar1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSelecionar1.Customization = "7e3t//Ly8v/r6+v/5ubm/+vr6//f39//p6en/zw8PP8UFBT/gICA/w==";
+            this.btnSelecionar1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSelecionar1.Image = null;
+            this.btnSelecionar1.Location = new System.Drawing.Point(10, 581);
+            this.btnSelecionar1.Name = "btnSelecionar1";
+            this.btnSelecionar1.NoRounding = false;
+            this.btnSelecionar1.Size = new System.Drawing.Size(308, 31);
+            this.btnSelecionar1.TabIndex = 67;
+            this.btnSelecionar1.Text = "airButton1";
+            this.btnSelecionar1.Transparent = false;
+            this.btnSelecionar1.Click += new System.EventHandler(this.btnSelecionar1_Click);
+            // 
+            // btnSelecionar2
+            // 
+            this.btnSelecionar2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSelecionar2.Customization = "7e3t//Ly8v/r6+v/5ubm/+vr6//f39//p6en/zw8PP8UFBT/gICA/w==";
+            this.btnSelecionar2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSelecionar2.Image = null;
+            this.btnSelecionar2.Location = new System.Drawing.Point(360, 581);
+            this.btnSelecionar2.Name = "btnSelecionar2";
+            this.btnSelecionar2.NoRounding = false;
+            this.btnSelecionar2.Size = new System.Drawing.Size(308, 31);
+            this.btnSelecionar2.TabIndex = 68;
+            this.btnSelecionar2.Text = "airButton1";
+            this.btnSelecionar2.Transparent = false;
+            this.btnSelecionar2.Click += new System.EventHandler(this.btnSelecionar2_Click);
+            // 
+            // btnSelecionar3
+            // 
+            this.btnSelecionar3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSelecionar3.Customization = "7e3t//Ly8v/r6+v/5ubm/+vr6//f39//p6en/zw8PP8UFBT/gICA/w==";
+            this.btnSelecionar3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSelecionar3.Image = null;
+            this.btnSelecionar3.Location = new System.Drawing.Point(710, 581);
+            this.btnSelecionar3.Name = "btnSelecionar3";
+            this.btnSelecionar3.NoRounding = false;
+            this.btnSelecionar3.Size = new System.Drawing.Size(308, 31);
+            this.btnSelecionar3.TabIndex = 69;
+            this.btnSelecionar3.Text = "airButton2";
+            this.btnSelecionar3.Transparent = false;
+            this.btnSelecionar3.Click += new System.EventHandler(this.btnSelecionar3_Click);
+            // 
+            // btnSelecionar4
+            // 
+            this.btnSelecionar4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSelecionar4.Customization = "7e3t//Ly8v/r6+v/5ubm/+vr6//f39//p6en/zw8PP8UFBT/gICA/w==";
+            this.btnSelecionar4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSelecionar4.Image = null;
+            this.btnSelecionar4.Location = new System.Drawing.Point(1060, 581);
+            this.btnSelecionar4.Name = "btnSelecionar4";
+            this.btnSelecionar4.NoRounding = false;
+            this.btnSelecionar4.Size = new System.Drawing.Size(308, 31);
+            this.btnSelecionar4.TabIndex = 70;
+            this.btnSelecionar4.Text = "airButton3";
+            this.btnSelecionar4.Transparent = false;
+            this.btnSelecionar4.Click += new System.EventHandler(this.btnSelecionar4_Click);
+            // 
+            // btnSelecionar5
+            // 
+            this.btnSelecionar5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSelecionar5.Customization = "7e3t//Ly8v/r6+v/5ubm/+vr6//f39//p6en/zw8PP8UFBT/gICA/w==";
+            this.btnSelecionar5.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSelecionar5.Image = null;
+            this.btnSelecionar5.Location = new System.Drawing.Point(1410, 581);
+            this.btnSelecionar5.Name = "btnSelecionar5";
+            this.btnSelecionar5.NoRounding = false;
+            this.btnSelecionar5.Size = new System.Drawing.Size(308, 31);
+            this.btnSelecionar5.TabIndex = 71;
+            this.btnSelecionar5.Text = "airButton4";
+            this.btnSelecionar5.Transparent = false;
+            this.btnSelecionar5.Click += new System.EventHandler(this.btnSelecionar5_Click);
+            // 
             // FormSemana
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1737, 668);
+            this.ClientSize = new System.Drawing.Size(1737, 694);
+            this.Controls.Add(this.btnSelecionar5);
+            this.Controls.Add(this.btnSelecionar4);
+            this.Controls.Add(this.btnSelecionar3);
+            this.Controls.Add(this.btnSelecionar2);
+            this.Controls.Add(this.btnSelecionar1);
             this.Controls.Add(this.pnl3);
             this.Controls.Add(this.dungeonHeaderLabel11);
             this.Controls.Add(this.pnl4);
@@ -390,5 +475,10 @@
         private System.Windows.Forms.FlowLayoutPanel pnl1;
         private System.Windows.Forms.FlowLayoutPanel pnl2;
         private System.Windows.Forms.FlowLayoutPanel pnl4;
+        private ReaLTaiizor.Controls.AirButton btnSelecionar1;
+        private ReaLTaiizor.Controls.AirButton btnSelecionar2;
+        private ReaLTaiizor.Controls.AirButton btnSelecionar3;
+        private ReaLTaiizor.Controls.AirButton btnSelecionar4;
+        private ReaLTaiizor.Controls.AirButton btnSelecionar5;
     }
 }

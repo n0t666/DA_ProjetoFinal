@@ -110,5 +110,18 @@ namespace DA_ProjetoFinal
             }
             container.Refresh();
         }
+
+        public static DateTime? ConvertFromString(string date)
+        {
+            DateTime result;
+            if (DateTime.TryParse(date, out result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }

@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,7 +18,7 @@ namespace DA_ProjetoFinal.Views
     {
         //-----------------Variáveis relacionadas com a paginação-----------------
         private int tamanhoPagina = 6;
-        private int paginaAtual = 2;
+        private int paginaAtual = 1;
         //------------------------------------------------------------------------
 
         private List<Utilizador> utilizadores;
@@ -31,16 +32,28 @@ namespace DA_ProjetoFinal.Views
 
         public event EventHandler <int> UtilizadorSelectedChanged;
         public event EventHandler <bool> HomePage_FirsTimeLoad;
+        public event EventHandler <DateTime> SemanaDataSelected;
+        
 
-        public FormHomePage(bool firstTime)
+        public FormHomePage(bool firstTime,int id)
         {
             InitializeComponent();
             this.firstTime = firstTime;
+            this.numeroUtilizador = id;
+            if(numeroUtilizador > 0)
+            {
+                labelUtilizadorAtual.Text = "Utilizador Atual: " + UtilizadorController.GetById(numeroUtilizador).Nome;
+            }
+            else
+            {
+                labelUtilizadorAtual.Text = "Utilizador Atual: Nenhum";
+            }
         }
 
         private void FormHomePage_Load(object sender, EventArgs e)
         {
             datePickAtual.Value = DateTime.Now;
+            setImage();
             carregadorDados();
         }
 
@@ -64,6 +77,7 @@ namespace DA_ProjetoFinal.Views
 
         private void comboUtilizador_SelectedIndexChanged(object sender, EventArgs e)
         {
+        
 
         }
 
@@ -87,30 +101,34 @@ namespace DA_ProjetoFinal.Views
 
         private void obterDadosUtilizadores(bool isCliente)
         {
-            int numeroUtilizadores;
+            int numeroUtilizadores =0;
+
 
             if(isCliente)
             {
-                utilizadoresPaginados = utilizadores.OrderBy(u => u.Nome)
-                .Skip((paginaAtual - 1) * tamanhoPagina)
-                .Take(tamanhoPagina)
-                .Where(u => u is Cliente)
-                .ToList();
-                numeroUtilizadores = numeroClientes;
+                utilizadoresPaginados = utilizadores
+                    .Where(u => u is Cliente) 
+                    .OrderBy(u => u.Nome)
+                    .Skip((paginaAtual - 1) * tamanhoPagina)
+                    .Take(tamanhoPagina)
+                    .ToList();
+                numeroUtilizadores = numeroClientes; 
+
             }
             else
             {
-                utilizadoresPaginados = utilizadores.OrderBy(u => u.Nome)
-                .Skip((paginaAtual - 1) * tamanhoPagina)
-                .Take(tamanhoPagina)
-                .Where(u => u is Funcionario)
-                .ToList();
+                utilizadoresPaginados = utilizadores
+                    .Where(u => u is Funcionario)
+                    .OrderBy(u => u.Nome)
+                    .Skip((paginaAtual - 1) * tamanhoPagina)
+                    .Take(tamanhoPagina)
+                    .ToList();
                 numeroUtilizadores = numeroFuncionarios;
             }
 
 
             comboUtilizador.DataSource = utilizadoresPaginados;
-            comboUtilizador.DisplayMember = "Nome";
+            comboUtilizador.Refresh();
 
             updatePagination(numeroUtilizadores);
         }
@@ -122,6 +140,7 @@ namespace DA_ProjetoFinal.Views
             {
                 numeroUtilizador = ((Utilizador)comboUtilizador.SelectedItem).Id;
                 labelUtilizadorAtual.Text = ((Utilizador)comboUtilizador.SelectedItem).ToString();
+                setImage();
             }else
             {
                 numeroUtilizador = 0;
@@ -163,7 +182,6 @@ namespace DA_ProjetoFinal.Views
             UtilityController.Center(labelLoading);
             await Task.Delay(1000);
 
-            var funcionarios = utilizadores.OfType<Funcionario>().ToList();
         }
 
         private void criarLoading(bool loadingVisible = true,bool controlsVisible = false)
@@ -186,7 +204,8 @@ namespace DA_ProjetoFinal.Views
         private void pictureInfoWeek_Click(object sender, EventArgs e)
         {
             UtilityController.GetWeeKStart(datePickAtual.Value.Date);
-            Form form = new FormSemana(datePickAtual.Value.Date);
+            FormSemana form = new FormSemana(datePickAtual.Value.Date);
+            form.SemanaDataSelected += semanaSelected;
             form.Show();
         }
 
@@ -196,5 +215,89 @@ namespace DA_ProjetoFinal.Views
             this.Refresh();
         }
 
+        private void semanaSelected(object sender,DateTime data)
+        {
+            SemanaDataSelected?.Invoke(this, data);
+        }
+
+        private void picUtilizadorPfp_Click(object sender, EventArgs e)
+        {
+            if (numeroUtilizador > 0)
+            {
+
+                OpenFileDialog openFileDialog1 = new OpenFileDialog();
+                openFileDialog1.Filter = "Image Files|*.jpg;*.jpeg;*.png";
+                openFileDialog1.Title = "Selecione a imagem de perfil";
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+
+                    Guid guid = Guid.NewGuid();
+                    string nome = guid.ToString();
+
+                    string caminho = openFileDialog1.FileName;
+
+                    string rootDirectory = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
+
+                    string root = Path.Combine(rootDirectory, "resources", "images", "users", "pfps", numeroUtilizador.ToString());
+
+
+                    if (!Directory.Exists(root))
+                    {
+                        Directory.CreateDirectory(root);
+                    }
+
+                    string destino = Path.Combine(root, nome + ".png");
+
+                    try
+                    {
+                        File.Copy(caminho, destino, true);
+                        if (UtilizadorController.AdicionarFotoDePerfil(numeroUtilizador, destino))
+                        {
+                            picUtilizadorPfp.Image = Image.FromFile(destino);
+                            MessageBox.Show("Foto de perfil atualizada com sucesso");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Erro ao atualizar a foto de perfil");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Erro ao copiar a imagem: " + ex.Message);
+                    }
+                }
+            }
+        }
+
+        private void setImage()
+        {
+            if(numeroUtilizador > 0)
+            {
+                Utilizador utilizador = UtilizadorController.GetById(numeroUtilizador);
+                if (utilizador.FotoDePerfil != null)
+                {
+                    picUtilizadorPfp.Image = Image.FromFile(utilizador.FotoDePerfil);
+                }
+            }
+
+        }
+
+        private void btnApagarFoto_Click(object sender, EventArgs e)
+        {
+            if(numeroUtilizador > 0)
+            {
+                if(UtilizadorController.AdicionarFotoDePerfil(numeroUtilizador, null))
+                {
+                    picUtilizadorPfp.Image = null;
+                    picUtilizadorPfp.Image = Properties.Resources.default_user;
+
+                    MessageBox.Show("Foto de perfil apagada com sucesso");
+                }
+                else
+                {
+                    MessageBox.Show("Erro ao apagar a foto de perfil");
+                }
+            }
+        }
     }
 }

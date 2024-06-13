@@ -12,10 +12,19 @@ namespace DA_ProjetoFinal.Views
 {
     public partial class FormReservas : Form
     {
-        public FormReservas(int utilizadorAtual)
+        public FormReservas(int utilizadorAtual,DateTime? diaEspecifico = null)
         {
             InitializeComponent();
-            MessageBox.Show(utilizadorAtual.ToString());
+            if(utilizadorAtual != 0)
+            {
+
+            }
+ 
+
+            if (diaEspecifico != null)
+            {
+
+            }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

@@ -1,100 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\Documentos\\DA_ProjetoFinal\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|e:\\documentos\\da_projetofinal\\da_projetofinal\\views\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\views\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|E:\\Documentos\\DA_ProjetoFinal\\da_projetofinal\\views\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\views\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|E:\\Documentos\\DA_ProjetoFinal\\da_projetofinal\\views\\formhomepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\views\\formhomepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|E:\\Documentos\\DA_ProjetoFinal\\da_projetofinal\\models\\utilizador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\models\\utilizador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|E:\\Documentos\\DA_ProjetoFinal\\da_projetofinal\\controllers\\utilizadorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\controllers\\utilizadorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 3,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UtilizadorController.cs",
-              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Controllers\\UtilizadorController.cs",
-              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Controllers\\UtilizadorController.cs",
-              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Controllers\\UtilizadorController.cs",
-              "RelativeToolTip": "DA_ProjetoFinal\\Controllers\\UtilizadorController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAcwC0AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T19:19:07.478Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Utilizador.cs",
-              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Models\\Utilizador.cs",
-              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Models\\Utilizador.cs",
-              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Models\\Utilizador.cs",
-              "RelativeToolTip": "DA_ProjetoFinal\\Models\\Utilizador.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T19:18:57.401Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormHomePage.cs [Design]",
-              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormHomePage.cs",
-              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Views\\FormHomePage.cs",
-              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormHomePage.cs [Design]",
-              "RelativeToolTip": "DA_ProjetoFinal\\Views\\FormHomePage.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T19:18:04.634Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Main.cs",
-              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\Main.cs",
-              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Views\\Main.cs",
-              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\Main.cs",
-              "RelativeToolTip": "DA_ProjetoFinal\\Views\\Main.cs",
-              "ViewState": "AQIAAKAAAAAAAAAAAAAwwLEAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T19:14:04.028Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Main.cs [Design]",
-              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\Main.cs",
-              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Views\\Main.cs",
-              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\Main.cs [Design]",
-              "RelativeToolTip": "DA_ProjetoFinal\\Views\\Main.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T19:14:37.019Z"
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

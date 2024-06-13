@@ -32,8 +32,6 @@
             this.datePickAtual = new ReaLTaiizor.Controls.PoisonDateTime();
             this.comboSemana = new ReaLTaiizor.Controls.PoisonComboBox();
             this.comboUtilizador = new ReaLTaiizor.Controls.PoisonComboBox();
-            this.btnMenu = new ReaLTaiizor.Controls.PoisonButton();
-            this.txtMenuDia = new ReaLTaiizor.Controls.HopeRichTextBox();
             this.comboTipoUtilizador = new ReaLTaiizor.Controls.PoisonComboBox();
             this.btnPaginateAvancar = new ReaLTaiizor.Controls.AloneButton();
             this.btnPaginateVoltar = new ReaLTaiizor.Controls.AloneButton();
@@ -41,10 +39,11 @@
             this.labelUtilizadorAtual = new ReaLTaiizor.Controls.DungeonLabel();
             this.dungeonLabel4 = new ReaLTaiizor.Controls.DungeonLabel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelLoading = new ReaLTaiizor.Controls.BigLabel();
+            this.spinnerLoading = new ReaLTaiizor.Controls.PoisonProgressSpinner();
             this.pictureInfoWeek = new ReaLTaiizor.Controls.HopePictureBox();
             this.picUtilizadorPfp = new System.Windows.Forms.PictureBox();
-            this.spinnerLoading = new ReaLTaiizor.Controls.PoisonProgressSpinner();
-            this.labelLoading = new ReaLTaiizor.Controls.BigLabel();
+            this.btnApagarFoto = new ReaLTaiizor.Controls.AloneButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureInfoWeek)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUtilizadorPfp)).BeginInit();
@@ -71,9 +70,9 @@
             // 
             this.comboSemana.FormattingEnabled = true;
             this.comboSemana.ItemHeight = 23;
-            this.comboSemana.Location = new System.Drawing.Point(286, 293);
+            this.comboSemana.Location = new System.Drawing.Point(262, 293);
             this.comboSemana.Name = "comboSemana";
-            this.comboSemana.Size = new System.Drawing.Size(235, 29);
+            this.comboSemana.Size = new System.Drawing.Size(259, 29);
             this.comboSemana.TabIndex = 55;
             this.comboSemana.UseSelectable = true;
             // 
@@ -88,37 +87,6 @@
             this.comboUtilizador.TabIndex = 56;
             this.comboUtilizador.UseSelectable = true;
             this.comboUtilizador.SelectedIndexChanged += new System.EventHandler(this.comboUtilizador_SelectedIndexChanged);
-            // 
-            // btnMenu
-            // 
-            this.btnMenu.Location = new System.Drawing.Point(54, 471);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(425, 23);
-            this.btnMenu.TabIndex = 57;
-            this.btnMenu.Text = "poisonButton1";
-            this.btnMenu.UseSelectable = true;
-            // 
-            // txtMenuDia
-            // 
-            this.txtMenuDia.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
-            this.txtMenuDia.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtMenuDia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
-            this.txtMenuDia.Hint = "";
-            this.txtMenuDia.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            this.txtMenuDia.Location = new System.Drawing.Point(3, 333);
-            this.txtMenuDia.MaxLength = 32767;
-            this.txtMenuDia.Multiline = true;
-            this.txtMenuDia.Name = "txtMenuDia";
-            this.txtMenuDia.PasswordChar = '\0';
-            this.txtMenuDia.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtMenuDia.SelectedText = "";
-            this.txtMenuDia.SelectionLength = 0;
-            this.txtMenuDia.SelectionStart = 0;
-            this.txtMenuDia.Size = new System.Drawing.Size(520, 132);
-            this.txtMenuDia.TabIndex = 58;
-            this.txtMenuDia.TabStop = false;
-            this.txtMenuDia.Text = "hopeRichTextBox1";
-            this.txtMenuDia.UseSystemPasswordChar = false;
             // 
             // comboTipoUtilizador
             // 
@@ -170,7 +138,7 @@
             this.btnSelecionarUtilizador.EnabledCalc = true;
             this.btnSelecionarUtilizador.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSelecionarUtilizador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(133)))), ((int)(((byte)(142)))));
-            this.btnSelecionarUtilizador.Location = new System.Drawing.Point(331, 258);
+            this.btnSelecionarUtilizador.Location = new System.Drawing.Point(324, 258);
             this.btnSelecionarUtilizador.Name = "btnSelecionarUtilizador";
             this.btnSelecionarUtilizador.Size = new System.Drawing.Size(135, 22);
             this.btnSelecionarUtilizador.TabIndex = 62;
@@ -203,6 +171,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnApagarFoto);
             this.panel1.Controls.Add(this.labelLoading);
             this.panel1.Controls.Add(this.spinnerLoading);
             this.panel1.Controls.Add(this.pictureInfoWeek);
@@ -212,8 +181,6 @@
             this.panel1.Controls.Add(this.btnPaginateVoltar);
             this.panel1.Controls.Add(this.btnPaginateAvancar);
             this.panel1.Controls.Add(this.comboTipoUtilizador);
-            this.panel1.Controls.Add(this.txtMenuDia);
-            this.panel1.Controls.Add(this.btnMenu);
             this.panel1.Controls.Add(this.comboUtilizador);
             this.panel1.Controls.Add(this.comboSemana);
             this.panel1.Controls.Add(this.datePickAtual);
@@ -222,6 +189,28 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(531, 502);
             this.panel1.TabIndex = 0;
+            // 
+            // labelLoading
+            // 
+            this.labelLoading.AutoSize = true;
+            this.labelLoading.BackColor = System.Drawing.Color.Transparent;
+            this.labelLoading.Font = new System.Drawing.Font("Segoe UI", 25F);
+            this.labelLoading.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.labelLoading.Location = new System.Drawing.Point(90, 271);
+            this.labelLoading.Name = "labelLoading";
+            this.labelLoading.Size = new System.Drawing.Size(343, 46);
+            this.labelLoading.TabIndex = 71;
+            this.labelLoading.Text = "A carregador dados....";
+            // 
+            // spinnerLoading
+            // 
+            this.spinnerLoading.Location = new System.Drawing.Point(208, 177);
+            this.spinnerLoading.Maximum = 100;
+            this.spinnerLoading.Name = "spinnerLoading";
+            this.spinnerLoading.Size = new System.Drawing.Size(106, 91);
+            this.spinnerLoading.TabIndex = 72;
+            this.spinnerLoading.UseCustomBackColor = true;
+            this.spinnerLoading.UseSelectable = true;
             // 
             // pictureInfoWeek
             // 
@@ -247,28 +236,21 @@
             this.picUtilizadorPfp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picUtilizadorPfp.TabIndex = 52;
             this.picUtilizadorPfp.TabStop = false;
+            this.picUtilizadorPfp.Click += new System.EventHandler(this.picUtilizadorPfp_Click);
             // 
-            // spinnerLoading
+            // btnApagarFoto
             // 
-            this.spinnerLoading.Location = new System.Drawing.Point(208, 177);
-            this.spinnerLoading.Maximum = 100;
-            this.spinnerLoading.Name = "spinnerLoading";
-            this.spinnerLoading.Size = new System.Drawing.Size(106, 91);
-            this.spinnerLoading.TabIndex = 72;
-            this.spinnerLoading.UseCustomBackColor = true;
-            this.spinnerLoading.UseSelectable = true;
-            // 
-            // labelLoading
-            // 
-            this.labelLoading.AutoSize = true;
-            this.labelLoading.BackColor = System.Drawing.Color.Transparent;
-            this.labelLoading.Font = new System.Drawing.Font("Segoe UI", 25F);
-            this.labelLoading.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.labelLoading.Location = new System.Drawing.Point(90, 271);
-            this.labelLoading.Name = "labelLoading";
-            this.labelLoading.Size = new System.Drawing.Size(343, 46);
-            this.labelLoading.TabIndex = 71;
-            this.labelLoading.Text = "A carregador dados....";
+            this.btnApagarFoto.BackColor = System.Drawing.Color.Transparent;
+            this.btnApagarFoto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnApagarFoto.EnabledCalc = true;
+            this.btnApagarFoto.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApagarFoto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(133)))), ((int)(((byte)(142)))));
+            this.btnApagarFoto.Location = new System.Drawing.Point(390, 3);
+            this.btnApagarFoto.Name = "btnApagarFoto";
+            this.btnApagarFoto.Size = new System.Drawing.Size(43, 22);
+            this.btnApagarFoto.TabIndex = 73;
+            this.btnApagarFoto.Text = "X";
+            this.btnApagarFoto.Click += new ReaLTaiizor.Controls.AloneButton.ClickEventHandler(this.btnApagarFoto_Click);
             // 
             // FormHomePage
             // 
@@ -295,8 +277,6 @@
         private ReaLTaiizor.Controls.PoisonDateTime datePickAtual;
         private ReaLTaiizor.Controls.PoisonComboBox comboSemana;
         private ReaLTaiizor.Controls.PoisonComboBox comboUtilizador;
-        private ReaLTaiizor.Controls.PoisonButton btnMenu;
-        private ReaLTaiizor.Controls.HopeRichTextBox txtMenuDia;
         private ReaLTaiizor.Controls.PoisonComboBox comboTipoUtilizador;
         private ReaLTaiizor.Controls.AloneButton btnPaginateAvancar;
         private ReaLTaiizor.Controls.AloneButton btnPaginateVoltar;
@@ -307,5 +287,6 @@
         private ReaLTaiizor.Controls.HopePictureBox pictureInfoWeek;
         private ReaLTaiizor.Controls.PoisonProgressSpinner spinnerLoading;
         private ReaLTaiizor.Controls.BigLabel labelLoading;
+        private ReaLTaiizor.Controls.AloneButton btnApagarFoto;
     }
 }

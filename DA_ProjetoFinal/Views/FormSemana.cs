@@ -20,6 +20,9 @@ namespace DA_ProjetoFinal.Views
         private DateTime fimSemanaAtual;
         private List<Menu> menus;
 
+        public event EventHandler<DateTime> SemanaDataSelected;
+
+
         public FormSemana(DateTime data)
         {
             InitializeComponent();
@@ -39,9 +42,11 @@ namespace DA_ProjetoFinal.Views
 
             for (int i = 1; i < 6; i++)
             {
+                AirButton airButton = this.Controls.Find("btnSelecionar" + i.ToString(), true).FirstOrDefault() as AirButton;
                 FlowLayoutPanel panel = this.Controls.Find("pnl" + i.ToString(), true).FirstOrDefault() as FlowLayoutPanel;
                 DungeonHeaderLabel label = this.Controls.Find("labelDia" + i.ToString(), true).FirstOrDefault() as DungeonHeaderLabel;
                 label.Text = inicioSemanaAtual.ToShortDateString(); 
+                airButton.Text = "Criar menu para " + inicioSemanaAtual.ToShortDateString();
 
                 List<Menu> menusForCurrentDate = menus.Where(menu => menu.DataHora.Date == inicioSemanaAtual.Date).ToList();
                 if (menusForCurrentDate.Count > 0)
@@ -188,6 +193,137 @@ namespace DA_ProjetoFinal.Views
                 panel.AutoScroll = true;  
             }
             this.Refresh();
+        }
+
+        private void btnSelecionar1_Click(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(labelDia1.Text))
+            {
+                string diaString = labelDia1.Text;
+                DateTime data = UtilityController.ConvertFromString(diaString).Value;
+                if(data != null)
+                {
+                    MessageBox.Show("Data: " + diaString, "Data", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    SemanaDataSelected?.Invoke(this, data);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Ocorreu um erro ao tentar obter a data", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                    
+                }
+            }
+            else
+            {
+                MessageBox.Show("Não foi possível obter a data", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+        }
+
+        private void btnSelecionar2_Click(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(labelDia2.Text))
+            {
+                string diaString = labelDia2.Text;
+                DateTime data = UtilityController.ConvertFromString(diaString).Value;
+                if (data != null)
+                {
+                    MessageBox.Show("Data: " + diaString, "Data", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    SemanaDataSelected?.Invoke(this, data);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Ocorreu um erro ao tentar obter a data", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Não foi possível obter a data", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
+
+        private void btnSelecionar3_Click(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(labelDia3.Text))
+            {
+                string diaString = labelDia3.Text;
+                DateTime data = UtilityController.ConvertFromString(diaString).Value;
+                if (data != null)
+                {
+                    MessageBox.Show("Data: " + diaString, "Data", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    SemanaDataSelected?.Invoke(this, data);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Ocorreu um erro ao tentar obter a data", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Não foi possível obter a data", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
+
+        private void btnSelecionar4_Click(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(labelDia4.Text))
+            {
+                string diaString = labelDia4.Text;
+                DateTime data = UtilityController.ConvertFromString(diaString).Value;
+                if (data != null)
+                {
+                    MessageBox.Show("Data: " + diaString, "Data", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    SemanaDataSelected?.Invoke(this, data);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Ocorreu um erro ao tentar obter a data", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Não foi possível obter a data", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
+
+        private void btnSelecionar5_Click(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(labelDia5.Text))
+            {
+                string diaString = labelDia5.Text;
+                DateTime data = UtilityController.ConvertFromString(diaString).Value;
+                if (data != null)
+                {
+                    MessageBox.Show("Data: " + diaString, "Data", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    SemanaDataSelected?.Invoke(this, data);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Ocorreu um erro ao tentar obter a data", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Não foi possível obter a data", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
         }
     }
 }

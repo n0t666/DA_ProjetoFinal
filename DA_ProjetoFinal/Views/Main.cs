@@ -21,6 +21,7 @@ namespace DA_ProjetoFinal.Views
         private int utilizadorAtualId;
         private bool firstTimeHome = true;
         private string currentLoadedFormName;
+        
 
         public Main()
         {
@@ -95,10 +96,11 @@ namespace DA_ProjetoFinal.Views
         private void sideBarCustomButton1_Click(object sender, EventArgs e)
         {
             appName = BaseAppName + "Página inicial";
-            FormHomePage form = new FormHomePage(firstTimeHome);
+            FormHomePage form = new FormHomePage(firstTimeHome,utilizadorAtualId);
             form.Name = "FormHomePage";
             form.UtilizadorSelectedChanged +=  Utilizador_SelectedChanged;
             form.HomePage_FirsTimeLoad += HomePage_FirsTimeLoad;
+            form.SemanaDataSelected += semanaSelected;
             loadForm(form);
         }
 
@@ -205,6 +207,15 @@ namespace DA_ProjetoFinal.Views
         {
             firstTimeHome = firstTime;
             changeSideState(true);
+        }
+
+        private void semanaSelected(object sender, DateTime data)
+        {
+            appName = BaseAppName + "Reservas";
+            Form form = new FormReservas(utilizadorAtualId, data);
+            form.Name = "FormReservas";
+            loadForm(form);
+           
         }
 
         private void changeSideState(bool state) 
