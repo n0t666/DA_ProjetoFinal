@@ -251,7 +251,7 @@
             this.btnSubmitCreate.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
             this.btnSubmitCreate.Size = new System.Drawing.Size(562, 40);
             this.btnSubmitCreate.TabIndex = 48;
-            this.btnSubmitCreate.Text = "button1";
+            this.btnSubmitCreate.Text = "CRIAR";
             this.btnSubmitCreate.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btnSubmitCreate.Click += new System.EventHandler(this.btnSubmitCreate_Click);
             // 
@@ -909,7 +909,7 @@
             this.btnSubmitEdit.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
             this.btnSubmitEdit.Size = new System.Drawing.Size(562, 40);
             this.btnSubmitEdit.TabIndex = 69;
-            this.btnSubmitEdit.Text = "button1";
+            this.btnSubmitEdit.Text = "EDITAR";
             this.btnSubmitEdit.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btnSubmitEdit.Click += new System.EventHandler(this.btnSubmitEdit_Click);
             // 
@@ -1191,18 +1191,7 @@
         private ReaLTaiizor.Controls.BigLabel bigLabel3;
         private ReaLTaiizor.Controls.BigLabel bigLabel2;
         private ReaLTaiizor.Controls.Button btnSubmitCreate;
-        private System.Windows.Forms.FlowLayoutPanel pnlPratosCriar;
-        private ReaLTaiizor.Controls.BigLabel bigLabel8;
-        private ReaLTaiizor.Controls.AloneButton btnRecuarPrCriar;
-        private ReaLTaiizor.Controls.AloneButton btnPvoltarCriar;
-        private ReaLTaiizor.Controls.AloneButton btnPresetCriar;
-        private ReaLTaiizor.Controls.AloneButton btnAvancarPrCriar;
         private System.Windows.Forms.FlowLayoutPanel pnlExtrasCriar;
-        private ReaLTaiizor.Controls.BigLabel bigLabel9;
-        private ReaLTaiizor.Controls.AloneButton btnEvoltarCriar;
-        private ReaLTaiizor.Controls.AloneButton btnEresetCriar;
-        private ReaLTaiizor.Controls.AloneButton btnAvancarExCriar;
-        private ReaLTaiizor.Controls.AloneButton btnRecuarExCriar;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
         private ReaLTaiizor.Controls.DungeonHeaderLabel dungeonHeaderLabel7;
         private ReaLTaiizor.Controls.DungeonLabel lblQuantidade;
@@ -1232,5 +1221,16 @@
         private ReaLTaiizor.Controls.DungeonNumeric numQuantidadeEditar;
         private ReaLTaiizor.Controls.BigLabel bigLabel12;
         private ReaLTaiizor.Controls.PoisonDateTime dateDataHoraEdit;
+        private ReaLTaiizor.Controls.BigLabel bigLabel9;
+        private ReaLTaiizor.Controls.BigLabel bigLabel8;
+        private System.Windows.Forms.FlowLayoutPanel pnlPratosCriar;
+        private ReaLTaiizor.Controls.AloneButton btnEvoltarCriar;
+        private ReaLTaiizor.Controls.AloneButton btnEresetCriar;
+        private ReaLTaiizor.Controls.AloneButton btnAvancarExCriar;
+        private ReaLTaiizor.Controls.AloneButton btnRecuarExCriar;
+        private ReaLTaiizor.Controls.AloneButton btnRecuarPrCriar;
+        private ReaLTaiizor.Controls.AloneButton btnPvoltarCriar;
+        private ReaLTaiizor.Controls.AloneButton btnPresetCriar;
+        private ReaLTaiizor.Controls.AloneButton btnAvancarPrCriar;
     }
 }

@@ -238,7 +238,7 @@
             this.tabPageClientes.Controls.Add(this.tabPageEditarCliente);
             this.tabPageClientes.DeactiveFontColor = System.Drawing.Color.White;
             this.tabPageClientes.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageClientes.ItemSize = new System.Drawing.Size(120, 60);
+            this.tabPageClientes.ItemSize = new System.Drawing.Size(150, 60);
             this.tabPageClientes.Location = new System.Drawing.Point(-2, 0);
             this.tabPageClientes.Name = "tabPageClientes";
             this.tabPageClientes.SelectedIndex = 0;
@@ -484,7 +484,7 @@
             this.tabPageListarCliente.Name = "tabPageListarCliente";
             this.tabPageListarCliente.Size = new System.Drawing.Size(606, 487);
             this.tabPageListarCliente.TabIndex = 3;
-            this.tabPageListarCliente.Text = "Listar cliente";
+            this.tabPageListarCliente.Text = "Listar clientes";
             // 
             // comboTipoUtilizadorList
             // 

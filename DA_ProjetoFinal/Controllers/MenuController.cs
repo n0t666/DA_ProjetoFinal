@@ -28,6 +28,24 @@ namespace DA_ProjetoFinal
             }
         }
 
+        public static List<Menu> GetSpecificDay(DateTime data)
+        {
+            try
+            {
+                using (var context = new CantinaContext())
+                {
+                    return context.Menus
+                        .Where(m => m.DataHora.Day == data.Day)
+                        .Include(m => m.Prato)
+                        .Include(m => m.Extra)
+                        .ToList();
+                }
+            }catch (Exception)
+            {
+                return null;
+            }
+        }
+
         public static List<Menu> GetBetweenDates(DateTime inicio, DateTime fim)
         {
             try { 
@@ -156,9 +174,13 @@ namespace DA_ProjetoFinal
                 }
                 return true;
             }
-            catch (Exception)
+            catch (System.Data.Entity.Infrastructure.DbUpdateException)
             {
-                MessageBox.Show("Ocorreu um erro inesperado ao apagar o menu", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Não pode apagar este menu porque está associado a uma reserva ativa", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro inesperado ao apagar o menu " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return false;
 

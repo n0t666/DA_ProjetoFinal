@@ -50,7 +50,7 @@
             this.dungeonHeaderLabel3 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
             this.btnPaginateVoltar = new ReaLTaiizor.Controls.AloneButton();
             this.btnPaginateAvancar = new ReaLTaiizor.Controls.AloneButton();
-            this.tabPageEditarMenu = new System.Windows.Forms.TabPage();
+            this.tabPageEditarMulta = new System.Windows.Forms.TabPage();
             this.lblNotSelected = new ReaLTaiizor.Controls.DungeonHeaderLabel();
             this.pnlSelecionadoEdit = new System.Windows.Forms.Panel();
             this.btnSubmitEdit = new ReaLTaiizor.Controls.HopeRoundButton();
@@ -65,7 +65,7 @@
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
-            this.tabPageEditarMenu.SuspendLayout();
+            this.tabPageEditarMulta.SuspendLayout();
             this.pnlSelecionadoEdit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numValorEdit)).BeginInit();
             this.SuspendLayout();
@@ -78,7 +78,7 @@
             this.foreverTabPage1.BGColor = System.Drawing.Color.WhiteSmoke;
             this.foreverTabPage1.Controls.Add(this.tabPageCriarMulta);
             this.foreverTabPage1.Controls.Add(this.tabPageListarMultas);
-            this.foreverTabPage1.Controls.Add(this.tabPageEditarMenu);
+            this.foreverTabPage1.Controls.Add(this.tabPageEditarMulta);
             this.foreverTabPage1.DeactiveFontColor = System.Drawing.Color.White;
             this.foreverTabPage1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.foreverTabPage1.ItemSize = new System.Drawing.Size(120, 60);
@@ -384,17 +384,17 @@
             this.btnPaginateAvancar.Text = ">";
             this.btnPaginateAvancar.Click += new ReaLTaiizor.Controls.AloneButton.ClickEventHandler(this.btnPaginateAvancar_Click_1);
             // 
-            // tabPageEditarMenu
+            // tabPageEditarMulta
             // 
-            this.tabPageEditarMenu.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tabPageEditarMenu.Controls.Add(this.lblNotSelected);
-            this.tabPageEditarMenu.Controls.Add(this.pnlSelecionadoEdit);
-            this.tabPageEditarMenu.Location = new System.Drawing.Point(4, 64);
-            this.tabPageEditarMenu.Name = "tabPageEditarMenu";
-            this.tabPageEditarMenu.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageEditarMenu.Size = new System.Drawing.Size(606, 487);
-            this.tabPageEditarMenu.TabIndex = 2;
-            this.tabPageEditarMenu.Text = "Editar menu";
+            this.tabPageEditarMulta.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPageEditarMulta.Controls.Add(this.lblNotSelected);
+            this.tabPageEditarMulta.Controls.Add(this.pnlSelecionadoEdit);
+            this.tabPageEditarMulta.Location = new System.Drawing.Point(4, 64);
+            this.tabPageEditarMulta.Name = "tabPageEditarMulta";
+            this.tabPageEditarMulta.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageEditarMulta.Size = new System.Drawing.Size(606, 487);
+            this.tabPageEditarMulta.TabIndex = 2;
+            this.tabPageEditarMulta.Text = "Editar multa";
             // 
             // lblNotSelected
             // 
@@ -530,8 +530,8 @@
             this.flowLayoutPanel3.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
-            this.tabPageEditarMenu.ResumeLayout(false);
-            this.tabPageEditarMenu.PerformLayout();
+            this.tabPageEditarMulta.ResumeLayout(false);
+            this.tabPageEditarMulta.PerformLayout();
             this.pnlSelecionadoEdit.ResumeLayout(false);
             this.pnlSelecionadoEdit.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numValorEdit)).EndInit();
@@ -544,7 +544,7 @@
         private ReaLTaiizor.Controls.ForeverTabPage foreverTabPage1;
         private System.Windows.Forms.TabPage tabPageCriarMulta;
         private System.Windows.Forms.TabPage tabPageListarMultas;
-        private System.Windows.Forms.TabPage tabPageEditarMenu;
+        private System.Windows.Forms.TabPage tabPageEditarMulta;
         private ReaLTaiizor.Controls.DungeonHeaderLabel lblNotSelected;
         private System.Windows.Forms.Panel pnlSelecionadoEdit;
         private ReaLTaiizor.Controls.CrownNumeric numValor;

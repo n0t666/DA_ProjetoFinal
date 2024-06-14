@@ -60,3 +60,4 @@ C:\Users\Leandro\Documents\DA_ProjetoFinal\DA_ProjetoFinal\obj\Debug\DA_ProjetoF
 E:\Documentos\DA_ProjetoFinal\DA_ProjetoFinal\obj\Debug\DA_ProjetoFinal.Views.FormFuncionarios.resources
 E:\Documentos\DA_ProjetoFinal\DA_ProjetoFinal\obj\Debug\DA_ProjetoFinal.Views.FormMenu.resources
 E:\Documentos\DA_ProjetoFinal\DA_ProjetoFinal\obj\Debug\DA_ProjetoFinal.Views.FormMultas.resources
+E:\Documentos\DA_ProjetoFinal\DA_ProjetoFinal\obj\Debug\DA_ProjetoFinal.Migrations.relationships_added.resources

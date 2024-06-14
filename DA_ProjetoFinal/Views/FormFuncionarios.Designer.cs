@@ -385,7 +385,7 @@
             this.tabPageFuncionarios.Controls.Add(this.tabPageEditarFunc);
             this.tabPageFuncionarios.DeactiveFontColor = System.Drawing.Color.White;
             this.tabPageFuncionarios.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageFuncionarios.ItemSize = new System.Drawing.Size(160, 60);
+            this.tabPageFuncionarios.ItemSize = new System.Drawing.Size(170, 60);
             this.tabPageFuncionarios.Location = new System.Drawing.Point(-2, 0);
             this.tabPageFuncionarios.Name = "tabPageFuncionarios";
             this.tabPageFuncionarios.SelectedIndex = 0;
@@ -412,7 +412,7 @@
             this.tabPageListarFunc.Name = "tabPageListarFunc";
             this.tabPageListarFunc.Size = new System.Drawing.Size(606, 487);
             this.tabPageListarFunc.TabIndex = 3;
-            this.tabPageListarFunc.Text = "Listar funcionário";
+            this.tabPageListarFunc.Text = "Listar funcionários";
             // 
             // comboBoxFunc
             // 

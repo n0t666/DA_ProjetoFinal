@@ -658,13 +658,14 @@ namespace DA_ProjetoFinal.Views
                     loadMenus();
                     obterDadosPaginados();
                     MessageBox.Show("Menu apagado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    lblSelecionado.Text = "";
+                    selectedMenu = null;
                 }
                 else
                 {
                     MessageBox.Show("Erro ao apagar o menu", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            selectedMenu = null;
         }
 
         private void btnAvancarEditE_Click(object sender, EventArgs e)
