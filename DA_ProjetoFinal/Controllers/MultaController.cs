@@ -106,5 +106,26 @@ namespace DA_ProjetoFinal
                     return context.Multas.Any(m => m.NumeroHoras == numeroHoras);
             }
         }
+
+        public static int CheckMulta(DateTime dataMenu)
+        {
+            try
+            {
+                DateTime data = dataMenu.AddHours(-DateTime.Now.Hour);
+                using (var context = new CantinaContext())
+                {
+                    var multa = context.Multas.Where(m => m.NumeroHoras == data.Hour).FirstOrDefault();
+                    if (multa != null)
+                    {
+                        return multa.Id;
+                    }
+                    return -1;
+                }
+            }catch(Exception)
+            {
+                MessageBox.Show("Ocorreu um erro inesperado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return -1;
+        }
     }
 }

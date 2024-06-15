@@ -27,7 +27,7 @@ namespace DA_ProjetoFinal
 
         public DbSet<ItemFatura> ItemFaturas { get; set;}
 
-
+ 
 
 
 

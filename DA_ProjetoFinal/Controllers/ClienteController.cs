@@ -10,9 +10,13 @@ namespace DA_ProjetoFinal
 {
     internal class ClienteController
     {
+        /*
         private const int numeroMaximoExtrasDiario = 3;
         private const int numeroMaximoPratosDiario = 1;
+        */
 
+        private const int numeroMaximoExtrasDiario = 999;
+        private const int numeroMaximoPratosDiario = 999;
 
         public static List<Cliente> Get()
         {
@@ -73,10 +77,16 @@ namespace DA_ProjetoFinal
                     return true;
                 }
             }
+            catch (System.Data.Entity.Infrastructure.DbUpdateException)
+            {
+                MessageBox.Show("Não é possível apagar o cliente, pois existem reservas associadas a ele", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
             catch (Exception)
             {
-                return false;
+                MessageBox.Show("Ocorreu um erro ao apagar o cliente", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            return false;
         }
 
         public static bool PodeEfetuarReserva(int id, int day)

@@ -19,6 +19,7 @@ namespace DA_ProjetoFinal.Views
         private string appName;
         private Utilizador utilizadorAtual;
         private int utilizadorAtualId;
+        private int reservaUtilizadorId =-1;
         private bool firstTimeHome = true;
         private string currentLoadedFormName;
         
@@ -119,8 +120,9 @@ namespace DA_ProjetoFinal.Views
                 return;
             }
             appName = BaseAppName + "Reservas";
-            FormReservas form = new FormReservas(utilizadorAtualId);
+            FormReservas form = new FormReservas(utilizadorAtualId,null, reservaUtilizadorId);
             form.Name = "FormReservas";
+            form.RememberMeSelected += Utilizador_ReservaSelected;
             loadForm(form);
         }
 
@@ -209,13 +211,17 @@ namespace DA_ProjetoFinal.Views
             changeSideState(true);
         }
 
+        private void Utilizador_ReservaSelected(object sender, int id)
+        {
+            reservaUtilizadorId = id;
+        }
+
         private void semanaSelected(object sender, DateTime data)
         {
             appName = BaseAppName + "Reservas";
-            Form form = new FormReservas(utilizadorAtualId, data);
+            Form form = new FormReservas(utilizadorAtualId, data, reservaUtilizadorId);
             form.Name = "FormReservas";
-            loadForm(form);
-           
+            loadForm(form); 
         }
 
         private void changeSideState(bool state) 

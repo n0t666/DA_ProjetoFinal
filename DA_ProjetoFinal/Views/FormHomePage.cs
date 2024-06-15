@@ -274,7 +274,7 @@ namespace DA_ProjetoFinal.Views
             if(numeroUtilizador > 0)
             {
                 Utilizador utilizador = UtilizadorController.GetById(numeroUtilizador);
-                if (utilizador.FotoDePerfil != null)
+                if (utilizador.FotoDePerfil != null && utilizador.FotoDePerfil !=null)
                 {
                     picUtilizadorPfp.Image = Image.FromFile(utilizador.FotoDePerfil);
                 }

@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "E:\\Documentos\\DA_ProjetoFinal\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|e:\\documentos\\da_projetofinal\\da_projetofinal\\cantinacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\cantinacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|e:\\documentos\\da_projetofinal\\da_projetofinal\\models\\fatura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\models\\fatura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|e:\\documentos\\da_projetofinal\\da_projetofinal\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|e:\\documentos\\da_projetofinal\\da_projetofinal\\views\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\views\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|e:\\documentos\\da_projetofinal\\da_projetofinal\\views\\formreservas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\views\\formreservas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,28 +27,24 @@
       "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\views\\formreservas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|e:\\documentos\\da_projetofinal\\da_projetofinal\\views\\formmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\views\\formmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|e:\\documentos\\da_projetofinal\\da_projetofinal\\views\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\views\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|e:\\documentos\\da_projetofinal\\da_projetofinal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|e:\\documentos\\da_projetofinal\\da_projetofinal\\models\\reserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\models\\reserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|e:\\documentos\\da_projetofinal\\da_projetofinal\\models\\utilizador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\models\\utilizador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|e:\\documentos\\da_projetofinal\\da_projetofinal\\controllers\\reservacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\controllers\\reservacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|e:\\documentos\\da_projetofinal\\da_projetofinal\\controllers\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\controllers\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|e:\\documentos\\da_projetofinal\\da_projetofinal\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|e:\\documentos\\da_projetofinal\\da_projetofinal\\views\\formmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\views\\formmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|e:\\documentos\\da_projetofinal\\da_projetofinal\\controllers\\extracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{266308EB-8BC5-4502-A990-8A0D41BE4D5A}|DA_ProjetoFinal\\DA_ProjetoFinal.csproj|solutionrelative:da_projetofinal\\controllers\\extracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,109 +54,148 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Fatura.cs",
+              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Models\\Fatura.cs",
+              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Models\\Fatura.cs",
+              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Models\\Fatura.cs",
+              "RelativeToolTip": "DA_ProjetoFinal\\Models\\Fatura.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-15T20:46:36.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ClienteController.cs",
+              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Controllers\\ClienteController.cs",
+              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Controllers\\ClienteController.cs",
+              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Controllers\\ClienteController.cs",
+              "RelativeToolTip": "DA_ProjetoFinal\\Controllers\\ClienteController.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAAAAwFgAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-15T20:45:32.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Main.cs",
+              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\Main.cs",
+              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Views\\Main.cs",
+              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\Main.cs",
+              "RelativeToolTip": "DA_ProjetoFinal\\Views\\Main.cs",
+              "ViewState": "AQIAAG4AAAAAAAAAAAAwwHoAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-15T17:47:03.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Main.cs [Design]",
+              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\Main.cs",
+              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Views\\Main.cs",
+              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\Main.cs [Design]",
+              "RelativeToolTip": "DA_ProjetoFinal\\Views\\Main.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-15T20:34:57.752Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Program.cs",
+              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Program.cs",
+              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Program.cs",
+              "RelativeToolTip": "DA_ProjetoFinal\\Program.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwBkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-15T20:06:52.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CantinaContext.cs",
+              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\CantinaContext.cs",
+              "RelativeDocumentMoniker": "DA_ProjetoFinal\\CantinaContext.cs",
+              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\CantinaContext.cs",
+              "RelativeToolTip": "DA_ProjetoFinal\\CantinaContext.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAA5wB0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-15T20:06:49.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Utilizador.cs",
+              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Models\\Utilizador.cs",
+              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Models\\Utilizador.cs",
+              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Models\\Utilizador.cs",
+              "RelativeToolTip": "DA_ProjetoFinal\\Models\\Utilizador.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-15T18:44:15.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Reserva.cs",
+              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Models\\Reserva.cs",
+              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Models\\Reserva.cs",
+              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Models\\Reserva.cs",
+              "RelativeToolTip": "DA_ProjetoFinal\\Models\\Reserva.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAqwBwAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-15T18:10:58.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ReservaController.cs",
+              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Controllers\\ReservaController.cs",
+              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Controllers\\ReservaController.cs",
+              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Controllers\\ReservaController.cs",
+              "RelativeToolTip": "DA_ProjetoFinal\\Controllers\\ReservaController.cs",
+              "ViewState": "AQIAAHsAAAAAAAAAAAAQwJMAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-15T17:27:50.995Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "FormReservas.cs",
               "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormReservas.cs",
               "RelativeDocumentMoniker": "DA_ProjetoFinal\\Views\\FormReservas.cs",
               "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormReservas.cs",
               "RelativeToolTip": "DA_ProjetoFinal\\Views\\FormReservas.cs",
-              "ViewState": "AQIAAN8AAAAAAAAAAAAmwPkAAAAOAAAA",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAIwFEAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T19:03:22.631Z",
+              "WhenOpened": "2024-06-15T17:26:04.197Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "FormReservas.cs [Design]",
               "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormReservas.cs",
               "RelativeDocumentMoniker": "DA_ProjetoFinal\\Views\\FormReservas.cs",
               "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormReservas.cs [Design]",
               "RelativeToolTip": "DA_ProjetoFinal\\Views\\FormReservas.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T19:03:21.501Z",
+              "WhenOpened": "2024-06-15T17:25:35.151Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FormMenu.cs",
-              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormMenu.cs",
-              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Views\\FormMenu.cs",
-              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormMenu.cs",
-              "RelativeToolTip": "DA_ProjetoFinal\\Views\\FormMenu.cs",
-              "ViewState": "AQIAAJMCAAAAAAAAAAAmwJICAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T18:55:03.484Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormMenu.cs [Design]",
-              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormMenu.cs",
-              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Views\\FormMenu.cs",
-              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Views\\FormMenu.cs [Design]",
-              "RelativeToolTip": "DA_ProjetoFinal\\Views\\FormMenu.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T18:57:12.407Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ReservaController.cs",
-              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Controllers\\ReservaController.cs",
-              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Controllers\\ReservaController.cs",
-              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Controllers\\ReservaController.cs",
-              "RelativeToolTip": "DA_ProjetoFinal\\Controllers\\ReservaController.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAgwCsAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T18:51:15.303Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MenuController.cs",
-              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Controllers\\MenuController.cs",
-              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Controllers\\MenuController.cs",
-              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Controllers\\MenuController.cs",
-              "RelativeToolTip": "DA_ProjetoFinal\\Controllers\\MenuController.cs",
-              "ViewState": "AQIAAIYAAAAAAAAAAAAewLAAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T18:50:11.428Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ExtraController.cs",
-              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Controllers\\ExtraController.cs",
-              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Controllers\\ExtraController.cs",
-              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Controllers\\ExtraController.cs",
-              "RelativeToolTip": "DA_ProjetoFinal\\Controllers\\ExtraController.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAgwAIAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T18:50:03.506Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ClienteController.cs",
-              "DocumentMoniker": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Controllers\\ClienteController.cs",
-              "RelativeDocumentMoniker": "DA_ProjetoFinal\\Controllers\\ClienteController.cs",
-              "ToolTip": "E:\\Documentos\\DA_ProjetoFinal\\DA_ProjetoFinal\\Controllers\\ClienteController.cs",
-              "RelativeToolTip": "DA_ProjetoFinal\\Controllers\\ClienteController.cs",
-              "ViewState": "AQIAAEcAAAAAAAAAAAAwwGUAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T18:49:57.738Z",
-              "EditorCaption": ""
             }
           ]
         }

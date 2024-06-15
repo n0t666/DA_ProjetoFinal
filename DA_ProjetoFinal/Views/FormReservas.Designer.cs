@@ -30,12 +30,28 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabPageListarMenus = new System.Windows.Forms.TabPage();
+            this.pnlExtrasMenus = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblMulta = new ReaLTaiizor.Controls.DungeonLabel();
+            this.lblDataMenu = new ReaLTaiizor.Controls.DungeonLabel();
+            this.lblTitleMulta = new ReaLTaiizor.Controls.DungeonHeaderLabel();
+            this.dungeonHeaderLabel2 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
+            this.btnBackReserva = new ReaLTaiizor.Controls.AloneButton();
+            this.btnNextReserva = new ReaLTaiizor.Controls.AloneButton();
+            this.bigLabel5 = new ReaLTaiizor.Controls.BigLabel();
+            this.comboBoxReservas = new ReaLTaiizor.Controls.PoisonComboBox();
+            this.btnBackClienteM = new ReaLTaiizor.Controls.AloneButton();
+            this.btnNextClienteM = new ReaLTaiizor.Controls.AloneButton();
+            this.bigLabel4 = new ReaLTaiizor.Controls.BigLabel();
+            this.comboBoxClientesM = new ReaLTaiizor.Controls.PoisonComboBox();
             this.tabPageCriarReserva = new System.Windows.Forms.TabPage();
+            this.lblQuantidadeMenu = new ReaLTaiizor.Controls.DungeonHeaderLabel();
+            this.lblSaldo = new ReaLTaiizor.Controls.DungeonHeaderLabel();
             this.btnBackCliente = new ReaLTaiizor.Controls.AloneButton();
             this.btnNextCliente = new ReaLTaiizor.Controls.AloneButton();
             this.btnNextMenu = new ReaLTaiizor.Controls.AloneButton();
             this.btnBackMenu = new ReaLTaiizor.Controls.AloneButton();
-            this.hopeCheckBox1 = new ReaLTaiizor.Controls.HopeCheckBox();
+            this.checkBoxRemeber = new ReaLTaiizor.Controls.HopeCheckBox();
             this.btnSubmit = new ReaLTaiizor.Controls.HopeRoundButton();
             this.bigLabel3 = new ReaLTaiizor.Controls.BigLabel();
             this.comboBoxMenus = new ReaLTaiizor.Controls.PoisonComboBox();
@@ -46,8 +62,15 @@
             this.pnlExtras = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlPratos = new System.Windows.Forms.FlowLayoutPanel();
             this.foreverTabPage1 = new ReaLTaiizor.Controls.ForeverTabPage();
-            this.lblSaldo = new ReaLTaiizor.Controls.DungeonHeaderLabel();
-            this.lblQuantidadeMenu = new ReaLTaiizor.Controls.DungeonHeaderLabel();
+            this.dungeonHeaderLabel1 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
+            this.lblDataReserva = new ReaLTaiizor.Controls.DungeonLabel();
+            this.dungeonHeaderLabel3 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
+            this.checkReserva = new ReaLTaiizor.Controls.AloneCheckBox();
+            this.dungeonHeaderLabel4 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
+            this.dungeonLabel1 = new ReaLTaiizor.Controls.DungeonLabel();
+            this.lblTotal = new ReaLTaiizor.Controls.DungeonLabel();
+            this.tabPageListarMenus.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.tabPageCriarReserva.SuspendLayout();
             this.foreverTabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -62,12 +85,198 @@
             // tabPageListarMenus
             // 
             this.tabPageListarMenus.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPageListarMenus.Controls.Add(this.pnlExtrasMenus);
+            this.tabPageListarMenus.Controls.Add(this.panel2);
+            this.tabPageListarMenus.Controls.Add(this.btnBackReserva);
+            this.tabPageListarMenus.Controls.Add(this.btnNextReserva);
+            this.tabPageListarMenus.Controls.Add(this.bigLabel5);
+            this.tabPageListarMenus.Controls.Add(this.comboBoxReservas);
+            this.tabPageListarMenus.Controls.Add(this.btnBackClienteM);
+            this.tabPageListarMenus.Controls.Add(this.btnNextClienteM);
+            this.tabPageListarMenus.Controls.Add(this.bigLabel4);
+            this.tabPageListarMenus.Controls.Add(this.comboBoxClientesM);
             this.tabPageListarMenus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.tabPageListarMenus.Location = new System.Drawing.Point(4, 64);
             this.tabPageListarMenus.Name = "tabPageListarMenus";
             this.tabPageListarMenus.Size = new System.Drawing.Size(606, 487);
             this.tabPageListarMenus.TabIndex = 3;
             this.tabPageListarMenus.Text = "Marcar reserva";
+            // 
+            // pnlExtrasMenus
+            // 
+            this.pnlExtrasMenus.AutoScroll = true;
+            this.pnlExtrasMenus.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.pnlExtrasMenus.Location = new System.Drawing.Point(146, 326);
+            this.pnlExtrasMenus.Name = "pnlExtrasMenus";
+            this.pnlExtrasMenus.Size = new System.Drawing.Size(412, 122);
+            this.pnlExtrasMenus.TabIndex = 90;
+            // 
+            // panel2
+            // 
+            this.panel2.AutoScroll = true;
+            this.panel2.Controls.Add(this.lblTotal);
+            this.panel2.Controls.Add(this.dungeonLabel1);
+            this.panel2.Controls.Add(this.dungeonHeaderLabel4);
+            this.panel2.Controls.Add(this.checkReserva);
+            this.panel2.Controls.Add(this.dungeonHeaderLabel3);
+            this.panel2.Controls.Add(this.lblDataReserva);
+            this.panel2.Controls.Add(this.dungeonHeaderLabel1);
+            this.panel2.Controls.Add(this.lblMulta);
+            this.panel2.Controls.Add(this.lblDataMenu);
+            this.panel2.Controls.Add(this.lblTitleMulta);
+            this.panel2.Controls.Add(this.dungeonHeaderLabel2);
+            this.panel2.Location = new System.Drawing.Point(146, 189);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(412, 122);
+            this.panel2.TabIndex = 88;
+            // 
+            // lblMulta
+            // 
+            this.lblMulta.AutoSize = true;
+            this.lblMulta.BackColor = System.Drawing.Color.Transparent;
+            this.lblMulta.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.lblMulta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.lblMulta.Location = new System.Drawing.Point(127, 99);
+            this.lblMulta.Name = "lblMulta";
+            this.lblMulta.Size = new System.Drawing.Size(0, 20);
+            this.lblMulta.TabIndex = 5;
+            // 
+            // lblDataMenu
+            // 
+            this.lblDataMenu.AutoSize = true;
+            this.lblDataMenu.BackColor = System.Drawing.Color.Transparent;
+            this.lblDataMenu.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.lblDataMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.lblDataMenu.Location = new System.Drawing.Point(127, 11);
+            this.lblDataMenu.Name = "lblDataMenu";
+            this.lblDataMenu.Size = new System.Drawing.Size(0, 20);
+            this.lblDataMenu.TabIndex = 4;
+            // 
+            // lblTitleMulta
+            // 
+            this.lblTitleMulta.AutoSize = true;
+            this.lblTitleMulta.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitleMulta.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.lblTitleMulta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.lblTitleMulta.Location = new System.Drawing.Point(3, 99);
+            this.lblTitleMulta.Name = "lblTitleMulta";
+            this.lblTitleMulta.Size = new System.Drawing.Size(54, 20);
+            this.lblTitleMulta.TabIndex = 2;
+            this.lblTitleMulta.Text = "Multa:";
+            // 
+            // dungeonHeaderLabel2
+            // 
+            this.dungeonHeaderLabel2.AutoSize = true;
+            this.dungeonHeaderLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.dungeonHeaderLabel2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.dungeonHeaderLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.dungeonHeaderLabel2.Location = new System.Drawing.Point(3, 11);
+            this.dungeonHeaderLabel2.Name = "dungeonHeaderLabel2";
+            this.dungeonHeaderLabel2.Size = new System.Drawing.Size(90, 20);
+            this.dungeonHeaderLabel2.TabIndex = 1;
+            this.dungeonHeaderLabel2.Text = "Data menu:";
+            // 
+            // btnBackReserva
+            // 
+            this.btnBackReserva.BackColor = System.Drawing.Color.Transparent;
+            this.btnBackReserva.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBackReserva.EnabledCalc = true;
+            this.btnBackReserva.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBackReserva.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(133)))), ((int)(((byte)(142)))));
+            this.btnBackReserva.Location = new System.Drawing.Point(146, 139);
+            this.btnBackReserva.Name = "btnBackReserva";
+            this.btnBackReserva.Size = new System.Drawing.Size(16, 18);
+            this.btnBackReserva.TabIndex = 87;
+            this.btnBackReserva.Text = "<";
+            this.btnBackReserva.Click += new ReaLTaiizor.Controls.AloneButton.ClickEventHandler(this.btnBackReserva_Click_1);
+            // 
+            // btnNextReserva
+            // 
+            this.btnNextReserva.BackColor = System.Drawing.Color.Transparent;
+            this.btnNextReserva.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNextReserva.EnabledCalc = true;
+            this.btnNextReserva.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnNextReserva.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(133)))), ((int)(((byte)(142)))));
+            this.btnNextReserva.Location = new System.Drawing.Point(448, 139);
+            this.btnNextReserva.Name = "btnNextReserva";
+            this.btnNextReserva.Size = new System.Drawing.Size(16, 18);
+            this.btnNextReserva.TabIndex = 86;
+            this.btnNextReserva.Text = ">";
+            this.btnNextReserva.Click += new ReaLTaiizor.Controls.AloneButton.ClickEventHandler(this.btnNextReserva_Click_1);
+            // 
+            // bigLabel5
+            // 
+            this.bigLabel5.AutoSize = true;
+            this.bigLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.bigLabel5.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bigLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.bigLabel5.Location = new System.Drawing.Point(40, 101);
+            this.bigLabel5.Name = "bigLabel5";
+            this.bigLabel5.Size = new System.Drawing.Size(100, 32);
+            this.bigLabel5.TabIndex = 85;
+            this.bigLabel5.Text = "Reserva:";
+            // 
+            // comboBoxReservas
+            // 
+            this.comboBoxReservas.FormattingEnabled = true;
+            this.comboBoxReservas.ItemHeight = 23;
+            this.comboBoxReservas.Location = new System.Drawing.Point(146, 104);
+            this.comboBoxReservas.Name = "comboBoxReservas";
+            this.comboBoxReservas.Size = new System.Drawing.Size(318, 29);
+            this.comboBoxReservas.TabIndex = 84;
+            this.comboBoxReservas.UseSelectable = true;
+            // 
+            // btnBackClienteM
+            // 
+            this.btnBackClienteM.BackColor = System.Drawing.Color.Transparent;
+            this.btnBackClienteM.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBackClienteM.EnabledCalc = true;
+            this.btnBackClienteM.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBackClienteM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(133)))), ((int)(((byte)(142)))));
+            this.btnBackClienteM.Location = new System.Drawing.Point(146, 80);
+            this.btnBackClienteM.Name = "btnBackClienteM";
+            this.btnBackClienteM.Size = new System.Drawing.Size(16, 18);
+            this.btnBackClienteM.TabIndex = 83;
+            this.btnBackClienteM.Text = "<";
+            this.btnBackClienteM.Click += new ReaLTaiizor.Controls.AloneButton.ClickEventHandler(this.btnBackClienteM_Click);
+            // 
+            // btnNextClienteM
+            // 
+            this.btnNextClienteM.BackColor = System.Drawing.Color.Transparent;
+            this.btnNextClienteM.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNextClienteM.EnabledCalc = true;
+            this.btnNextClienteM.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnNextClienteM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(133)))), ((int)(((byte)(142)))));
+            this.btnNextClienteM.Location = new System.Drawing.Point(448, 80);
+            this.btnNextClienteM.Name = "btnNextClienteM";
+            this.btnNextClienteM.Size = new System.Drawing.Size(16, 18);
+            this.btnNextClienteM.TabIndex = 82;
+            this.btnNextClienteM.Text = ">";
+            this.btnNextClienteM.Click += new ReaLTaiizor.Controls.AloneButton.ClickEventHandler(this.btnNextClienteM_Click);
+            // 
+            // bigLabel4
+            // 
+            this.bigLabel4.AutoSize = true;
+            this.bigLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.bigLabel4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bigLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.bigLabel4.Location = new System.Drawing.Point(46, 42);
+            this.bigLabel4.Name = "bigLabel4";
+            this.bigLabel4.Size = new System.Drawing.Size(94, 32);
+            this.bigLabel4.TabIndex = 81;
+            this.bigLabel4.Text = "Cliente:";
+            // 
+            // comboBoxClientesM
+            // 
+            this.comboBoxClientesM.FormattingEnabled = true;
+            this.comboBoxClientesM.ItemHeight = 23;
+            this.comboBoxClientesM.Location = new System.Drawing.Point(146, 45);
+            this.comboBoxClientesM.Name = "comboBoxClientesM";
+            this.comboBoxClientesM.Size = new System.Drawing.Size(318, 29);
+            this.comboBoxClientesM.TabIndex = 80;
+            this.comboBoxClientesM.UseSelectable = true;
+            this.comboBoxClientesM.SelectedIndexChanged += new System.EventHandler(this.comboBoxClientesM_SelectedIndexChanged);
+            this.comboBoxClientesM.SelectionChangeCommitted += new System.EventHandler(this.comboBoxClientesM_SelectionChangeCommitted);
             // 
             // tabPageCriarReserva
             // 
@@ -78,7 +287,7 @@
             this.tabPageCriarReserva.Controls.Add(this.btnNextCliente);
             this.tabPageCriarReserva.Controls.Add(this.btnNextMenu);
             this.tabPageCriarReserva.Controls.Add(this.btnBackMenu);
-            this.tabPageCriarReserva.Controls.Add(this.hopeCheckBox1);
+            this.tabPageCriarReserva.Controls.Add(this.checkBoxRemeber);
             this.tabPageCriarReserva.Controls.Add(this.btnSubmit);
             this.tabPageCriarReserva.Controls.Add(this.bigLabel3);
             this.tabPageCriarReserva.Controls.Add(this.comboBoxMenus);
@@ -95,6 +304,30 @@
             this.tabPageCriarReserva.TabIndex = 1;
             this.tabPageCriarReserva.Text = "Efetuar reserva";
             this.tabPageCriarReserva.ToolTipText = "Adicionar prato";
+            // 
+            // lblQuantidadeMenu
+            // 
+            this.lblQuantidadeMenu.AutoSize = true;
+            this.lblQuantidadeMenu.BackColor = System.Drawing.Color.Transparent;
+            this.lblQuantidadeMenu.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.lblQuantidadeMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.lblQuantidadeMenu.Location = new System.Drawing.Point(139, 173);
+            this.lblQuantidadeMenu.Name = "lblQuantidadeMenu";
+            this.lblQuantidadeMenu.Size = new System.Drawing.Size(94, 20);
+            this.lblQuantidadeMenu.TabIndex = 81;
+            this.lblQuantidadeMenu.Text = "Quantidade:";
+            // 
+            // lblSaldo
+            // 
+            this.lblSaldo.AutoSize = true;
+            this.lblSaldo.BackColor = System.Drawing.Color.Transparent;
+            this.lblSaldo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.lblSaldo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.lblSaldo.Location = new System.Drawing.Point(142, 76);
+            this.lblSaldo.Name = "lblSaldo";
+            this.lblSaldo.Size = new System.Drawing.Size(51, 20);
+            this.lblSaldo.TabIndex = 80;
+            this.lblSaldo.Text = "Saldo:";
             // 
             // btnBackCliente
             // 
@@ -152,25 +385,25 @@
             this.btnBackMenu.Text = "<";
             this.btnBackMenu.Click += new ReaLTaiizor.Controls.AloneButton.ClickEventHandler(this.btnBackMenu_Click);
             // 
-            // hopeCheckBox1
+            // checkBoxRemeber
             // 
-            this.hopeCheckBox1.AutoSize = true;
-            this.hopeCheckBox1.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            this.hopeCheckBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.hopeCheckBox1.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(198)))), ((int)(((byte)(202)))));
-            this.hopeCheckBox1.DisabledStringColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(187)))), ((int)(((byte)(189)))));
-            this.hopeCheckBox1.Enable = true;
-            this.hopeCheckBox1.EnabledCheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            this.hopeCheckBox1.EnabledStringColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.hopeCheckBox1.EnabledUncheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(158)))), ((int)(((byte)(161)))));
-            this.hopeCheckBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.hopeCheckBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
-            this.hopeCheckBox1.Location = new System.Drawing.Point(142, 412);
-            this.hopeCheckBox1.Name = "hopeCheckBox1";
-            this.hopeCheckBox1.Size = new System.Drawing.Size(138, 20);
-            this.hopeCheckBox1.TabIndex = 75;
-            this.hopeCheckBox1.Text = "Remember me";
-            this.hopeCheckBox1.UseVisualStyleBackColor = true;
+            this.checkBoxRemeber.AutoSize = true;
+            this.checkBoxRemeber.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
+            this.checkBoxRemeber.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBoxRemeber.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(198)))), ((int)(((byte)(202)))));
+            this.checkBoxRemeber.DisabledStringColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(187)))), ((int)(((byte)(189)))));
+            this.checkBoxRemeber.Enable = true;
+            this.checkBoxRemeber.EnabledCheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
+            this.checkBoxRemeber.EnabledStringColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.checkBoxRemeber.EnabledUncheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(158)))), ((int)(((byte)(161)))));
+            this.checkBoxRemeber.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.checkBoxRemeber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
+            this.checkBoxRemeber.Location = new System.Drawing.Point(142, 412);
+            this.checkBoxRemeber.Name = "checkBoxRemeber";
+            this.checkBoxRemeber.Size = new System.Drawing.Size(138, 20);
+            this.checkBoxRemeber.TabIndex = 75;
+            this.checkBoxRemeber.Text = "Remember me";
+            this.checkBoxRemeber.UseVisualStyleBackColor = true;
             // 
             // btnSubmit
             // 
@@ -265,6 +498,7 @@
             // 
             // pnlExtras
             // 
+            this.pnlExtras.AutoScroll = true;
             this.pnlExtras.Location = new System.Drawing.Point(140, 308);
             this.pnlExtras.Name = "pnlExtras";
             this.pnlExtras.Size = new System.Drawing.Size(321, 94);
@@ -272,6 +506,7 @@
             // 
             // pnlPratos
             // 
+            this.pnlPratos.AutoScroll = true;
             this.pnlPratos.Location = new System.Drawing.Point(140, 204);
             this.pnlPratos.Name = "pnlPratos";
             this.pnlPratos.Size = new System.Drawing.Size(321, 98);
@@ -294,30 +529,89 @@
             this.foreverTabPage1.Size = new System.Drawing.Size(614, 555);
             this.foreverTabPage1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.foreverTabPage1.TabIndex = 2;
+            this.foreverTabPage1.SelectedIndexChanged += new System.EventHandler(this.foreverTabPage1_SelectedIndexChanged);
             // 
-            // lblSaldo
+            // dungeonHeaderLabel1
             // 
-            this.lblSaldo.AutoSize = true;
-            this.lblSaldo.BackColor = System.Drawing.Color.Transparent;
-            this.lblSaldo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.lblSaldo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
-            this.lblSaldo.Location = new System.Drawing.Point(142, 76);
-            this.lblSaldo.Name = "lblSaldo";
-            this.lblSaldo.Size = new System.Drawing.Size(51, 20);
-            this.lblSaldo.TabIndex = 80;
-            this.lblSaldo.Text = "Saldo:";
+            this.dungeonHeaderLabel1.AutoSize = true;
+            this.dungeonHeaderLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.dungeonHeaderLabel1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.dungeonHeaderLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.dungeonHeaderLabel1.Location = new System.Drawing.Point(3, 33);
+            this.dungeonHeaderLabel1.Name = "dungeonHeaderLabel1";
+            this.dungeonHeaderLabel1.Size = new System.Drawing.Size(90, 20);
+            this.dungeonHeaderLabel1.TabIndex = 6;
+            this.dungeonHeaderLabel1.Text = "Data menu:";
             // 
-            // lblQuantidadeMenu
+            // lblDataReserva
             // 
-            this.lblQuantidadeMenu.AutoSize = true;
-            this.lblQuantidadeMenu.BackColor = System.Drawing.Color.Transparent;
-            this.lblQuantidadeMenu.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.lblQuantidadeMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
-            this.lblQuantidadeMenu.Location = new System.Drawing.Point(139, 173);
-            this.lblQuantidadeMenu.Name = "lblQuantidadeMenu";
-            this.lblQuantidadeMenu.Size = new System.Drawing.Size(94, 20);
-            this.lblQuantidadeMenu.TabIndex = 81;
-            this.lblQuantidadeMenu.Text = "Quantidade:";
+            this.lblDataReserva.AutoSize = true;
+            this.lblDataReserva.BackColor = System.Drawing.Color.Transparent;
+            this.lblDataReserva.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.lblDataReserva.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.lblDataReserva.Location = new System.Drawing.Point(127, 33);
+            this.lblDataReserva.Name = "lblDataReserva";
+            this.lblDataReserva.Size = new System.Drawing.Size(0, 20);
+            this.lblDataReserva.TabIndex = 7;
+            // 
+            // dungeonHeaderLabel3
+            // 
+            this.dungeonHeaderLabel3.AutoSize = true;
+            this.dungeonHeaderLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.dungeonHeaderLabel3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.dungeonHeaderLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.dungeonHeaderLabel3.Location = new System.Drawing.Point(3, 55);
+            this.dungeonHeaderLabel3.Name = "dungeonHeaderLabel3";
+            this.dungeonHeaderLabel3.Size = new System.Drawing.Size(122, 20);
+            this.dungeonHeaderLabel3.TabIndex = 9;
+            this.dungeonHeaderLabel3.Text = "Marcar Reserva:";
+            // 
+            // checkReserva
+            // 
+            this.checkReserva.BackColor = System.Drawing.Color.Transparent;
+            this.checkReserva.Checked = false;
+            this.checkReserva.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkReserva.EnabledCalc = true;
+            this.checkReserva.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(133)))), ((int)(((byte)(142)))));
+            this.checkReserva.Location = new System.Drawing.Point(131, 60);
+            this.checkReserva.Name = "checkReserva";
+            this.checkReserva.Size = new System.Drawing.Size(118, 17);
+            this.checkReserva.TabIndex = 91;
+            this.checkReserva.CheckedChanged += new ReaLTaiizor.Controls.AloneCheckBox.CheckedChangedEventHandler(this.checkReserva_CheckedChanged);
+            // 
+            // dungeonHeaderLabel4
+            // 
+            this.dungeonHeaderLabel4.AutoSize = true;
+            this.dungeonHeaderLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.dungeonHeaderLabel4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.dungeonHeaderLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.dungeonHeaderLabel4.Location = new System.Drawing.Point(3, 77);
+            this.dungeonHeaderLabel4.Name = "dungeonHeaderLabel4";
+            this.dungeonHeaderLabel4.Size = new System.Drawing.Size(48, 20);
+            this.dungeonHeaderLabel4.TabIndex = 92;
+            this.dungeonHeaderLabel4.Text = "Total:";
+            // 
+            // dungeonLabel1
+            // 
+            this.dungeonLabel1.AutoSize = true;
+            this.dungeonLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.dungeonLabel1.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.dungeonLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.dungeonLabel1.Location = new System.Drawing.Point(206, 51);
+            this.dungeonLabel1.Name = "dungeonLabel1";
+            this.dungeonLabel1.Size = new System.Drawing.Size(0, 20);
+            this.dungeonLabel1.TabIndex = 93;
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.lblTotal.Location = new System.Drawing.Point(127, 77);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(0, 20);
+            this.lblTotal.TabIndex = 94;
             // 
             // FormReservas
             // 
@@ -330,6 +624,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormReservas";
             this.Text = "FormReservas";
+            this.tabPageListarMenus.ResumeLayout(false);
+            this.tabPageListarMenus.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.tabPageCriarReserva.ResumeLayout(false);
             this.tabPageCriarReserva.PerformLayout();
             this.foreverTabPage1.ResumeLayout(false);
@@ -354,9 +652,30 @@
         private ReaLTaiizor.Controls.AloneButton btnNextCliente;
         private ReaLTaiizor.Controls.AloneButton btnNextMenu;
         private ReaLTaiizor.Controls.AloneButton btnBackMenu;
-        private ReaLTaiizor.Controls.HopeCheckBox hopeCheckBox1;
+        private ReaLTaiizor.Controls.HopeCheckBox checkBoxRemeber;
         private ReaLTaiizor.Controls.HopeRoundButton btnSubmit;
         private ReaLTaiizor.Controls.DungeonHeaderLabel lblSaldo;
         private ReaLTaiizor.Controls.DungeonHeaderLabel lblQuantidadeMenu;
+        private System.Windows.Forms.Panel panel2;
+        private ReaLTaiizor.Controls.AloneButton btnBackReserva;
+        private ReaLTaiizor.Controls.AloneButton btnNextReserva;
+        private ReaLTaiizor.Controls.BigLabel bigLabel5;
+        private ReaLTaiizor.Controls.PoisonComboBox comboBoxReservas;
+        private ReaLTaiizor.Controls.AloneButton btnBackClienteM;
+        private ReaLTaiizor.Controls.AloneButton btnNextClienteM;
+        private ReaLTaiizor.Controls.BigLabel bigLabel4;
+        private ReaLTaiizor.Controls.PoisonComboBox comboBoxClientesM;
+        private System.Windows.Forms.FlowLayoutPanel pnlExtrasMenus;
+        private ReaLTaiizor.Controls.DungeonHeaderLabel dungeonHeaderLabel2;
+        private ReaLTaiizor.Controls.DungeonHeaderLabel lblTitleMulta;
+        private ReaLTaiizor.Controls.DungeonLabel lblMulta;
+        private ReaLTaiizor.Controls.DungeonLabel lblDataMenu;
+        private ReaLTaiizor.Controls.DungeonLabel lblDataReserva;
+        private ReaLTaiizor.Controls.DungeonHeaderLabel dungeonHeaderLabel1;
+        private ReaLTaiizor.Controls.DungeonHeaderLabel dungeonHeaderLabel3;
+        private ReaLTaiizor.Controls.AloneCheckBox checkReserva;
+        private ReaLTaiizor.Controls.DungeonLabel lblTotal;
+        private ReaLTaiizor.Controls.DungeonLabel dungeonLabel1;
+        private ReaLTaiizor.Controls.DungeonHeaderLabel dungeonHeaderLabel4;
     }
 }

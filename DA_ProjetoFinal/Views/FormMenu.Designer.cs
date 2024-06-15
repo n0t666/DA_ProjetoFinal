@@ -100,6 +100,7 @@
             this.numQuantidadeEditar = new ReaLTaiizor.Controls.DungeonNumeric();
             this.bigLabel12 = new ReaLTaiizor.Controls.BigLabel();
             this.dateDataHoraEdit = new ReaLTaiizor.Controls.PoisonDateTime();
+            this.poisonToolTip1 = new ReaLTaiizor.Controls.PoisonToolTip();
             this.foreverTabPage1.SuspendLayout();
             this.tabPageCriarMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecoProfessorCreate)).BeginInit();
@@ -166,7 +167,6 @@
             this.tabPageCriarMenu.Size = new System.Drawing.Size(606, 487);
             this.tabPageCriarMenu.TabIndex = 1;
             this.tabPageCriarMenu.Text = "Criar menu";
-            this.tabPageCriarMenu.ToolTipText = "Adicionar prato";
             // 
             // bigLabel9
             // 
@@ -205,6 +205,7 @@
             this.pnlPratosCriar.Name = "pnlPratosCriar";
             this.pnlPratosCriar.Size = new System.Drawing.Size(318, 98);
             this.pnlPratosCriar.TabIndex = 49;
+            this.poisonToolTip1.SetToolTip(this.pnlPratosCriar, "\"a\"");
             // 
             // btnEvoltarCriar
             // 
@@ -1122,6 +1123,12 @@
             this.dateDataHoraEdit.TabIndex = 51;
             this.dateDataHoraEdit.Value = new System.DateTime(2024, 6, 11, 17, 40, 58, 0);
             // 
+            // poisonToolTip1
+            // 
+            this.poisonToolTip1.Style = ReaLTaiizor.Enum.Poison.ColorStyle.Blue;
+            this.poisonToolTip1.StyleManager = null;
+            this.poisonToolTip1.Theme = ReaLTaiizor.Enum.Poison.ThemeStyle.Default;
+            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1232,5 +1239,6 @@
         private ReaLTaiizor.Controls.AloneButton btnPvoltarCriar;
         private ReaLTaiizor.Controls.AloneButton btnPresetCriar;
         private ReaLTaiizor.Controls.AloneButton btnAvancarPrCriar;
+        private ReaLTaiizor.Controls.PoisonToolTip poisonToolTip1;
     }
 }

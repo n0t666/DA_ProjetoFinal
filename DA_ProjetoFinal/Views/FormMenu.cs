@@ -220,6 +220,7 @@ namespace DA_ProjetoFinal.Views
                     AloneCheckBox check = new AloneCheckBox();
                     check.Name = controlName;
                     check.Text = prato.Descricao;
+                    poisonToolTip1.SetToolTip(check, prato.Descricao);
 
                     if (checkboxStates.ContainsKey(controlName))
                     {
@@ -245,6 +246,7 @@ namespace DA_ProjetoFinal.Views
                     AloneCheckBox check = new AloneCheckBox();
                     check.Name = controlName;
                     check.Text = extra.Descricao;
+                    poisonToolTip1.SetToolTip(check, extra.Descricao);
 
                     if (checkboxStates.ContainsKey(controlName))
                     {
@@ -277,6 +279,7 @@ namespace DA_ProjetoFinal.Views
                         AloneCheckBox check = new AloneCheckBox();
                         check.Name = controlName;
                         check.Text = prato.Descricao;
+                        poisonToolTip1.SetToolTip(check, prato.Descricao);
 
 
 
@@ -310,6 +313,7 @@ namespace DA_ProjetoFinal.Views
                         AloneCheckBox check = new AloneCheckBox();
                         check.Name = controlName;
                         check.Text = extra.Descricao;
+                        poisonToolTip1.SetToolTip(check, extra.Descricao);
 
                         if (selectedMenu.Extra.Any(p => p.Id == extra.Id))
                         {

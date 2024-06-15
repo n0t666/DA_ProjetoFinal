@@ -43,6 +43,9 @@
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="QuestPDF, Version=2024.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QuestPDF.2024.6.0\lib\netstandard2.0\QuestPDF.dll</HintPath>
+    </Reference>
     <Reference Include="ReaLTaiizor, Version=3.8.0.5, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ReaLTaiizor.3.8.0.5\lib\net48\ReaLTaiizor.dll</HintPath>
     </Reference>
@@ -71,6 +74,7 @@
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\EstudanteController.cs" />
     <Compile Include="Controllers\ExtraController.cs" />
+    <Compile Include="Controllers\FaturaController.cs" />
     <Compile Include="Controllers\FuncionarioController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\MultaController.cs" />
@@ -79,6 +83,7 @@
     <Compile Include="Controllers\ReservaController.cs" />
     <Compile Include="Controllers\UtilityController.cs" />
     <Compile Include="Controllers\UtilizadorController.cs" />
+    <Compile Include="DocumentoFatura.cs" />
     <Compile Include="Migrations\202405182258031_InitialCreate.cs" />
     <Compile Include="Migrations\202405182258031_InitialCreate.Designer.cs">
       <DependentUpon>202405182258031_InitialCreate.cs</DependentUpon>
@@ -94,6 +99,10 @@
     <Compile Include="Migrations\202406141827426_relationships_added.cs" />
     <Compile Include="Migrations\202406141827426_relationships_added.Designer.cs">
       <DependentUpon>202406141827426_relationships_added.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202406151812315_ChangedReserva.cs" />
+    <Compile Include="Migrations\202406151812315_ChangedReserva.Designer.cs">
+      <DependentUpon>202406151812315_ChangedReserva.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Cliente.cs" />
@@ -194,6 +203,9 @@
     <EmbeddedResource Include="Migrations\202406141827426_relationships_added.resx">
       <DependentUpon>202406141827426_relationships_added.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202406151812315_ChangedReserva.resx">
+      <DependentUpon>202406151812315_ChangedReserva.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -255,6 +267,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <Content Include="Resources\Images\Icons\customer_active_small.png" />
     <Content Include="Resources\Images\Icons\customer_normal_small.png" />
     <Content Include="Resources\Images\Icons\default_user.png" />
@@ -292,6 +307,8 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
     <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\QuestPDF.2024.6.0\build\net4\QuestPDF.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\QuestPDF.2024.6.0\build\net4\QuestPDF.targets'))" />
   </Target>
   <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\QuestPDF.2024.6.0\build\net4\QuestPDF.targets" Condition="Exists('..\packages\QuestPDF.2024.6.0\build\net4\QuestPDF.targets')" />
 </Project>

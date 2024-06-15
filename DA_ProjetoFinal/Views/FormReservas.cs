@@ -22,6 +22,7 @@ namespace DA_ProjetoFinal.Views
         private int paginaAtualPratos = 1;
         private int paginaAtualMenus = 1;
         private int paginaAtualUtilizadores = 1;
+        private int paginaAtualReservas = 1;
         //------------------------------------------------------------------------
 
         private List<Extra> extras;
@@ -36,6 +37,10 @@ namespace DA_ProjetoFinal.Views
         private List<Cliente> clientes;
         private List<Cliente> clientesPaginados;
 
+        private List<Reserva> reserva;
+        private List<Reserva> reservaPaginados;
+
+        private int numeroReservas;
         private int numeroExtras;
         private int numeroPratos;
         private int numeroMenus;
@@ -48,9 +53,11 @@ namespace DA_ProjetoFinal.Views
         private const string pPrefixCriar = "checkPcriar";
         private const string ePrefixCriar = "checkEcriar";
 
+        private int rememberUser = -1;
+
         public event EventHandler<int> RememberMeSelected;
 
-        public FormReservas(int utilizadorAtual, DateTime? diaEspecifico = null)
+        public FormReservas(int utilizadorAtual, DateTime? diaEspecifico = null, int remmberMeUser = -1)
         {
             InitializeComponent();
 
@@ -70,6 +77,8 @@ namespace DA_ProjetoFinal.Views
             {
                 menus = MenuController.Get();
             }
+            rememberUser = remmberMeUser;
+
             loadDados();
             obterDadosPaginados(true, true);
             obterSaldoCliente();
@@ -78,8 +87,104 @@ namespace DA_ProjetoFinal.Views
         private void loadDados()
         {
             clientes = ClienteController.Get();
+            if (rememberUser != -1) 
+            {
+                Cliente cliente = clientes.Find(c => c.Id == rememberUser);
+                if (cliente != null)
+                {
+                    clientes.Remove(cliente);
+                    clientes.Insert(0, cliente);
+                }
+            }
+
+
             numeroUtilizadores = clientes.Count;
             numeroMenus = menus.Count;
+        }
+
+        private void loadDetalhesReserva()
+        {
+            if (comboBoxReservas.SelectedItem != null)
+            {
+                pnlExtrasMenus.Controls.Clear();
+
+                decimal total = 0;
+                Reserva selectedReserva = (Reserva)comboBoxReservas.SelectedItem;
+                lblDataMenu.Text = selectedReserva.Menu.DataHora.ToString();
+                lblDataReserva.Text = selectedReserva.Data.ToString();
+                total += selectedReserva.Cliente is Estudante ? selectedReserva.Menu.PrecoEstudante : selectedReserva.Menu.PrecoEstudante;
+
+
+                foreach(Extra extra in selectedReserva.Extra)
+                {
+                    total += extra.Preco;
+                }
+
+
+
+                if(selectedReserva.Multa != null)
+                {
+                    lblTitleMulta.Visible = true;
+                    lblTitleMulta.Text = "Multa" + "(" + selectedReserva.Multa.NumeroHoras + " horas)";
+                    lblMulta.Text = selectedReserva.Multa.Valor.ToString() + "€";
+                    total += selectedReserva.Multa.Valor;
+                }
+                else
+                {
+                    lblTitleMulta.Visible = false;
+                    lblMulta.Text = "";
+                }
+
+                lblTotal.Text = total.ToString() + "€";
+
+                DungeonHeaderLabel labelPratosTitle = new DungeonHeaderLabel();
+                labelPratosTitle.Text = "Pratos:";
+                labelPratosTitle.Font = new Font("Segoe UI", 13, FontStyle.Bold);
+                labelPratosTitle.Padding = new Padding(0, 10, 0, 10);
+                labelPratosTitle.AutoSize = true;
+
+                DungeonHeaderLabel labelExtrasTitle = new DungeonHeaderLabel();
+                labelExtrasTitle.Text = "Extras:";
+                labelExtrasTitle.Font = new Font("Segoe UI", 13, FontStyle.Bold);
+                labelExtrasTitle.Padding = new Padding(0, 10, 0, 10);
+                labelExtrasTitle.AutoSize = true;
+
+                pnlExtrasMenus.Controls.Add(labelPratosTitle);
+                pnlExtrasMenus.SetFlowBreak(labelPratosTitle, true);
+
+                foreach (Prato prato in selectedReserva.Prato)
+                {
+                    DungeonLabel labelPrato = new DungeonLabel();
+                    labelPrato.Text = "\u2022" + prato.Descricao; // Unicode para bullet point
+                    labelPrato.Font = new Font("Segoe UI", 11, FontStyle.Regular);
+                    labelPrato.Padding = new Padding(0, 5, 0, 5);
+                    labelPrato.AutoSize = true;
+
+                    pnlExtrasMenus.Controls.Add(labelPrato);
+                    pnlExtrasMenus.SetFlowBreak(labelPrato, true);                 
+                }
+
+                pnlExtrasMenus.Controls.Add(labelExtrasTitle);
+                pnlExtrasMenus.SetFlowBreak(labelExtrasTitle, true);
+                foreach (Extra extra in selectedReserva.Extra)
+                {
+                    DungeonLabel labelExtra = new DungeonLabel();
+                    labelExtra.Text = "\u2022" + extra.Descricao + "  (" + extra.Preco + "€)"; // Unicode para bullet point
+                    labelExtra.Font = new Font("Segoe UI", 11, FontStyle.Regular);
+                    labelExtra.Padding = new Padding(0, 5, 0, 5);
+                    labelExtra.AutoSize = true;
+
+                    pnlExtrasMenus.Controls.Add(labelExtra);
+                    pnlExtrasMenus.SetFlowBreak(labelExtra, true);
+                }
+            }
+            else
+            {
+                pnlExtrasMenus.Controls.Clear();
+
+            }
+            pnlExtrasMenus.Refresh();
+            this.Refresh();
         }
 
         private void populateChecks(List<Prato> pratos, List<Extra> extras, bool pratosUpdate = false, bool extrasUpdate = false)
@@ -153,10 +258,18 @@ namespace DA_ProjetoFinal.Views
                     btnNextCliente.Enabled = paginaAtualUtilizadores * tamanhoPagina < numeroUtilizadores;
                     btnBackCliente.Enabled = paginaAtualUtilizadores > 1;
                     break;
+                case 1:
+                    btnBackClienteM.Enabled = paginaAtualUtilizadores > 1;
+                    btnNextClienteM.Enabled = paginaAtualUtilizadores * tamanhoPagina < numeroUtilizadores;
+                    btnBackReserva.Enabled = paginaAtualReservas > 1;
+                    btnNextReserva.Enabled = paginaAtualReservas * tamanhoPagina < numeroReservas;
+                    break;
+
+
             }
         }
 
-        private void obterDadosPaginados(bool updateMenus = false, bool updateClientes = false)
+        private void obterDadosPaginados(bool updateMenus = false, bool updateClientes = false, bool updateReservas = false)
         {
             switch (foreverTabPage1.SelectedIndex)
             {
@@ -173,6 +286,22 @@ namespace DA_ProjetoFinal.Views
                     {
                         clientesPaginados = clientes.Skip((paginaAtualUtilizadores - 1) * tamanhoPagina).Take(tamanhoPagina).ToList();
                         comboBoxClientes.DataSource = clientesPaginados;
+                        obterSaldoCliente();
+                    }
+                    updatePagination();
+                    break;
+                case 1:
+                    if (updateClientes)
+                    {
+                        clientesPaginados = clientes.Skip((paginaAtualUtilizadores - 1) * tamanhoPagina).Take(tamanhoPagina).ToList();
+                        comboBoxClientesM.DataSource = clientesPaginados;
+                    }
+                    if (updateReservas)
+                    {
+                        reservaPaginados = reserva.Skip((paginaAtualReservas - 1) * tamanhoPagina).Take(tamanhoPagina).ToList();
+                        comboBoxReservas.DataSource = reservaPaginados;
+                        comboBoxReservas.DisplayMember = "Menu.DataHora";
+                        loadDetalhesReserva();
                     }
                     updatePagination();
                     break;
@@ -251,7 +380,7 @@ namespace DA_ProjetoFinal.Views
             }
         }
 
-       
+
 
         private void comboBoxMenus_SelectionChangeCommitted(object sender, EventArgs e)
         {
@@ -298,17 +427,28 @@ namespace DA_ProjetoFinal.Views
                             extrasSelecionadosId.Add(id);
                         }
                     }
-
-                    if (ClienteController.PodeEfetuarReserva(selectedCliente.Id, selectedMenu.DataHora.Day))
+                    if (pratosSelecionadosId.Count < 0)
                     {
-                        if (ReservaController.Adicionar(selectedCliente.Id, selectedMenu.Id, pratosSelecionadosId, extrasSelecionadosId))
+                        MessageBox.Show("Por favor selecione pelo menos um prato");
+                        return;
+                    }
+                    else
+                    {
+                        if (ClienteController.PodeEfetuarReserva(selectedCliente.Id, selectedMenu.DataHora.Day))
                         {
-                            MessageBox.Show("Reserva efetuada com sucesso");
-                            loadDados();
-                            obterDadosPaginados(true, true);
-                            obterSaldoCliente();
-                            obterQuantidadeMenu();
-                            this.Refresh();
+                            int idMulta = MultaController.CheckMulta(selectedMenu.DataHora);
+                            if (ReservaController.Adicionar(selectedCliente.Id, selectedMenu.Id, pratosSelecionadosId, extrasSelecionadosId, idMulta))
+                            {
+                                if (checkBoxRemeber.Checked)
+                                {
+                                    RememberMeSelected?.Invoke(this, selectedCliente.Id);
+                                }
+                                MessageBox.Show("Reserva efetuada com sucesso");
+                                loadDados();
+                                obterDadosPaginados(true, true);
+                                obterSaldoCliente();
+                                obterQuantidadeMenu();
+                            }
                         }
                     }
                 }
@@ -320,6 +460,116 @@ namespace DA_ProjetoFinal.Views
             obterSaldoCliente();
         }
 
+        private void foreverTabPage1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (foreverTabPage1.SelectedIndex)
+            {
+                case 0:
+                    paginaAtualUtilizadores = 1;
+                    loadDados();
+                    obterDadosPaginados(true, true);
+                    obterSaldoCliente();
+                    break;
+                case 1:
+                    paginaAtualUtilizadores = 1;
+                    loadDados();
+                    if(comboBoxClientes.SelectedItem != null)
+                    {
+                        Cliente cliente = (Cliente)comboBoxClientes.SelectedItem;
+                        reserva = ReservaController.GetUser(cliente.Id);
+                        numeroReservas = reserva.Count;
+                        obterDadosPaginados(false, true, true);
+                    }
+                    else
+                    {
+                        obterDadosPaginados(false, true, false);
+                    }
+                    break;
+            }
 
+        }
+
+        private void btnNextReserva_Click(object sender, EventArgs e)
+        {
+            paginaAtualReservas++;
+            obterDadosPaginados(true, true);
+        }
+
+        private void btnBackReserva_Click(object sender, EventArgs e)
+        {
+            paginaAtualReservas--;
+            obterDadosPaginados(true, true);
+        }
+
+        private void comboBoxClientesM_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            if (comboBoxClientes.SelectedItem != null)
+            {
+                Cliente cliente = (Cliente)comboBoxClientesM.SelectedItem;
+                reserva = ReservaController.GetUser(cliente.Id);
+                numeroReservas = reserva.Count;
+                obterDadosPaginados(false, false, true);
+            }
+
+        }
+
+        private void btnNextClienteM_Click(object sender, EventArgs e)
+        {
+            paginaAtualUtilizadores++;
+            obterDadosPaginados(false, true, true);
+        }
+
+        private void btnBackClienteM_Click(object sender, EventArgs e)
+        {
+            paginaAtualUtilizadores--;
+            comboBoxClientesM.SelectedItem = 0;
+            obterDadosPaginados(false, true, true);
+        }
+
+        private void btnBackReserva_Click_1(object sender, EventArgs e)
+        {
+            paginaAtualReservas--;
+            obterDadosPaginados(false, true, true);
+        }
+
+        private void btnNextReserva_Click_1(object sender, EventArgs e)
+        {
+            paginaAtualReservas++;
+            obterDadosPaginados(false, true, true);
+        }
+
+
+
+        private void checkReserva_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkReserva.Checked && comboBoxReservas.SelectedItem != null && MessageBox.Show("Deseja realmente marcar a reserva como concluída?", "Confirmação", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Reserva reservaSelecionada = (Reserva)comboBoxReservas.SelectedItem;
+
+                if (ReservaController.MarcarReserva(reservaSelecionada.Id))
+                {
+                    MessageBox.Show("Reserva marcada com sucesso");
+                    foreverTabPage1.SelectedIndex = 0;
+                    comboBoxReservas.ResetText();
+                    comboBoxClientes.ResetText();
+                    pnlExtrasMenus.Controls.Clear();
+                }else
+                {
+                    MessageBox.Show("Erro ao marcar a reserva");
+                    checkReserva.Checked = false;
+                }
+            }
+        }
+
+        private void comboBoxClientesM_SelectedIndexChanged(object sender, EventArgs e)
+        {
+                        if (comboBoxClientes.SelectedItem != null)
+            {
+                Cliente cliente = (Cliente)comboBoxClientesM.SelectedItem;
+                reserva = ReservaController.GetUser(cliente.Id);
+                numeroReservas = reserva.Count;
+                obterDadosPaginados(false, false, true);
+            }
+        }
     }
 }

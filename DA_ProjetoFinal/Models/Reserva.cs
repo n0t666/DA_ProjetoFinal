@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,11 +16,19 @@ namespace DA_ProjetoFinal
 
         public Multa Multa { get; set; }
 
+        public DateTime Data { get; set; }
+
 
         public Menu Menu { get; set; }
 
         public ICollection<Extra> Extra { get; set; }
 
         public ICollection<Prato> Prato { get; set; }
+
+
+        public override string ToString()
+        {
+            return "Reserva: " + Id + " - " + Data + " - " + Cliente.Nome;
+        }
     }
 }
