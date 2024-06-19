@@ -61,6 +61,7 @@ namespace DA_ProjetoFinal.Views
             InitializeComponent();
             loadDados();
             obterDadosPaginados(true, true);
+            dateDataHoraCreate.Value = DateTime.Now;
             dateDataHoraCreate.CustomFormat = "dd/MM/yyyy HH:mm";
             dateDataHoraCreate.Format = DateTimePickerFormat.Custom;
             dateDataHoraEdit.CustomFormat = "dd/MM/yyyy HH:mm";

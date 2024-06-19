@@ -16,8 +16,6 @@ namespace DA_ProjetoFinal.Views
 
         private DateTime dataBase;
         private DateTime dataAtual;
-        private DateTime inicioSemanaAtual;
-        private DateTime fimSemanaAtual;
         private List<Menu> menus;
 
         public event EventHandler<DateTime> SemanaDataSelected;

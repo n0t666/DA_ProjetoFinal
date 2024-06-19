@@ -188,10 +188,10 @@ namespace DA_ProjetoFinal.Views
                         txtNifEdit.Text = selectedCliente.Nif;
                         if (selectedCliente is Estudante)
                         {
-                            txtNumEstudante.Text = ((Estudante)selectedCliente).NumEstudante;
-                            txtNumEstudEdit.Text = "";
                             txtNumEstudEdit.Enabled = true;
+                            txtNumEstudEdit.Text = ((Estudante)selectedCliente).NumEstudante;
                             txtEmailEdit.Enabled = false;
+                            txtEmailEdit.Text = "";
                         }
                         else
                         {
@@ -207,6 +207,7 @@ namespace DA_ProjetoFinal.Views
                         lblNotSelected.Text = "Selecione um cliente para editar";
                         panelSelecionadoEdit.Visible = false;
                     }
+                    tabPageEditarCliente.Refresh();
                     break;
             }
         }

@@ -32,6 +32,13 @@
             this.tabPageListarMenus = new System.Windows.Forms.TabPage();
             this.pnlExtrasMenus = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblTotal = new ReaLTaiizor.Controls.DungeonLabel();
+            this.dungeonLabel1 = new ReaLTaiizor.Controls.DungeonLabel();
+            this.dungeonHeaderLabel4 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
+            this.checkReserva = new ReaLTaiizor.Controls.AloneCheckBox();
+            this.dungeonHeaderLabel3 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
+            this.lblDataReserva = new ReaLTaiizor.Controls.DungeonLabel();
+            this.dungeonHeaderLabel1 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
             this.lblMulta = new ReaLTaiizor.Controls.DungeonLabel();
             this.lblDataMenu = new ReaLTaiizor.Controls.DungeonLabel();
             this.lblTitleMulta = new ReaLTaiizor.Controls.DungeonHeaderLabel();
@@ -62,13 +69,6 @@
             this.pnlExtras = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlPratos = new System.Windows.Forms.FlowLayoutPanel();
             this.foreverTabPage1 = new ReaLTaiizor.Controls.ForeverTabPage();
-            this.dungeonHeaderLabel1 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
-            this.lblDataReserva = new ReaLTaiizor.Controls.DungeonLabel();
-            this.dungeonHeaderLabel3 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
-            this.checkReserva = new ReaLTaiizor.Controls.AloneCheckBox();
-            this.dungeonHeaderLabel4 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
-            this.dungeonLabel1 = new ReaLTaiizor.Controls.DungeonLabel();
-            this.lblTotal = new ReaLTaiizor.Controls.DungeonLabel();
             this.tabPageListarMenus.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabPageCriarReserva.SuspendLayout();
@@ -129,6 +129,88 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(412, 122);
             this.panel2.TabIndex = 88;
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.lblTotal.Location = new System.Drawing.Point(127, 77);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(0, 20);
+            this.lblTotal.TabIndex = 94;
+            // 
+            // dungeonLabel1
+            // 
+            this.dungeonLabel1.AutoSize = true;
+            this.dungeonLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.dungeonLabel1.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.dungeonLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.dungeonLabel1.Location = new System.Drawing.Point(206, 51);
+            this.dungeonLabel1.Name = "dungeonLabel1";
+            this.dungeonLabel1.Size = new System.Drawing.Size(0, 20);
+            this.dungeonLabel1.TabIndex = 93;
+            // 
+            // dungeonHeaderLabel4
+            // 
+            this.dungeonHeaderLabel4.AutoSize = true;
+            this.dungeonHeaderLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.dungeonHeaderLabel4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.dungeonHeaderLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.dungeonHeaderLabel4.Location = new System.Drawing.Point(3, 77);
+            this.dungeonHeaderLabel4.Name = "dungeonHeaderLabel4";
+            this.dungeonHeaderLabel4.Size = new System.Drawing.Size(48, 20);
+            this.dungeonHeaderLabel4.TabIndex = 92;
+            this.dungeonHeaderLabel4.Text = "Total:";
+            // 
+            // checkReserva
+            // 
+            this.checkReserva.BackColor = System.Drawing.Color.Transparent;
+            this.checkReserva.Checked = false;
+            this.checkReserva.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkReserva.EnabledCalc = true;
+            this.checkReserva.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(133)))), ((int)(((byte)(142)))));
+            this.checkReserva.Location = new System.Drawing.Point(131, 60);
+            this.checkReserva.Name = "checkReserva";
+            this.checkReserva.Size = new System.Drawing.Size(118, 17);
+            this.checkReserva.TabIndex = 91;
+            this.checkReserva.CheckedChanged += new ReaLTaiizor.Controls.AloneCheckBox.CheckedChangedEventHandler(this.checkReserva_CheckedChanged);
+            // 
+            // dungeonHeaderLabel3
+            // 
+            this.dungeonHeaderLabel3.AutoSize = true;
+            this.dungeonHeaderLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.dungeonHeaderLabel3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.dungeonHeaderLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.dungeonHeaderLabel3.Location = new System.Drawing.Point(3, 55);
+            this.dungeonHeaderLabel3.Name = "dungeonHeaderLabel3";
+            this.dungeonHeaderLabel3.Size = new System.Drawing.Size(122, 20);
+            this.dungeonHeaderLabel3.TabIndex = 9;
+            this.dungeonHeaderLabel3.Text = "Marcar Reserva:";
+            // 
+            // lblDataReserva
+            // 
+            this.lblDataReserva.AutoSize = true;
+            this.lblDataReserva.BackColor = System.Drawing.Color.Transparent;
+            this.lblDataReserva.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.lblDataReserva.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.lblDataReserva.Location = new System.Drawing.Point(127, 33);
+            this.lblDataReserva.Name = "lblDataReserva";
+            this.lblDataReserva.Size = new System.Drawing.Size(0, 20);
+            this.lblDataReserva.TabIndex = 7;
+            // 
+            // dungeonHeaderLabel1
+            // 
+            this.dungeonHeaderLabel1.AutoSize = true;
+            this.dungeonHeaderLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.dungeonHeaderLabel1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.dungeonHeaderLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.dungeonHeaderLabel1.Location = new System.Drawing.Point(3, 33);
+            this.dungeonHeaderLabel1.Name = "dungeonHeaderLabel1";
+            this.dungeonHeaderLabel1.Size = new System.Drawing.Size(90, 20);
+            this.dungeonHeaderLabel1.TabIndex = 6;
+            this.dungeonHeaderLabel1.Text = "Data menu:";
             // 
             // lblMulta
             // 
@@ -530,88 +612,6 @@
             this.foreverTabPage1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.foreverTabPage1.TabIndex = 2;
             this.foreverTabPage1.SelectedIndexChanged += new System.EventHandler(this.foreverTabPage1_SelectedIndexChanged);
-            // 
-            // dungeonHeaderLabel1
-            // 
-            this.dungeonHeaderLabel1.AutoSize = true;
-            this.dungeonHeaderLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.dungeonHeaderLabel1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.dungeonHeaderLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
-            this.dungeonHeaderLabel1.Location = new System.Drawing.Point(3, 33);
-            this.dungeonHeaderLabel1.Name = "dungeonHeaderLabel1";
-            this.dungeonHeaderLabel1.Size = new System.Drawing.Size(90, 20);
-            this.dungeonHeaderLabel1.TabIndex = 6;
-            this.dungeonHeaderLabel1.Text = "Data menu:";
-            // 
-            // lblDataReserva
-            // 
-            this.lblDataReserva.AutoSize = true;
-            this.lblDataReserva.BackColor = System.Drawing.Color.Transparent;
-            this.lblDataReserva.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lblDataReserva.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
-            this.lblDataReserva.Location = new System.Drawing.Point(127, 33);
-            this.lblDataReserva.Name = "lblDataReserva";
-            this.lblDataReserva.Size = new System.Drawing.Size(0, 20);
-            this.lblDataReserva.TabIndex = 7;
-            // 
-            // dungeonHeaderLabel3
-            // 
-            this.dungeonHeaderLabel3.AutoSize = true;
-            this.dungeonHeaderLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.dungeonHeaderLabel3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.dungeonHeaderLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
-            this.dungeonHeaderLabel3.Location = new System.Drawing.Point(3, 55);
-            this.dungeonHeaderLabel3.Name = "dungeonHeaderLabel3";
-            this.dungeonHeaderLabel3.Size = new System.Drawing.Size(122, 20);
-            this.dungeonHeaderLabel3.TabIndex = 9;
-            this.dungeonHeaderLabel3.Text = "Marcar Reserva:";
-            // 
-            // checkReserva
-            // 
-            this.checkReserva.BackColor = System.Drawing.Color.Transparent;
-            this.checkReserva.Checked = false;
-            this.checkReserva.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkReserva.EnabledCalc = true;
-            this.checkReserva.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(133)))), ((int)(((byte)(142)))));
-            this.checkReserva.Location = new System.Drawing.Point(131, 60);
-            this.checkReserva.Name = "checkReserva";
-            this.checkReserva.Size = new System.Drawing.Size(118, 17);
-            this.checkReserva.TabIndex = 91;
-            this.checkReserva.CheckedChanged += new ReaLTaiizor.Controls.AloneCheckBox.CheckedChangedEventHandler(this.checkReserva_CheckedChanged);
-            // 
-            // dungeonHeaderLabel4
-            // 
-            this.dungeonHeaderLabel4.AutoSize = true;
-            this.dungeonHeaderLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.dungeonHeaderLabel4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.dungeonHeaderLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
-            this.dungeonHeaderLabel4.Location = new System.Drawing.Point(3, 77);
-            this.dungeonHeaderLabel4.Name = "dungeonHeaderLabel4";
-            this.dungeonHeaderLabel4.Size = new System.Drawing.Size(48, 20);
-            this.dungeonHeaderLabel4.TabIndex = 92;
-            this.dungeonHeaderLabel4.Text = "Total:";
-            // 
-            // dungeonLabel1
-            // 
-            this.dungeonLabel1.AutoSize = true;
-            this.dungeonLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.dungeonLabel1.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.dungeonLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
-            this.dungeonLabel1.Location = new System.Drawing.Point(206, 51);
-            this.dungeonLabel1.Name = "dungeonLabel1";
-            this.dungeonLabel1.Size = new System.Drawing.Size(0, 20);
-            this.dungeonLabel1.TabIndex = 93;
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.BackColor = System.Drawing.Color.Transparent;
-            this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
-            this.lblTotal.Location = new System.Drawing.Point(127, 77);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(0, 20);
-            this.lblTotal.TabIndex = 94;
             // 
             // FormReservas
             // 

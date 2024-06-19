@@ -182,11 +182,11 @@ namespace DA_ProjetoFinal.Views
                 {
                     loadMulta();
                     obterDadosMulta();
-                    MessageBox.Show("Funcionário apagado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Multa apagada com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Ocorreu um erro ao apagar o Funcionário", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Ocorreu um erro ao apagar a multa", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             selectedMulta = null;

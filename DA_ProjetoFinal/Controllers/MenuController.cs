@@ -169,6 +169,11 @@ namespace DA_ProjetoFinal
                 using (var context = new CantinaContext())
                 {
                     Menu menu = context.Menus.Find(id);
+                    if (menu == null)
+                    {
+                        return false;
+                    }
+
                     context.Menus.Remove(menu);
                     context.SaveChanges();
                 }

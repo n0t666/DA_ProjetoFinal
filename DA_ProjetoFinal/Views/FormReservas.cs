@@ -18,18 +18,11 @@ namespace DA_ProjetoFinal.Views
 
         //-----------------Variáveis relacionadas com a paginação-----------------
         private int tamanhoPagina = 6;
-        private int paginaAtualExtras = 1;
-        private int paginaAtualPratos = 1;
         private int paginaAtualMenus = 1;
         private int paginaAtualUtilizadores = 1;
         private int paginaAtualReservas = 1;
         //------------------------------------------------------------------------
 
-        private List<Extra> extras;
-        private List<Extra> extrasPaginados;
-
-        private List<Prato> pratos;
-        private List<Prato> pratosPaginados;
 
         private List<Menu> menus;
         private List<Menu> menusPaginados;
@@ -41,12 +34,9 @@ namespace DA_ProjetoFinal.Views
         private List<Reserva> reservaPaginados;
 
         private int numeroReservas;
-        private int numeroExtras;
-        private int numeroPratos;
         private int numeroMenus;
         private int numeroUtilizadores;
 
-        private Menu selectedMenu;
 
         private Dictionary<string, bool> checkboxStates = new Dictionary<string, bool>();
 

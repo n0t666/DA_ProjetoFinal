@@ -10,13 +10,18 @@ namespace DA_ProjetoFinal
 {
     internal class ClienteController
     {
-        /*
+
+        /*  Mudar consoante o número de pratos e extras que se podem reservar por dia
         private const int numeroMaximoExtrasDiario = 3;
         private const int numeroMaximoPratosDiario = 1;
+        -----------------------------------------------------------------------------------
         */
 
+
+        // Número máximo de pratos e extras que se podem reservar por dia destinado para testes 
         private const int numeroMaximoExtrasDiario = 999;
         private const int numeroMaximoPratosDiario = 999;
+        //-----------------------------------------------------------------------------------
 
         public static List<Cliente> Get()
         {
@@ -72,7 +77,25 @@ namespace DA_ProjetoFinal
                     {
                         return false;
                     }
-                    context.Clientes.Remove(cliente);
+
+                    var reservas = context.Reservas.Where(r => r.Cliente.Id == id).ToList();
+                    var faturas = context.Faturas
+                        .Where(f => f.Cliente.Id == id)
+                        .Include(f => f.ItemFatura)
+                        .ToList();
+                    
+                    foreach(Fatura f in faturas) // Apagar os items de fatura associados a cada fatura, para evitar erros relacionados com a chave estrangeira
+                    {
+                        foreach(ItemFatura i in f.ItemFatura.ToList()) // Iterar sobre cada item de fatura associado a cada fatura e apagá-lo
+                        {
+                            context.ItemFaturas.Remove(i);
+                        }
+                    }
+                    
+
+                    context.Reservas.RemoveRange(reservas); // Apagar todas as reservas associadas ao cliente
+                    context.Faturas.RemoveRange(faturas); // Apagar todas as faturas associadas ao cliente
+                    context.Clientes.Remove(cliente); // Apagar o cliente em si
                     context.SaveChanges();
                     return true;
                 }
@@ -82,13 +105,14 @@ namespace DA_ProjetoFinal
                 MessageBox.Show("Não é possível apagar o cliente, pois existem reservas associadas a ele", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Ocorreu um erro ao apagar o cliente", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ocorreu um erro ao apagar o cliente " + ex.Message , "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return false;
         }
 
+        // Método para verificar se o cliente pode efetuar a reserva
         public static bool PodeEfetuarReserva(int id, int day)
         {
             try
@@ -96,6 +120,10 @@ namespace DA_ProjetoFinal
                 using (var context = new CantinaContext())
                 {
                     var cliente = context.Clientes.Where(c => c.Id == id);
+                    if (cliente == null)
+                    {
+                        return false;
+                    }
                     var reservas = context.Reservas
                         .Where(r => r.Cliente.Id == id && r.Menu.DataHora.Day == day)
                         .Include(r => r.Prato)
